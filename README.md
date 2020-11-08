@@ -12,5 +12,4 @@ A fun game about how to waste your time on the internet.
 
 ## Deployment
 
-1. Install Netlify CLI as described [here](https://docs.netlify.com/cli/get-started/).
-2. Run `sh deploy.sh`
+Pages are deployed automatically via netlify.
