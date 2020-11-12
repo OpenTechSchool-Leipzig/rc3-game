@@ -16,32 +16,26 @@
         <b-button variant="danger" block>New Message</b-button>
       </section>
       <section>
-        <p class="my-3">
-          <b-link
-            @click="selectFolder('inbox')"
-            :class="{ selected: isSelected('inbox') }"
-            class="text-white"
-          >
-            Inbox
-          </b-link>
+        <p
+          class="my-1 p-2 folder"
+          @click="selectFolder('inbox')"
+          :class="{ selected: isSelected('inbox') }"
+        >
+          Inbox ({{ getCount("inbox") }})
         </p>
-        <p class="my-3">
-          <b-link
-            @click="selectFolder('spam')"
-            :class="{ selected: isSelected('spam') }"
-            class="text-white"
-          >
-            Spam
-          </b-link>
+        <p
+          class="my-1 p-2 folder"
+          @click="selectFolder('spam')"
+          :class="{ selected: isSelected('spam') }"
+        >
+          Spam ({{ getCount("spam") }})
         </p>
-        <p class="my-3">
-          <b-link
-            @click="selectFolder('trash')"
-            :class="{ selected: isSelected('trash') }"
-            class="text-white"
-          >
-            Trash
-          </b-link>
+        <p
+          class="my-1 p-2 folder"
+          @click="selectFolder('trash')"
+          :class="{ selected: isSelected('trash') }"
+        >
+          Trash ({{ getCount("trash") }})
         </p>
       </section>
       <section>
@@ -68,6 +62,11 @@ export default {
     isSelected: function(folder) {
       return this.$store.state.selectedFolder === folder;
     },
+    getCount: function(folder) {
+      return this.$store.state.emails.filter((email) => {
+        return folder === email.folder;
+      }).length;
+    },
   },
 };
 </script>
@@ -84,13 +83,23 @@ export default {
     padding: 20px 0 20px;
 
     p {
-      opacity: 0.3;
       margin: 0;
     }
-  }
 
-  a.selected {
-    color: black !important;
+    p.folder {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.05);
+      opacity: 0.5;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    p.selected {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
   }
 }
 </style>

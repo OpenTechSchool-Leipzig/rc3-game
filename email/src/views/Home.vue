@@ -3,7 +3,7 @@
     <Nav />
     <b-row no-gutters style="margin-left: 305px;">
       <b-col cols="4" class="vertical-border">
-        <EmailList :emails="emails" />
+        <EmailList />
       </b-col>
       <b-col class="vertical-border">
         <EmailView />
@@ -16,16 +16,10 @@
 import Nav from "@/components/Nav.vue";
 import EmailList from "@/components/EmailList.vue";
 import EmailView from "@/components/EmailView.vue";
-import emails from "@/content/emails.json";
 
 export default {
   name: "Home",
   components: { Nav, EmailList, EmailView },
-  data: function() {
-    return {
-      emails,
-    };
-  },
 };
 </script>
 

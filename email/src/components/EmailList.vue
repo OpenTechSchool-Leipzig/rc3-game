@@ -13,11 +13,10 @@ import EmailListRow from "@/components/EmailListRow.vue";
 
 export default {
   name: "EmailList",
-  props: ["emails"],
   components: { EmailListRow },
   computed: {
     filteredEmails: function() {
-      return this.emails.filter((email) => {
+      return this.$store.state.emails.filter((email) => {
         return email.folder === this.$store.state.selectedFolder;
       });
     },

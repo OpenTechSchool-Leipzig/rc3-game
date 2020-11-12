@@ -5,6 +5,7 @@ import router from "./router";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import emails from "@/content/emails.json";
 
 Vue.config.productionTip = false;
 
@@ -17,14 +18,20 @@ Vue.use(IconsPlugin)
 const store = new Vuex.Store({
   state: {
     selectedEmail: null,
-    selectedFolder: "inbox"
+    selectedFolder: "inbox",
+    emails,
+    readEmails: []
   },
   mutations: {
     selectEmail (state, email) {
       state.selectedEmail = email
+      if (!state.readEmails.includes(email.id)) {
+        state.readEmails.push(email.id)
+      }
     },
     selectFolder (state, folder) {
       state.selectedFolder = folder
+      state.selectedEmail = null
     }
   }
 })
