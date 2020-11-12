@@ -17,23 +17,41 @@
       </section>
       <section>
         <p class="my-3">
-          <b-link href="#foo" class="text-white">Inbox</b-link>
+          <b-link
+            @click="selectFolder('inbox')"
+            :class="{ selected: isSelected('inbox') }"
+            class="text-white"
+          >
+            Inbox
+          </b-link>
         </p>
         <p class="my-3">
-          <b-link href="#foo" class="text-white">Spam</b-link>
+          <b-link
+            @click="selectFolder('spam')"
+            :class="{ selected: isSelected('spam') }"
+            class="text-white"
+          >
+            Spam
+          </b-link>
         </p>
         <p class="my-3">
-          <b-link href="#foo" class="text-white">Trash</b-link>
+          <b-link
+            @click="selectFolder('trash')"
+            :class="{ selected: isSelected('trash') }"
+            class="text-white"
+          >
+            Trash
+          </b-link>
         </p>
       </section>
       <section>
         <p>
-          <b-link href="#foo" class="text-white">Contacts</b-link>
+          <b-link href="#contacts" class="text-white">Contacts</b-link>
         </p>
       </section>
       <section>
         <p>
-          <b-link href="#foo" class="text-white">Settings</b-link>
+          <b-link href="#settings" class="text-white">Settings</b-link>
         </p>
       </section>
     </div>
@@ -43,6 +61,14 @@
 <script>
 export default {
   name: "Nav",
+  methods: {
+    selectFolder: function(folder) {
+      return this.$store.commit("selectFolder", folder);
+    },
+    isSelected: function(folder) {
+      return this.$store.state.selectedFolder === folder;
+    },
+  },
 };
 </script>
 
@@ -61,6 +87,10 @@ export default {
       opacity: 0.3;
       margin: 0;
     }
+  }
+
+  a.selected {
+    color: black !important;
   }
 }
 </style>

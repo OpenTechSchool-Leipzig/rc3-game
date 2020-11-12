@@ -1,5 +1,5 @@
 <template>
-  <li @click="handleClick">
+  <li @click="handleClick" :class="{ selected: isSelected }">
     <b-row no-gutters>
       <b-col cols="1">
         <b-form-checkbox name="checkbox-1"> </b-form-checkbox>
@@ -20,9 +20,15 @@
 export default {
   name: "EmailListRow",
   props: ["email"],
+  computed: {
+    isSelected: function() {
+      if (!this.$store.state.selectedEmail) return false;
+      return this.$store.state.selectedEmail.id === this.email.id;
+    },
+  },
   methods: {
     handleClick: function() {
-      this.$emit("click:email-selected");
+      this.$store.commit("selectEmail", this.email);
     },
   },
 };
@@ -33,13 +39,18 @@ li {
   padding: 20px 10px;
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
 
-li:nth-child(2n) {
-  background-color: rgba(0, 0, 0, 0.01);
-}
+  &:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.01);
+  }
 
-p {
-  margin: 0;
+  &.selected,
+  &:nth-child(2n).selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  p {
+    margin: 0;
+  }
 }
 </style>

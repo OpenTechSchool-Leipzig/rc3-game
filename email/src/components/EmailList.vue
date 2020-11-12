@@ -1,7 +1,7 @@
 <template>
   <ul>
     <EmailListRow
-      v-for="email in emails"
+      v-for="email in filteredEmails"
       :email="email"
       :key="email.id"
     ></EmailListRow>
@@ -15,6 +15,13 @@ export default {
   name: "EmailList",
   props: ["emails"],
   components: { EmailListRow },
+  computed: {
+    filteredEmails: function() {
+      return this.emails.filter((email) => {
+        return email.folder === this.$store.state.selectedFolder;
+      });
+    },
+  },
 };
 </script>
 

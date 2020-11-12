@@ -16,5 +16,14 @@
     "title": "Anna Kauert invited you to Sunny Art opening",
     "content": "Anna Kauert invited you to Sunny Art opening",
     "folder": "inbox"
+  },
+  {
+    "id": "EB5BA286-3C11-4675-BAAA-699DDB453611",
+    "from": "Microsoft<customerservice@microsoft.com>",
+    "to": "",
+    "created": "",
+    "title": "Avoid suspension",
+    "content": "Your Microsoft account has been compromised. You must update it immediately or your account will be closed. Click <a href=''>here</a> to update.",
+    "folder": "spam"
   }
 ]
