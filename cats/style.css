@@ -1,0 +1,32 @@
+body {
+
+}
+
+h1 {
+    text-align: center;
+    margin: 8rem 0 6rem;
+    font-size: 8rem;
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.wrapper {
+    margin-top: 10rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    scroll-snap-points-y: repeat(300px);
+    scroll-snap-type: y mandatory;
+}
+
+.col {
+    flex: 0 0 30%;
+    padding: 2rem 0;
+    scroll-snap-align: start;
+}
