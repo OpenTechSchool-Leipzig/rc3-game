@@ -21,21 +21,43 @@
           @click="selectFolder('inbox')"
           :class="{ selected: isSelected('inbox') }"
         >
-          Inbox ({{ getCount("inbox") }})
+          <b-button variant="secondary" block>
+            Inbox
+            <span v-if="getCount('inbox') !== 0" class="badge badge-danger">{{
+              getCount("inbox")
+            }}</span>
+            <span v-else class="badge badge-light">{{
+              getCount("inbox")
+            }}</span>
+          </b-button>
         </p>
         <p
           class="my-1 p-2 folder"
           @click="selectFolder('spam')"
           :class="{ selected: isSelected('spam') }"
         >
-          Spam ({{ getCount("spam") }})
+          <b-button variant="secondary" block>
+            Spam
+            <span v-if="getCount('spam') !== 0" class="badge badge-danger">{{
+              getCount("spam")
+            }}</span>
+            <span v-else class="badge badge-light">{{ getCount("spam") }}</span>
+          </b-button>
         </p>
         <p
           class="my-1 p-2 folder"
           @click="selectFolder('trash')"
           :class="{ selected: isSelected('trash') }"
         >
-          Trash ({{ getCount("trash") }})
+          <b-button variant="secondary" block>
+            Trash
+            <span v-if="getCount('trash') !== 0" class="badge badge-danger">{{
+              getCount("trash")
+            }}</span>
+            <span v-else class="badge badge-light">{{
+              getCount("trash")
+            }}</span>
+          </b-button>
         </p>
       </section>
       <section>
@@ -63,7 +85,7 @@ export default {
       return this.$store.state.selectedFolder === folder;
     },
     getCount: function(folder) {
-      return this.$store.state.emails.filter((email) => {
+      return this.$store.getters.unreadEmails.filter((email) => {
         return folder === email.folder;
       }).length;
     },
@@ -86,19 +108,10 @@ export default {
       margin: 0;
     }
 
-    p.folder {
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.05);
-      opacity: 0.5;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-
-    p.selected {
-      background-color: rgba(255, 255, 255, 0.2);
+    p.selected button,
+    button:focus {
+      border-bottom: 1px solid white;
+      box-shadow: none !important;
     }
   }
 }

@@ -5,7 +5,7 @@ import router from "./router";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import emails from "@/content/emails.json";
+import emails from "@/content/emails.js";
 
 Vue.config.productionTip = false;
 
@@ -32,6 +32,13 @@ const store = new Vuex.Store({
     selectFolder (state, folder) {
       state.selectedFolder = folder
       state.selectedEmail = null
+    }
+  },
+  getters: {
+    unreadEmails: state => {
+      return state.emails.filter(email => {
+        return !state.readEmails.includes(email.id)
+      })
     }
   }
 })
