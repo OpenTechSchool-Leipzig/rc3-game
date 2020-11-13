@@ -6,9 +6,9 @@
       </b-col>
       <b-col>
         <p>
-          <b>{{ email.from }}</b>
+          {{ email.from }}
         </p>
-        <p>
+        <p class="title">
           {{ email.title }}
         </p>
       </b-col>
@@ -43,17 +43,25 @@ li {
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
+  .title {
+    color: var(--info);
+  }
+
   &:nth-child(2n) {
     background-color: rgba(0, 0, 0, 0.01);
   }
 
   &.selected,
   &:nth-child(2n).selected {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--info);
+    color: white;
+    .title {
+      color: white;
+    }
   }
 
   &.unread {
-    font-weight: bold;
+    font-weight: 700;
   }
 
   p {

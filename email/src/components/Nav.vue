@@ -18,7 +18,7 @@
       </section>
       <section>
         <p
-          class="my-1 p-2 folder"
+          class="my-3 folder"
           @click="selectFolder('inbox')"
           :class="{ selected: isSelected('inbox') }"
         >
@@ -33,7 +33,7 @@
           </b-button>
         </p>
         <p
-          class="my-1 p-2 folder"
+          class="my-3 folder"
           @click="selectFolder('spam')"
           :class="{ selected: isSelected('spam') }"
         >
@@ -46,7 +46,7 @@
           </b-button>
         </p>
         <p
-          class="my-1 p-2 folder"
+          class="my-3 folder"
           @click="selectFolder('trash')"
           :class="{ selected: isSelected('trash') }"
         >

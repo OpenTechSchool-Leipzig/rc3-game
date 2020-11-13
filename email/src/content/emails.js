@@ -3,7 +3,7 @@ import html from "@/content/html.js";
 export default [
   {
     id: "1C83A577-3609-4B22-8505-FF06EF2EA8EE",
-    from: "Facebook",
+    from: "Footbook",
     created: "",
     title: "Karsten Meißner shared a post.",
     content: "Karsten Meißner shared a post.",
@@ -11,11 +11,11 @@ export default [
   },
   {
     id: "EB5BA286-3C11-4675-BAAA-699DDB453611",
-    from: "Facebook",
+    from: "Footbook",
     created: "",
     title: "Anna Kauert invited you to Sunny Art opening",
     content:
-      "Anna Kauert invited you to Sunny Art opening <img src='https://media.giphy.com/media/LzJinu3jqfdinGWLNa/giphy.gif'>",
+      "Anna Kauert invited you to Sunny Art opening<br/><img src='https://media.giphy.com/media/LzJinu3jqfdinGWLNa/giphy.gif'>",
     folder: "inbox"
   },
   {
