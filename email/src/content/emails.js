@@ -67,7 +67,7 @@ export default [
   },
   {
     id: "FAE0528A-A111-4518-BC2B-585F5CF9E70E",
-    from: "<hawjulwoi@gmail.com>",
+    from: "Rustico banku<hawjulwoi@gmail.com>",
     created: "",
     title: "From rustico",
     content: `
@@ -96,7 +96,7 @@ I am sorry for reaching you through this medium as it is the most convenient way
   },
   {
     id: "062BE7EF-8284-4467-BB56-223D7C061C8D",
-    from: "<princeNpn@a.ea>",
+    from: "Prince Alyusi Islassis<aislassisn@a.ea>",
     created: "",
     title: "Funds awaiting transfer",
     content: `
@@ -115,5 +115,54 @@ Yours truly,
 Prince Alyusi Islassis
     `,
     folder: "spam"
-  }
+  },
+  {
+    id: "10D6AAC7-F14E-45BE-ADB7-290E16BE7480",
+    from: "Innagram<no-reply@mail.innagram.com>",
+    created: "",
+    title: "Watch videos from themailman and 1 others",
+    content:`
+      <a href="https://">Open Innagram</a><br/><br/>
+      You have 1 notification you not have seen.
+    `,
+    folder: "inbox"
+  },
+  {
+    id: "7A64580A-6894-4A63-9F85-EA1F3D00E543",
+    from: "Innagram<no-reply@mail.innagram.com>",
+    created: "",
+    title: "Watch videos from themailman and 1 others",
+    content:`
+      Follow Julia Anden, Paul Newname and others you know to see their photos and videos.
+      <a href="https://">Open Innagram</a><br/><br/>
+    `,
+    folder: "inbox"
+  },
+  {
+    id: "CD538412-4BED-4B76-BC01-0CF1FCFB0DA1",
+    from: "Innagram<no-reply@mail.innagram.com>",
+    created: "",
+    title: "santomXT, traveltheworkd and cubega have new posts",
+    content:`
+    Catch Up on Innagram<br/><br/>
+    See what's new, fun and inspired from the accounts you follow.<br/><br/>
+      <a href="https://">See what's new</a><br/><br/>
+      <b>Discover More<b/><br/>
+      The more accounts you follow, the more great stuff you'll see in your feed.<br/><br/>
+      <a href="https://">Find Accounts to follow</a><br/><br/
+    `,
+    folder: "inbox"
+  },
+  {
+    id: "A44FD6DB-14A5-4C9C-8C15-4999F149D01D",
+    from: "switch<no-reply@switch-watch.com>",
+    created: "",
+    title: "Chat with new people right now on Switch!",
+    content:`
+    <h1>Most popular channels right now!</h1>
+    Don't miss these top streamers.
+    `,
+    folder: "inbox"
+  },
+
 ];
