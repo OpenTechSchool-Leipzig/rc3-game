@@ -27,3 +27,7 @@ yarn build
 ```
 yarn lint
 ```
+
+### Styles
+
+Please see: https://bootstrap-vue.org/

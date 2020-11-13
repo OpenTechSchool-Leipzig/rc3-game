@@ -1,7 +1,7 @@
 <template>
-  <b-container fluid class="bv-example-row">
+  <b-container fluid class="home">
     <Nav />
-    <b-row no-gutters style="margin-left: 305px;">
+    <b-row no-gutters style="margin-left: 265px;">
       <b-col cols="4" class="vertical-border">
         <EmailList />
       </b-col>
@@ -24,7 +24,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.vertical-border {
-  border-left: 8px solid rgba(0, 0, 0, 0.05);
+.home {
+  min-width: 1600px;
+  .vertical-border {
+    border-left: 8px solid rgba(0, 0, 0, 0.05);
+  }
 }
 </style>

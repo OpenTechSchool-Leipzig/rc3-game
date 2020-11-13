@@ -7,6 +7,7 @@
     bg-variant="dark"
     text-variant="light"
     no-header
+    width="280px"
   >
     <div class="px-3 pt-5">
       <header>
@@ -62,12 +63,12 @@
       </section>
       <section>
         <p>
-          <b-link href="#contacts" class="text-white">Contacts</b-link>
+          <b-link to="about" class="text-white">Contacts</b-link>
         </p>
       </section>
       <section>
         <p>
-          <b-link href="#settings" class="text-white">Settings</b-link>
+          <b-link to="about" class="text-white">Settings</b-link>
         </p>
       </section>
     </div>
