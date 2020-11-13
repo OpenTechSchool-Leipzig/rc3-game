@@ -71,6 +71,7 @@
           <b-link to="about" class="text-white">Settings</b-link>
         </p>
       </section>
+      <img src="https://media.giphy.com/media/12Up26fqbaU45W/giphy.gif" />
     </div>
   </b-sidebar>
 </template>
@@ -96,6 +97,8 @@ export default {
 
 <style scoped lang="scss">
 .sidebar {
+  position: relative;
+
   header {
     height: 60px;
     text-align: center;
@@ -114,6 +117,15 @@ export default {
       border-bottom: 1px solid white;
       box-shadow: none !important;
     }
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: auto;
   }
 }
 </style>
