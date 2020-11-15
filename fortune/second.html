@@ -10,20 +10,19 @@
 <body>
   <a href="index.html">back to start</a>
   <div class="introduction">
-<p>First, tell me your birthday</p>
+<p>Now let me see your hands</p>
 
 <form>
-<input type="date" id="birthday" name="birthday">
 
-<input type="button" value="Submit" id="submit-bday">
 
+<input type="button" value="Continue" id="submit-hands">
 
 </form>
 
 <div id="action-tab">
 </div>
 
-<a href="second.html"><input type="button" id="continue-btn" value="Continue"></a>
+<a href="third.html"><input type="button" id="continue-btn" value="Continue"></a>
 
 </div>
 </div>
@@ -31,8 +30,8 @@
   <script>
 
   $(document).ready(function() {
-    $("#submit-bday").click(function() {
-    $("#action-tab").html("<p class='light'>I see. Mercury in retrograde.</p>").hide().fadeIn();
+    $("#submit-hands").click(function() {
+    $("#action-tab").html("<p class='light'>closer</p>").hide().fadeIn();
     $("#continue-btn").fadeIn()
   });
   } );
