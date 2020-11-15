@@ -4,7 +4,7 @@
       <b-col cols="1">
         <b-form-checkbox name="checkbox-1"> </b-form-checkbox>
       </b-col>
-      <b-col>
+      <b-col class="text-break">
         <p>
           {{ email.from }}
         </p>

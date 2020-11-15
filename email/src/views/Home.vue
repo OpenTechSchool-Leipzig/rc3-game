@@ -2,10 +2,10 @@
   <b-container fluid class="home">
     <Nav />
     <b-row no-gutters style="margin-left: 265px;">
-      <b-col cols="4" class="vertical-border">
+      <b-col cols="4" class="vertical-border scroll-bar">
         <EmailList />
       </b-col>
-      <b-col class="vertical-border">
+      <b-col class="vertical-border scroll-bar">
         <EmailView />
       </b-col>
     </b-row>
@@ -25,7 +25,13 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  min-width: 1600px;
+  padding-right: 0;
+
+  .scroll-bar {
+    height: 100vh;
+    overflow: scroll;
+  }
+
   .vertical-border {
     border-left: 8px solid rgba(0, 0, 0, 0.05);
   }

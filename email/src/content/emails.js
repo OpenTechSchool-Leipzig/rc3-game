@@ -54,7 +54,7 @@ export default [
   },
   {
     id: uuidv4(),
-    from: "American Espress<10_Stacy_Isaiah_35113@q.com>",
+    from: "American Espress<10_Stacy_Isaiah@q.com>",
     created: "",
     title: "Important Information about your account",
     content: `
