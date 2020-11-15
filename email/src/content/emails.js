@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export default [
   {
-    id: "1C83A577-3609-4B22-8505-FF06EF2EA8EE",
+    id: uuidv4(),
     from: "Footbook",
     created: "",
     title: "Karsten Meißner shared a post.",
@@ -8,25 +10,25 @@ export default [
     folder: "inbox"
   },
   {
-    id: "EB5BA286-3C11-4675-BAAA-699DDB453611",
+    id: uuidv4(),
     from: "Footbook",
     created: "",
     title: "Anna Kauert invited you to Sunny Art opening",
     content:
-      "Anna Kauert invited you to Sunny Art opening<br/><img src='https://media.giphy.com/media/LzJinu3jqfdinGWLNa/giphy.gif'>",
+      "Anna Kauert invited you to Sunny Art opening",
     folder: "inbox"
   },
   {
-    id: "CFE96D43-8F0A-4EF3-ABC9-22E50D338E12",
+    id: uuidv4(),
     from: "Micosoft<customerservice@micosoft.com>",
     created: "",
     title: "Avoid suspension",
     content:
-      "Your Microsoft account has been compromised. You must update it immediately or your account will be closed. Click <a href=''>here</a> to update.",
+      "Your Micosoft account has been compromised. You must update it immediately or your account will be closed. Click <a href=''>here</a> to update.",
     folder: "spam"
   },
   {
-    id: "5B3E1083-21B4-4778-BECA-BB2734BA01A4",
+    id: uuidv4(),
     from: "Excellent Cannabis<Nkhlsoler@blantomanr.cc>",
     created: "",
     title: "This unbelievable cure has helped millions!",
@@ -51,12 +53,12 @@ export default [
     folder: "spam"
   },
   {
-    id: "ABF18A47-9D1B-4D67-B5EB-8949876215B0",
-    from: "American Espress<10_Stacy_Isaiah_06_35113@q.com>",
+    id: uuidv4(),
+    from: "American Espress<10_Stacy_Isaiah_35113@q.com>",
     created: "",
     title: "Important Information about your account",
     content: `
-    𝑫𝒆𝒂𝒓 𝑺𝒌𝒅𝒃,<br/><br/>𝑾𝒆 𝒘𝒂𝒏𝒕 𝒕𝒐 𝒓𝒆𝒎𝒊𝒏𝒅 𝒚𝒐𝒖 𝒐𝒇 𝒄𝒉𝒂𝒏𝒈𝒆𝒔 𝒎𝒂𝒅𝒆 𝒕𝒐 𝒚𝒐𝒖𝒓 𝑨𝒎𝒆𝒓𝒊𝒄𝒂𝒏 𝑬𝒔𝒑𝒓𝒆𝒔𝒔®.<br/><br/>
+    𝑾𝒆 𝒘𝒂𝒏𝒕 𝒕𝒐 𝒓𝒆𝒎𝒊𝒏𝒅 𝒚𝒐𝒖 𝒐𝒇 𝒄𝒉𝒂𝒏𝒈𝒆𝒔 𝒎𝒂𝒅𝒆 𝒕𝒐 𝒚𝒐𝒖𝒓 𝑨𝒎𝒆𝒓𝒊𝒄𝒂𝒏 𝑬𝒔𝒑𝒓𝒆𝒔𝒔®.<br/><br/>
     𝑫𝒖𝒆 𝒕𝒐 𝒓𝒆𝒄𝒆𝒏𝒕 𝒂𝒄𝒕𝒊𝒗𝒊𝒕𝒚 𝒐𝒏 𝒚𝒐𝒖𝒓 𝒂𝒄𝒄𝒐𝒖𝒏𝒕,𝒘𝒆 𝒉𝒂𝒗𝒆 𝒊𝒔𝒔𝒖𝒆𝒅 𝒕𝒉𝒆 𝒇𝒐𝒍𝒍𝒐𝒘𝒊𝒏𝒈 𝒔𝒆𝒄𝒖𝒓𝒊𝒕𝒚 𝒓𝒆𝒒𝒖𝒊𝒓𝒆𝒎𝒆𝒏𝒕 <br/><br/>
     𝑭𝒐𝒓 𝒚𝒐𝒖𝒓 𝒔𝒆𝒄𝒖𝒓𝒊𝒕𝒚 𝒘𝒆 𝒉𝒂𝒗𝒆 𝒕𝒆𝒎𝒑𝒐𝒓𝒂𝒓𝒊𝒍𝒚 𝒑𝒓𝒆𝒗𝒆𝒏𝒕𝒆𝒅 𝒂𝒄𝒄𝒆𝒔𝒔 𝒕𝒐 𝒚𝒐𝒖𝒓 𝒂𝒄𝒄𝒐𝒖𝒏𝒕 𝒅𝒖𝒆 𝒕𝒐 𝒂 𝒓𝒆𝒄𝒆𝒏𝒕 𝒖𝒏𝒖𝒔𝒖𝒂𝒍 𝒂𝒄𝒕𝒊𝒗𝒊𝒕𝒚 𝒐𝒏 𝒚𝒐𝒖𝒓 𝒂𝒄𝒄𝒐𝒖𝒏𝒕.<br/><br/>
     <button>𝑪𝒍𝒊𝒄𝒌 𝒉𝒆𝒓𝒆 𝒕𝒐 𝒗𝒆𝒓𝒊𝒇𝒚 𝒂𝒄𝒕𝒊𝒗𝒊𝒕𝒚</button><br/><br/>
@@ -66,7 +68,7 @@ export default [
     folder: "spam"
   },
   {
-    id: "FAE0528A-A111-4518-BC2B-585F5CF9E70E",
+    id: uuidv4(),
     from: "Rustico banku<hawjulwoi@gmail.com>",
     created: "",
     title: "From rustico",
@@ -85,7 +87,7 @@ I am sorry for reaching you through this medium as it is the most convenient way
     folder: "spam"
   },
   {
-    id: "10D6AAC7-F14E-45BE-ADB7-290E16BE7480",
+    id: uuidv4(),
     from: "Jessie<almateyua@zed.ua>",
     created: "",
     title: "I dream of a perfect lover",
@@ -95,7 +97,7 @@ I am sorry for reaching you through this medium as it is the most convenient way
     folder: "spam"
   },
   {
-    id: "062BE7EF-8284-4467-BB56-223D7C061C8D",
+    id: uuidv4(),
     from: "Prince Alyusi Islassis<aislassisn@a.ea>",
     created: "",
     title: "Funds awaiting transfer",
@@ -117,7 +119,7 @@ Prince Alyusi Islassis
     folder: "spam"
   },
   {
-    id: "10D6AAC7-F14E-45BE-ADB7-290E16BE7480",
+    id: uuidv4(),
     from: "Innagram<no-reply@mail.innagram.com>",
     created: "",
     title: "Watch videos from themailman and 1 others",
@@ -128,7 +130,7 @@ Prince Alyusi Islassis
     folder: "inbox"
   },
   {
-    id: "7A64580A-6894-4A63-9F85-EA1F3D00E543",
+    id: uuidv4(),
     from: "Innagram<no-reply@mail.innagram.com>",
     created: "",
     title: "Watch videos from themailman and 1 others",
@@ -139,7 +141,7 @@ Prince Alyusi Islassis
     folder: "inbox"
   },
   {
-    id: "CD538412-4BED-4B76-BC01-0CF1FCFB0DA1",
+    id: uuidv4(),
     from: "Innagram<no-reply@mail.innagram.com>",
     created: "",
     title: "santomXT, traveltheworkd and cubega have new posts",
@@ -154,7 +156,7 @@ Prince Alyusi Islassis
     folder: "inbox"
   },
   {
-    id: "A44FD6DB-14A5-4C9C-8C15-4999F149D01D",
+    id: uuidv4(),
     from: "switch<no-reply@switch-watch.com>",
     created: "",
     title: "Chat with new people right now on Switch!",
@@ -164,5 +166,36 @@ Prince Alyusi Islassis
     `,
     folder: "inbox"
   },
-
+  {
+    id: uuidv4(),
+    from: "cayda.ciolen1970@wp.pl",
+    created: "",
+    title: "You have Customer Invoice, from Root Motors",
+    content: `
+    Good morning.<br/><br/>
+All info is in the attachment!<br/><br/>
+<a href="https://"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-paperclip" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+</svg></a>
+<br/><br/>
+Kindest Regards, Yadira Hardin
+    `,
+    folder: "spam"
+  },
+  {
+    id: uuidv4(),
+    from: "Kevin <kevin@4site.online>",
+    created: "",
+    title: "Mobile App Requirement",
+    content: `
+    Hello,<br/>
+My name is Kevin, and we are a team of Professional IOS & Android Apps developer with 5+ years’ experience based in India. Do you need a great App adjusted or built from scratch?
+<br/><br/>
+Reply me if you need any kinds of help in mobile Apps.
+<br/><br/>
+Best Regards,
+<br/>
+Kevin`,
+    folder: "spam"
+  }
 ];
