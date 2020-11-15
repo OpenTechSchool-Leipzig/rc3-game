@@ -197,5 +197,19 @@ Best Regards,
 <br/>
 Kevin`,
     folder: "spam"
+  },
+  {
+    id: uuidv4(),
+    from: "Christian Elstner <info@evirlo.com>",
+    created: "",
+    title: "Olli Hoeness nutzt Live Sendung um Bombe platzen zu lassen!",
+    content: `
+    Olli Hoeness berichtet Live im Doppelpass, wie jeder Deutsche ähnlich viel verdienen kann, wie die Profis in der Bundesliga.<br/><br/>
+    FC Bayern Legende Olli Hoeness nutzte wieder mal eine Live Sendung, um eine Bombe platzen zu lassen und machte jeden Deutschen selbst dafür verantwortlich, wenn sie durch Corona Zeiten in finanzielle Schwierigkeiten geraten sind.<br/><br/>
+    <a href="https://">Link</a><br/><br/>
+    Olli Hoeness erschien vergangenes Wochenende Live im Doppelpass und sollte eigentlich über die Bundesliga sprechen. Doch beim Thema Gehälter und Corona Krise platzte ihm der Kragen. Er könne das "jammern" der Deutschen nicht mehr hören. Schließlich sei es doch bekannt, dass sein Freund und Investor Frank Thelen vor wenigen Wochen in der Sendung "hart aber fair" eine neue App vorstellte. Dabei kündigte er eine neue "Kapital-Gesetzeslücke" an, von der er sagt, dass sie jeden innerhalb von 3-4 Monaten in einen Millionär verwandeln kann. Thelen forderte damals alle Deutsche auf, diese großartige Gelegenheit zu nutzen, bevor die Großbanken sie für immer schließen.`,
+    folder: "spam"
   }
 ];
+
+
