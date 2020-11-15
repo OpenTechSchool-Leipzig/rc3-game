@@ -1,22 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@200;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@200;400;700&display=swap');
 
 body {
   background: #300348;
 }
 
 .introduction {
-  margin-top: 20vh;
+  margin-top: 30vh;
 text-align: center;
 color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Grenze Gotisch', cursive;
-font-weight: 500;
+font-weight: 700;
 }
 
 p {
 font-family: 'Grenze Gotisch', cursive;
-font-weight: 500;
+font-weight: 400;
 font-size: 18px;
+}
+
+p.light {
+  font-weight: 200;
+}
+
+#continue-btn {
+  display:none;
 }
