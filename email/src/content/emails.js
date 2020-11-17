@@ -1,21 +1,56 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
+import footbook from "@/assets/footbook.png";
 
 export default [
   {
     id: uuidv4(),
     from: "Footbook",
     created: "",
-    title: "Karsten Meißner shared a post.",
-    content: "Karsten Meißner shared a post.",
+    title: "Lewie Campbell posted an update",
+    content: `
+      <div style="width: 500px; margin: 0 auto;">
+        <header style="border-bottom: 1px solid #efefef; padding: 20px 0 20px 0;">
+          <img src="${footbook}" width="30" height="30"/><span style="color: #0084ff; margin-left: 10px; font-weight: 500; font-size: 20px; line-height: 20px; vertical-align:middle;">Footbook</span>
+        </header>
+        <div style="padding: 15px; margin-top: 20px; background-color: #ECF3FF; border:solid 1px #E5E5E5; border-radius:4px;">
+          <b>Lewie Campbell</b> posted an update.
+          <br/>
+          <br/>
+          <button style="color: #fff; background-color: #0084ff; border:solid 1px #E5E5E5;border-radius:4px; font-weight: 600; padding: 10px 30px 10px 30px;">View Status</button>
+        </div>
+        <div style="border:solid 1px #E5E5E5; border-radius:4px; padding:14px 15px 14px 15px; margin-top: 20px;">
+        Cory Bryant, Lesley Rowland and 22 others reacted to this.
+        </div>
+        <div style="border-top: 1px solid #efefef; margin-top:60px; font-size:10px; color:#aaa; padding-top:10px">
+        If you don't want to receive these emails from Footbook in the future, please unsubscribe.<br/>
+        To help keep your account secure, please don't forward this email.
+        </div>
+      </div>
+    `,
     folder: "inbox"
   },
   {
     id: uuidv4(),
     from: "Footbook",
     created: "",
-    title: "Anna Kauert invited you to Sunny Art opening",
-    content:
-      "Anna Kauert invited you to Sunny Art opening",
+    title: "Marcelina May shared Baran Vang's post",
+    content: `
+    <div style="width: 500px; margin: 0 auto;">
+      <header style="border-bottom: 1px solid #efefef; padding: 20px 0 20px 0;">
+        <img src="${footbook}" width="30" height="30"/><span style="color: #0084ff; margin-left: 10px; font-weight: 500; font-size: 20px; line-height: 20px; vertical-align:middle;">Footbook</span>
+      </header>
+      <div style="padding: 15px; margin-top: 20px; background-color: #ECF3FF; border:solid 1px #E5E5E5; border-radius:4px;">
+        <b>Marcelina May</b> shared <a href="">Baran Vang's</a> post.
+        <br/>
+        <br/>
+        <button style="color: #fff; background-color: #0084ff; border:solid 1px #E5E5E5; border-radius:4px; font-weight: 600; padding: 10px 30px 10px 30px;">View</button>
+      </div>
+      <div style="border-top: 1px solid #efefef; margin-top:60px; font-size:10px; color:#aaa; padding-top:10px">
+        If you don't want to receive these emails from Footbook in the future, please unsubscribe.<br/>
+        To help keep your account secure, please don't forward this email.
+        </div>
+    </div>
+  `,
     folder: "inbox"
   },
   {
@@ -123,7 +158,7 @@ Prince Alyusi Islassis
     from: "Innagram<no-reply@mail.innagram.com>",
     created: "",
     title: "Watch videos from themailman and 1 others",
-    content:`
+    content: `
       <a href="https://">Open Innagram</a><br/><br/>
       You have 1 notification you not have seen.
     `,
@@ -134,7 +169,7 @@ Prince Alyusi Islassis
     from: "Innagram<no-reply@mail.innagram.com>",
     created: "",
     title: "Watch videos from themailman and 1 others",
-    content:`
+    content: `
       Follow Julia Anden, Paul Newname and others you know to see their photos and videos.
       <a href="https://">Open Innagram</a><br/><br/>
     `,
@@ -145,7 +180,7 @@ Prince Alyusi Islassis
     from: "Innagram<no-reply@mail.innagram.com>",
     created: "",
     title: "santomXT, traveltheworkd and cubega have new posts",
-    content:`
+    content: `
     Catch Up on Innagram<br/><br/>
     See what's new, fun and inspired from the accounts you follow.<br/><br/>
       <a href="https://">See what's new</a><br/><br/>
@@ -160,7 +195,7 @@ Prince Alyusi Islassis
     from: "switch<no-reply@switch-watch.com>",
     created: "",
     title: "Chat with new people right now on Switch!",
-    content:`
+    content: `
     <h1>Most popular channels right now!</h1>
     Don't miss these top streamers.
     `,
@@ -211,5 +246,3 @@ Kevin`,
     folder: "spam"
   }
 ];
-
-
