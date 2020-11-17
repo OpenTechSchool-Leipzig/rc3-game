@@ -22,6 +22,8 @@
 </template>
 
 <script>
+import audio from "@/assets/incoming-email.wav";
+
 const delay = (milliseconds) => {
   return new Promise((resolve) => {
     setTimeout(resolve, milliseconds);
@@ -38,6 +40,7 @@ export default {
     return {
       modalShow: false,
       stopIncomingEmails: false,
+      audio: new Audio(audio),
     };
   },
   async mounted() {
@@ -62,7 +65,11 @@ export default {
       if (incomingEmailCount > 0) {
         const email = this.$store.state.incomingEmails[0];
         this.$store.commit("addIncomingEmail", email);
-        this.modalShow = true;
+
+        if (!this.modalShow) {
+          this.modalShow = true;
+          this.audio.play();
+        }
       }
       if (incomingEmailCount > 1) {
         await delay(randomNumber());
