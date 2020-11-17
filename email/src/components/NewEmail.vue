@@ -29,7 +29,7 @@ const delay = (milliseconds) => {
 };
 
 const randomNumber = () => {
-  return Math.floor(Math.random() * (5000 - 3000) + 3000);
+  return Math.floor(Math.random() * (10000 - 3000) + 3000);
 };
 
 export default {
