@@ -1,5 +1,8 @@
 <template>
-  <li @click="handleClick" :class="{ selected: isSelected, unread: isUnread }">
+  <li
+    @click="handleClick"
+    :class="{ selected: isSelected, unread: isUnread, new: isIncoming }"
+  >
     <b-row no-gutters>
       <b-col cols="1">
         <b-form-checkbox name="checkbox-1"> </b-form-checkbox>
@@ -28,6 +31,9 @@ export default {
     isUnread: function() {
       return !this.$store.state.readEmails.includes(this.email.id);
     },
+    isIncoming: function() {
+      return this.email.incoming;
+    },
   },
   methods: {
     handleClick: function() {
@@ -49,6 +55,10 @@ li {
 
   &:nth-child(2n) {
     background-color: rgba(0, 0, 0, 0.01);
+  }
+
+  &.new {
+    background-color: rgba(23, 162, 184, 0.4);
   }
 
   &.selected,

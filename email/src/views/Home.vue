@@ -1,25 +1,29 @@
 <template>
-  <b-container fluid class="home">
+  <div>
     <Nav />
-    <b-row no-gutters style="margin-left: 265px;">
-      <b-col cols="4" class="vertical-border scroll-bar">
-        <EmailList />
-      </b-col>
-      <b-col class="vertical-border scroll-bar">
-        <EmailView />
-      </b-col>
-    </b-row>
-  </b-container>
+    <b-container fluid class="home">
+      <b-row no-gutters style="margin-left: 265px;">
+        <b-col cols="4" class="vertical-border scroll-bar">
+          <EmailList />
+        </b-col>
+        <b-col class="vertical-border scroll-bar">
+          <EmailView />
+        </b-col>
+      </b-row>
+    </b-container>
+    <NewEmail />
+  </div>
 </template>
 
 <script>
 import Nav from "@/components/Nav.vue";
 import EmailList from "@/components/EmailList.vue";
 import EmailView from "@/components/EmailView.vue";
+import NewEmail from "@/components/NewEmail.vue";
 
 export default {
   name: "Home",
-  components: { Nav, EmailList, EmailView },
+  components: { Nav, EmailList, EmailView, NewEmail },
 };
 </script>
 

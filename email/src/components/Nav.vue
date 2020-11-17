@@ -98,6 +98,7 @@ export default {
 <style scoped lang="scss">
 .sidebar {
   position: relative;
+  z-index: 50;
 
   header {
     height: 60px;
