@@ -1,6 +1,6 @@
 # You got mail!
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dfab78c3-1d5a-4026-948c-3cee3939d4ff/deploy-status)](https://app.netlify.com/sites/gifted-hodgkin-c43264/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c3962767-a744-4095-9faa-27308923d308/deploy-status)](https://app.netlify.com/sites/gifted-hodgkin-c43264/deploys)
 
 Page can be found at: https://gifted-hodgkin-c43264.netlify.app
 
