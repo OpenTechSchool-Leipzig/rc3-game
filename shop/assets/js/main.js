@@ -12,6 +12,43 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
     $(document).ready(function() {
 
         /* ---------------------------------------------- /*
+         * Checkout Code
+         /* ---------------------------------------------- */
+
+         var checkoutSteps = {
+            couponCode: false,
+            subscription: false,
+            changeSize: false,
+            address: false
+         }
+
+         $('#checkout-submit').click(() => {
+            var steps = Object.keys(checkoutSteps);
+            var done = true
+            steps.forEach(function(step) {
+                if (checkoutSteps[step] === false) {
+                    done = false;
+                    return;
+                }
+            });
+
+            $('html, body').animate({ scrollTop: 0 }, 'fast');
+            if (done) {
+                $('#checkout-success').show();
+                $('#checkout-cart').hide();
+            } else {
+                $('#checkout-error').show();
+            }
+         })
+
+         $("#checkout-apply-coupon").click(() => {
+            var coupon = $("#checkout-coupon-input").val().trim();
+            console.log(coupon);
+
+         });
+
+
+        /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
          /* ---------------------------------------------- */
 
@@ -238,23 +275,23 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
          * Video popup, Gallery
          /* ---------------------------------------------- */
 
-        $('.video-pop-up').magnificPopup({
-            type: 'iframe'
-        });
+        // $('.video-pop-up').magnificPopup({
+        //     type: 'iframe'
+        // });
 
-        $(".gallery-item").magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0,1]
-            },
-            image: {
-                titleSrc: 'title',
-                tError: 'The image could not be loaded.'
-            }
-        });
+        // $(".gallery-item").magnificPopup({
+        //     delegate: 'a',
+        //     type: 'image',
+        //     gallery: {
+        //         enabled: true,
+        //         navigateByImgClick: true,
+        //         preload: [0,1]
+        //     },
+        //     image: {
+        //         titleSrc: 'title',
+        //         tError: 'The image could not be loaded.'
+        //     }
+        // });
 
 
         /* ---------------------------------------------- /*
@@ -349,31 +386,31 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
          * Youtube video background
          /* ---------------------------------------------- */
 
-        $(function(){
-            $(".video-player").mb_YTPlayer();
-        });
+        // $(function(){
+        //     $(".video-player").mb_YTPlayer();
+        // });
 
-        $('#video-play').click(function(event) {
-            event.preventDefault();
-            if ($(this).hasClass('fa-play')) {
-                $('.video-player').playYTP();
-            } else {
-                $('.video-player').pauseYTP();
-            }
-            $(this).toggleClass('fa-play fa-pause');
-            return false;
-        });
+        // $('#video-play').click(function(event) {
+        //     event.preventDefault();
+        //     if ($(this).hasClass('fa-play')) {
+        //         $('.video-player').playYTP();
+        //     } else {
+        //         $('.video-player').pauseYTP();
+        //     }
+        //     $(this).toggleClass('fa-play fa-pause');
+        //     return false;
+        // });
 
-        $('#video-volume').click(function(event) {
-            event.preventDefault();
-            if ($(this).hasClass('fa-volume-off')) {
-                $('.video-player').YTPUnmute();
-            } else {
-                $('.video-player').YTPMute();
-            }
-            $(this).toggleClass('fa-volume-off fa-volume-up');
-            return false;
-        });
+        // $('#video-volume').click(function(event) {
+        //     event.preventDefault();
+        //     if ($(this).hasClass('fa-volume-off')) {
+        //         $('.video-player').YTPUnmute();
+        //     } else {
+        //         $('.video-player').YTPMute();
+        //     }
+        //     $(this).toggleClass('fa-volume-off fa-volume-up');
+        //     return false;
+        // });
 
 
         /* ---------------------------------------------- /*
