@@ -15,6 +15,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
          * Checkout Code
          /* ---------------------------------------------- */
 
+         var couponCode = "t0iletpaper";
          var checkoutSteps = {
             couponCode: false,
             subscription: false,
@@ -22,6 +23,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             address: false
          }
 
+         // proceed to checkout submission
          $('#checkout-submit').click(() => {
             var steps = Object.keys(checkoutSteps);
             var done = true
@@ -41,11 +43,25 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             }
          })
 
-         $("#checkout-apply-coupon").click(() => {
-            var coupon = $("#checkout-coupon-input").val().trim();
+         // applying coupon code
+         $("#checkout-apply-coupon").click(function() {
+            var coupon = $("#checkout-coupon-input").val().trim().toLowerCase();
             console.log(coupon);
-
+            if (coupon === couponCode) {
+                $('#checkout-cart-coupon').show();
+                $("#checkout-coupon-input").val(couponCode);
+                $('#checkout-coupon-wrong').hide();
+                $('#checkout-coupon-success').show();
+            } else {
+                $('#checkout-coupon-success').hide();
+                $('#checkout-coupon-wrong').show();
+            }
          });
+
+         $("#checkout-coupon-input").focus(function() {
+            $('#checkout-coupon-wrong').hide();
+            $("#checkout-coupon-input").val("");
+         })
 
 
         /* ---------------------------------------------- /*
