@@ -21,7 +21,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             subscription: false,
             changeSize: false,
             address: false
-         }
+         };
 
          // proceed to checkout submission
          $('#checkout-submit').click(() => {
@@ -41,7 +41,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             } else {
                 $('#checkout-error').show();
             }
-         })
+         });
 
          // applying coupon code
          $("#checkout-apply-coupon").click(function() {
@@ -61,8 +61,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
          $("#checkout-coupon-input").focus(function() {
             $('#checkout-coupon-wrong').hide();
             $("#checkout-coupon-input").val("");
-         })
-
+         });
 
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
