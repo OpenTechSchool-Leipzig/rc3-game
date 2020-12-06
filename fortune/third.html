@@ -10,19 +10,9 @@
 <body>
   <a href="index.html">back to start</a>
   <div class="introduction">
-<p>Please place both your hands on the screen and select "Continue".</p>
+<p>Choose a card</p>
 
-<div class="hand-wrapper">
 
-<div class="hand-container">
-<img src="img/left-hand.png" alt="outline of a left hand" class="hands"/>
-</div>
-
-<div class="hand-container">
-<img src="img/right-hand.png" alt="outline of a left hand" class="hands"/>
-</div>
-
-</div>
 
 
 <input type="button" value="Continue" id="submit-hands">
@@ -41,7 +31,7 @@
 
   $(document).ready(function() {
     $("#submit-hands").click(function() {
-    $("#action-tab").html("<p class='light'>Very well.</p>").hide().fadeIn();
+    $("#action-tab").html("<p class='light'>good</p>").hide().fadeIn();
     $("#continue-btn").fadeIn()
   });
   } );

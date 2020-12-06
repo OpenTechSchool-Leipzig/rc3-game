@@ -10,15 +10,14 @@
 <body>
   <a href="index.html">back to start</a>
   <div class="introduction">
-<p>First, tell me your birthday</p>
+<p>First, find out your IP-Adress</p>
+<input type="button" value="get IP" id="generate-IP">
 
-<form>
-<input type="date" id="birthday" name="birthday">
+<div id="IP-field">
+</div>
 
-<input type="button" value="Submit" id="submit-bday">
+<input type="button" value="Submit IP" id="submit-IP">
 
-
-</form>
 
 <div id="action-tab">
 </div>
@@ -29,10 +28,22 @@
 </div>
 </body>
   <script>
+  // code for generating an IP
+  //   var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255));
+  // console.log(ip);
 
   $(document).ready(function() {
-    $("#submit-bday").click(function() {
-    $("#action-tab").html("<p class='light'>I see. Mercury in retrograde.</p>").hide().fadeIn();
+    $("#generate-IP").click(function() {
+         var ip = (Math.floor(Math.random() * 255) + 1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255));
+         console.log(ip);
+             $("#IP-field").html("<p class='light'>Your IP is<br/>" + ip + "</p>").hide().fadeIn();
+             $("#generate-IP").hide();
+             $("#submit-IP").fadeIn()
+  });
+
+    $("#submit-IP").click(function() {
+    $("#submit-IP").hide();
+    $("#action-tab").html("<p class='light'>You are going to buy toilet paper.<br>Oh, that already happened?<br>My bad, I accidentally looked in the past.<br>I'll take care to look into the future from now on.</p>").hide().fadeIn();
     $("#continue-btn").fadeIn()
   });
   } );
