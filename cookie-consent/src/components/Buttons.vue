@@ -1,11 +1,8 @@
 <template>
   <div class="consent__buttons">
-    <button type="reset" @click="resetSubmitBtnPos">
-      Only functional cookies
-    </button>
     <button
       type="submit"
-      class="consent__buttons-submit"
+      class="consent__button consent__button--submit"
       @mouseover="moveButtonAway"
       :style="{
         position: this.position,
@@ -14,6 +11,13 @@
       }"
     >
       Confirm my choices
+    </button>
+    <button
+      type="reset"
+      class="consent__button consent__button--reset"
+      @click="resetSubmitBtnPos"
+    >
+      Only functional cookies
     </button>
   </div>
 </template>
@@ -42,36 +46,68 @@ export default class Buttons extends Vue {
 
   moveButtonAway(e: MouseEvent) {
     this.position = "fixed";
-    this.posX = e.clientX - 130;
-    this.posY = e.clientY - 55;
+    this.posX = e.clientX - 130; // - 130;
+    this.posY = e.clientY - 55; //- 55;
+    console.log(`X [${e.clientX}|${this.posX}]`);
+    console.log(`Y [${e.clientY}|${this.posY}]`);
   }
 
   resetSubmitBtnPos() {
     this.position = "static";
-    this.posX = -1;
-    this.posY = -1;
   }
 }
 </script>
 
 <style scoped lang="scss">
-.consent__buttons {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px 0;
-  background-color: #804d00;
+.consent {
+  &__buttons {
+    position: sticky;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 20px;
+    background-color: #009900;
+	  white-space: nowrap;
+    z-index: 2;
 
-  display: flex;
-  justify-content: flex-start;
-
-  &-submit {
-    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    @media (min-width: 450px) {
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 
-  > * {
-    margin-left: 10px;
+  &__button {
+    margin-right: 10px;
+    padding: 8px 10px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    width: 100%;
+
+    @media (min-width: 450px) {
+      width: auto;
+    }
+
+    &--submit {
+      color: #fff;
+      background-color: #009900;
+    }
+
+    &--reset {
+      color: #009900;
+      background-color: #fff;
+      margin-top: 15px;
+
+      @media (min-width: 450px) {
+        margin-top: 0;
+      }
+    }
   }
 }
 </style>

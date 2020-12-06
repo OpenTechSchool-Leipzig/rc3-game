@@ -29,15 +29,30 @@ export default class CookieConsent extends Vue {}
 
 <style scoped lang="scss">
 .consent {
-  background-color: #ffffcc;
-  border-radius: 20px;
+  background-color: #fff;
   padding: 20px;
-  color: #804d00;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #009900;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #009900;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-shadow: 0 0 20px lightgray;
+
+  height: 90vh;
+  /*
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  width: 800px;
+  max-width: 90%;
+  transform: translateX(-50%);
+  */
 
   &__title {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: -5px 5px 5px lightgray;
     margin-top: 0;
   }
 }

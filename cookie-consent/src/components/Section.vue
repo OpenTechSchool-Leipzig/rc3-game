@@ -53,7 +53,7 @@ export default class Section extends Vue {
   &-title {
     font-size: 20px;
     font-weight: bold;
-    margin-top: 0;
+    margin-top: 24px;
   }
 }
 </style>

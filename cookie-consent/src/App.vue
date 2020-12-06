@@ -20,5 +20,8 @@ export default class App extends Vue {}
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  padding: 10px;
+  // position: relative;
 }
 </style>
