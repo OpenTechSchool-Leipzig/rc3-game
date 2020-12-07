@@ -55,3 +55,22 @@ p.light {
   opacity: 0.5;
 
 }
+
+.pixel {
+  background-color: white;
+  width:1px;
+  height:1px;
+  margin: 20px;
+}
+
+.pixel:hover {
+  background-color: blue;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height:20vh;
+  justify-content: space-evenly;
+}
