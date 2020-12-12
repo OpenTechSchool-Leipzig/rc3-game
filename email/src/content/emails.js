@@ -4,7 +4,7 @@ import footbook from "@/assets/footbook.png";
 export default [
   {
     id: uuidv4(),
-    from: "Footbook",
+    from: "Footbook<notification@footbook.com>",
     created: "",
     title: "Lewie Campbell posted an update",
     content: `
@@ -31,7 +31,7 @@ export default [
   },
   {
     id: uuidv4(),
-    from: "Footbook",
+    from: "Footbook<notification@footbook.com>",
     created: "",
     title: "Marcelina May shared Baran Vang's post",
     content: `
@@ -200,6 +200,24 @@ Prince Alyusi Islassis
     Don't miss these top streamers.
     `,
     folder: "inbox"
+  },
+  {
+    id: uuidv4(),
+    from: "Unknown<questions@answers.consulting>",
+    created: "",
+    title: "The starlink is in retrograde",
+    content: `
+    <i>were you ever wondering what brought you here?
+    how the internet affects your life and how you can evolve with it?
+    why do all these things always happen to YOU?
+    there is a way to find all the answers you are looking for.
+    let a fortune teller show you the way.
+    get your first reading for free!!
+    </i>
+    <a href="https://01010001100010010011011011011110.100101.online/">click here!</a>
+    `
+    ,
+    folder: "spam"
   },
   {
     id: uuidv4(),

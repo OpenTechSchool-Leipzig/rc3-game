@@ -92,7 +92,6 @@ export default [
     title: "🧚 Your order was handled and is prepared for shipping",
     content: `
     Dear customer,<br/><br/>
-    <br/><br/>
     we are now preparing your order for shipping.
     <br/><br/>
     Your Tpapir team`,
