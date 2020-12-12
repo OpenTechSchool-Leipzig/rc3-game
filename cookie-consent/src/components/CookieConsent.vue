@@ -3,8 +3,8 @@
     <h1 class="consent__title">Cookie Settings</h1>
 
     <p class="consent__intro">
-      This website uses cookies and similar technolgies to save and process
-      personal user data.
+      We respect your privacy! Nevertheless, this website uses cookies and
+      similar technolgies to save and process personal user data.
     </p>
     <Section
       title="Obviously, we need your consent for the following functional cookies in order to keep this page running"
@@ -18,7 +18,7 @@
         'Saving and processing session information'
       ]"
     />
-    <form action="/" method="get">
+    <form action="https://hardcore-borg-141238.netlify.app/" method="get">
       <Section
         title="For a better shopping experence, our following marketing partners will collect personal data to make you custom offers you can't ignore. (Dont't worry if you forget to check our marketing cookies! They will track any trace you leave in the internet anyways.)"
         :items="[

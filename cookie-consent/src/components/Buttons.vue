@@ -45,15 +45,27 @@ export default class Buttons extends Vue {
   }
 
   moveButtonAway(e: MouseEvent) {
+    if (this.allCheckboxesAreChecked()) {
+      return;
+    }
+
     this.position = "fixed";
-    this.posX = e.clientX - 130; // - 130;
-    this.posY = e.clientY - 55; //- 55;
-    console.log(`X [${e.clientX}|${this.posX}]`);
-    console.log(`Y [${e.clientY}|${this.posY}]`);
+    this.posX = e.clientX - 130;
+    this.posY = e.clientY - 55;
   }
 
   resetSubmitBtnPos() {
     this.position = "static";
+  }
+
+  allCheckboxesAreChecked() {
+    const checkboxes = Array.from(
+      document.querySelectorAll(".checkbox__input input")
+    );
+    const allCheckboxesAreChecked: boolean = checkboxes.every(
+      (checkbox: Element) => (checkbox as HTMLInputElement).checked
+    );
+    return allCheckboxesAreChecked;
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <section class="consent__section">
-    <h2 class="consent__section-title foo">{{ title }}</h2>
+    <h2 class="consent__section-title">{{ title }}</h2>
     <div v-for="(itemTitle, i) in items" :key="i">
       <Item :label="itemTitle" :isDisabled="disableChoices" />
     </div>
