@@ -12,6 +12,10 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <script type="module">
+      import { reset_tracking_session, track_event } from "https://rc3-game-backend.herokuapp.com/tracker/tracker.js";
+      track_event("pageload");
+    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>
