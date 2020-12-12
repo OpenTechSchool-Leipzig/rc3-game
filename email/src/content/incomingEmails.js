@@ -10,7 +10,7 @@ export default [
     Dear customer,<br/><br/>
     thank you for your registration at Tpapir.
     <br/><br>
-    Your user name is: ineedtoiletpaper0349
+    Your username is: <i>ineedtoiletpaper0349</i>
     <br/><br>
     Please take good care of your credentials.
     <br/><br>
@@ -62,7 +62,9 @@ export default [
     title: "💁‍♀️ Your order was processed",
     content: `
     Dear customer,<br/><br/>
+    your order was processed.
     <br/><br/>
+    You can expect to hear back from us as soon as your order is ready for packaging.
     <br/><br/>
     Your Tpapir team`,
     folder: "inbox",
@@ -75,7 +77,9 @@ export default [
     title: "📦 Your order was scheduled for packaging",
     content: `
     Dear customer,<br/><br/>
+    your order is was scheduled and will be packed soon.
     <br/><br/>
+    If you have any questions please reach out.
     <br/><br/>
     Your Tpapir team`,
     folder: "inbox",
@@ -89,6 +93,7 @@ export default [
     content: `
     Dear customer,<br/><br/>
     <br/><br/>
+    we are now preparing your order for shipping.
     <br/><br/>
     Your Tpapir team`,
     folder: "inbox",
