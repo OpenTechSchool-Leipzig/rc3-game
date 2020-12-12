@@ -1,31 +1,9 @@
 <template>
   <section class="consent__section">
     <h2 class="consent__section-title foo">{{ title }}</h2>
-
-    <Item
-      label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
-      :isDisabled="disableChoices"
-    />
-    <Item
-      label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
-      :isDisabled="disableChoices"
-    />
-    <Item
-      label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
-      :isDisabled="disableChoices"
-    />
-    <Item
-      label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
-      :isDisabled="disableChoices"
-    />
-    <Item
-      label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
-      :isDisabled="disableChoices"
-    />
-    <Item
-      label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
-      :isDisabled="disableChoices"
-    />
+    <div v-for="(itemTitle, i) in items" :key="i">
+      <Item :label="itemTitle" :isDisabled="disableChoices" />
+    </div>
   </section>
 </template>
 
@@ -41,6 +19,8 @@ import Item from "./Item.vue";
 export default class Section extends Vue {
   @Prop({ required: true })
   title!: string;
+  @Prop({ required: true })
+  items!: Array<string>;
   @Prop({ default: false })
   disableChoices!: boolean;
 }
