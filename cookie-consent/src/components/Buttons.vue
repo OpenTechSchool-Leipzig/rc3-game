@@ -81,6 +81,7 @@ export default class Buttons extends Vue {
     right: 0;
     margin-left: -20px;
     margin-right: -20px;
+    margin-bottom: -20px;
     padding: 20px;
     background-color: $primary-color;
     white-space: nowrap;
