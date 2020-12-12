@@ -58,7 +58,9 @@ export default class Buttons extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+@import "../styles/_variables.scss";
+
 .consent {
   &__buttons {
     position: sticky;
@@ -68,14 +70,14 @@ export default class Buttons extends Vue {
     margin-left: -20px;
     margin-right: -20px;
     padding: 20px;
-    background-color: #009900;
-	  white-space: nowrap;
+    background-color: $primary-color;
+    white-space: nowrap;
     z-index: 2;
 
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    
+
     @media (min-width: 450px) {
       flex-wrap: nowrap;
       justify-content: flex-end;
@@ -84,10 +86,11 @@ export default class Buttons extends Vue {
   }
 
   &__button {
+    font-size: 1rem;
     margin-right: 10px;
     padding: 8px 10px;
     text-decoration: none;
-    border: 2px solid #fff;
+    border: 2px solid $tertiary-color;
     width: 100%;
 
     @media (min-width: 450px) {
@@ -95,13 +98,13 @@ export default class Buttons extends Vue {
     }
 
     &--submit {
-      color: #fff;
-      background-color: #009900;
+      color: $tertiary-color;
+      background-color: $primary-color;
     }
 
     &--reset {
-      color: #009900;
-      background-color: #fff;
+      color: $primary-color;
+      background-color: $tertiary-color;
       margin-top: 15px;
 
       @media (min-width: 450px) {

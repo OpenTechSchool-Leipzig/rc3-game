@@ -1,5 +1,3 @@
-console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55');
-
 /* ---------------------------------------------- /*
  * Preloader
  /* ---------------------------------------------- */
@@ -18,13 +16,15 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
          var couponCode = "t0iletpaper";
          var checkoutSteps = {
             couponCode: false,
-            subscription: false,
-            changeSize: false,
-            address: false
+            removeSubscription: false,
+            removeTravel: false,
+            removeGift: false,
+            removeProtection: false
          };
 
          // proceed to checkout submission
          $('#checkout-submit').click(() => {
+             console.log(checkoutSteps)
             var steps = Object.keys(checkoutSteps);
             var done = true
             steps.forEach(function(step) {
@@ -46,12 +46,12 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
          // applying coupon code
          $("#checkout-apply-coupon").click(function() {
             var coupon = $("#checkout-coupon-input").val().trim().toLowerCase();
-            console.log(coupon);
             if (coupon === couponCode) {
                 $('#checkout-cart-coupon').show();
                 $("#checkout-coupon-input").val(couponCode);
                 $('#checkout-coupon-wrong').hide();
                 $('#checkout-coupon-success').show();
+                checkoutSteps.couponCode = true;
             } else {
                 $('#checkout-coupon-success').hide();
                 $('#checkout-coupon-wrong').show();
@@ -62,6 +62,41 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             $('#checkout-coupon-wrong').hide();
             $("#checkout-coupon-input").val("");
          });
+
+         // remove item from checkout
+         let subtotalAmount = 15500;
+
+         $(".pr-remove a").click(function() {
+             const id = $(this).data("id");
+             $(`#${id}`).hide({duration: 400});
+
+             if (id === "travel") {
+                subtotalAmount = subtotalAmount - 680;
+                checkoutSteps.removeTravel = true;
+             }
+             if (id === "subscription") {
+                subtotalAmount = subtotalAmount - 11000;
+                checkoutSteps.removeSubscription = true;
+             }
+             if (id === "gift") {
+                subtotalAmount = subtotalAmount - 480;
+                checkoutSteps.removeGift = true;
+             }
+             if (id === "protection") {
+                subtotalAmount = subtotalAmount - 1200;
+                checkoutSteps.removeProtection = true;
+             }
+
+            $(".sub-total-replace").each(function() {
+                $(this).text(`€${$.number( subtotalAmount/100, 2, ',', '.')}`);
+            })
+            $(".total-replace").each(function() {
+                const total = subtotalAmount + 380
+                $(this).text(`€${$.number( total/100, 2, ',', '.')}`);
+            })
+         })
+
+
 
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
