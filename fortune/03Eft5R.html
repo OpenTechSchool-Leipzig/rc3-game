@@ -12,15 +12,23 @@
   <div class="introduction">
 <p>Choose a card</p>
 
-
-
-
-<input type="button" value="Continue" id="submit-hands">
-
-
-
-<div id="action-tab">
+<div class="card-container">
+<div class="card" style="left: 0px;" id="card-01"></div>
+<div class="card" style="left: 50px;" id="card-02"></div>
+<div class="card" style="left: 100px;" id="card-03"></div>
+<div class="card" style="left: 150px;" id="card-04"></div>
+<div class="card" style="left: 200px;" id="card-05"></div>
+<div class="card" style="left: 250px;" id="card-06"></div>
+<div class="card" style="left: 300px;" id="card-07"></div>
 </div>
+<!-- <br><br>
+<input type="button" value="Continue" id="submit-hands">
+<br><br> -->
+<div id="card-output"></div>
+
+
+<!-- <div id="action-tab">
+</div> -->
 
 <a href="04Ztgv7.html"><input type="button" id="continue-btn" value="Continue"></a>
 
@@ -30,6 +38,30 @@
   <script>
 
   $(document).ready(function() {
+        $("#card-01").click(function() {
+              $("#card-output").html("<img src='img/death.jpg'>");
+          });
+        $("#card-02").click(function() {
+                $("#card-output").html("<img src='img/strength.jpg'>");
+          });
+        $("#card-03").click(function() {
+                $("#card-output").html("<img src='img/the-empress.jpg'>");
+          });
+          $("#card-04").click(function() {
+                $("#card-output").html("<img src='img/the-tower.jpg'>");
+            });
+          $("#card-05").click(function() {
+                  $("#card-output").html("<img src='img/the-magician.jpg'>");
+            });
+          $("#card-06").click(function() {
+                  $("#card-output").html("<img src='img/the-devil.jpg'>");
+            });
+          $("#card-07").click(function() {
+                    $("#card-output").html("<img src='img/the-fool.jpg'>");
+              });
+
+
+
     $("#submit-hands").click(function() {
     $("#action-tab").html("<p class='light'>good</p>").hide().fadeIn();
     $("#submit-hands").hide()
