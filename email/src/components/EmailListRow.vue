@@ -33,13 +33,13 @@ export default {
     },
     isIncoming: function() {
       return this.email.incoming;
-    },
+    }
   },
   methods: {
     handleClick: function() {
       this.$store.commit("selectEmail", this.email);
-    },
-  },
+    }
+  }
 };
 </script>
 

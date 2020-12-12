@@ -61,7 +61,7 @@ export default {
   name: "EmailView",
   data() {
     return {
-      modalShow: false,
+      modalShow: false
     };
   },
   computed: {
@@ -77,13 +77,13 @@ export default {
       } else {
         return "";
       }
-    },
+    }
   },
   methods: {
     openAttachment: function() {
       this.$bvModal.show("attachment-modal");
-    },
-  },
+    }
+  }
 };
 </script>
 

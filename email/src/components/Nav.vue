@@ -87,7 +87,7 @@ export default {
   name: "Nav",
   data: function() {
     return {
-      logo,
+      logo
     };
   },
   methods: {
@@ -98,11 +98,11 @@ export default {
       return this.$store.state.selectedFolder === folder;
     },
     getCount: function(folder) {
-      return this.$store.getters.unreadEmails.filter((email) => {
+      return this.$store.getters.unreadEmails.filter(email => {
         return folder === email.folder;
       }).length;
-    },
-  },
+    }
+  }
 };
 </script>
 
