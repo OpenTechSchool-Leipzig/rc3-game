@@ -11,7 +11,8 @@
   >
     <div class="px-3 pt-5">
       <header>
-        Welcome back!
+        <img :src="logo" width="30" height="30" />
+        <b>Spambox</b>
       </header>
       <section>
         <b-button variant="danger" block>New Message</b-button>
@@ -61,7 +62,7 @@
           </b-button>
         </p>
       </section>
-      <section>
+      <!-- <section>
         <p>
           <b-link to="about" class="text-white">Contacts</b-link>
         </p>
@@ -70,15 +71,25 @@
         <p>
           <b-link to="about" class="text-white">Settings</b-link>
         </p>
-      </section>
-      <img src="https://media.giphy.com/media/12Up26fqbaU45W/giphy.gif" />
+      </section> -->
+      <img
+        class="check-email"
+        src="https://media.giphy.com/media/12Up26fqbaU45W/giphy.gif"
+      />
     </div>
   </b-sidebar>
 </template>
 
 <script>
+import logo from "@/assets/logo.png";
+
 export default {
   name: "Nav",
+  data: function() {
+    return {
+      logo,
+    };
+  },
   methods: {
     selectFolder: function(folder) {
       return this.$store.commit("selectFolder", folder);
@@ -103,6 +114,7 @@ export default {
   header {
     height: 60px;
     text-align: center;
+    text-transform: uppercase;
   }
 
   section {
@@ -120,7 +132,11 @@ export default {
     }
   }
 
-  img {
+  header img {
+    margin-right: 10px;
+  }
+
+  img.check-email {
     position: absolute;
     width: 100%;
     bottom: 0;
