@@ -75,6 +75,7 @@ export default class Item extends Vue {
   &__input {
     display: grid;
     grid-template-areas: "checkbox";
+    padding-top: 2px;
 
     > * {
       grid-area: checkbox;

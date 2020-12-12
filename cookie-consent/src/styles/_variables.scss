@@ -1,3 +1,26 @@
 $primary-color: #800040; // #660033;
 $secondary-color: #16163b;
 $tertiary-color: #bfbfbf; // #e6e6e6;
+
+@font-face { 
+	font-family: "Bloddy";
+  src: url("~@/assets/fonts/BLOODY-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face { 
+	font-family: "Source Sans";
+  src: url("~@/assets/fonts/sourcesanspro-regular-webfont.woff") format("woff"),
+        url("~@/assets/fonts/sourcesanspro-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-bloody {
+  font-family: "Bloddy", Arial, Helvetica, sans-serif;
+}
+
+@mixin font-source-sans {
+  font-family: "Source Sans", Arial, Helvetica, sans-serif;
+}

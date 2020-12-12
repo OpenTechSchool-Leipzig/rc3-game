@@ -31,10 +31,10 @@ export default class CookieConsent extends Vue {}
 @import "../styles/_variables.scss";
 
 .consent {
+  @include font-source-sans;
   background-color: $secondary-color;
   padding: 20px;
   color: $primary-color;
-  font-family: Arial, Helvetica, sans-serif;
   border: 2px solid $primary-color;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -50,10 +50,11 @@ export default class CookieConsent extends Vue {}
   */
 
   &__title {
-    font-size: 28px;
+    @include font-bloody;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 2px;
-    text-shadow: 0 0 5px $tertiary-color;
+    text-shadow: 0 0 16px $tertiary-color;
     margin-top: 0;
   }
 }

@@ -86,6 +86,7 @@ export default class Buttons extends Vue {
   }
 
   &__button {
+    font-size: 1rem;
     margin-right: 10px;
     padding: 8px 10px;
     text-decoration: none;
