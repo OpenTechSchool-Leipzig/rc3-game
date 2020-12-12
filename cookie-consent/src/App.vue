@@ -20,16 +20,17 @@ export default class App extends Vue {}
 @import "./styles/_variables.scss";
 
 body {
+  background-color: $secondary-color;
   padding: 0;
   margin: 0;
 }
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   padding: 30px;
   margin: 0;
-  background-color: $secondary-color;
+
   // position: relative;
 }
 </style>

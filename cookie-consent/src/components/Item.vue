@@ -24,7 +24,7 @@
           </svg>
         </span>
       </span>
-      <span class="checkbox__label">{{ label }}d</span>
+      <span class="checkbox__label">{{ label }}</span>
     </label>
   </div>
 </template>
