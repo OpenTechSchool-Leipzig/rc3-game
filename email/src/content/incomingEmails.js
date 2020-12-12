@@ -3,34 +3,34 @@ import { v4 as uuidv4 } from "uuid";
 export default [
   {
     id: uuidv4(),
-    from: "TPAPIR<info@tapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "Successful registration at TPAPIR",
     content: `
     Dear customer,<br/><br/>
     thank you for your registration at TPAPIR.
     <br/><br>
-    Your TAPIR team`,
+    Your TPAPIR team`,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "TPAPIR<info@tapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "We received your order",
     content: `
     Dear customer,<br/><br/>
     we are happy to announce that we received your order.
     <br/><br/>
-    Your TAPIR team
+    Your TPAPIR team
     `,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "TPAPIR<info@tapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "Thank you for your order",
     content: `
@@ -46,53 +46,53 @@ export default [
     <br/><br/>
     Payment: online by credit card
     <br/><br/>
-    Your TAPIR team
+    Your TPAPIR team
     `,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "TPAPIR<info@tapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "Your order is beeing processed",
     content: `
     Dear customer,<br/><br/>
     <br/><br/>
     <br/><br/>
-    Your TAPIR team`,
+    Your TPAPIR team`,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "TPAPIR<info@tapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "Your order was scheduled for packaging",
     content: `
     Dear customer,<br/><br/>
     <br/><br/>
     <br/><br/>
-    Your TAPIR team`,
+    Your TPAPIR team`,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "TPAPIR<info@tapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "Your order was handled and is prepared for shipping",
     content: `
     Dear customer,<br/><br/>
     <br/><br/>
     <br/><br/>
-    Your TAPIR team`,
+    Your TPAPIR team`,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "TPAPIR<info@tapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "Critical Security Notification",
     content: `
@@ -107,7 +107,7 @@ export default [
     Please be assured that we will do everything we can to prevent this from happening again.
     <br/><br/>
     <br/><br/>
-    Your TAPIR team`,
+    Your TPAPIR team`,
     folder: "inbox",
     incoming: true
   }

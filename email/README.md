@@ -6,7 +6,7 @@ Page can be found at: https://gifted-hodgkin-c43264.netlify.app
 
 # Story
 
-The user is redirected from the Tapir shop to this mail client. She can browse the email while being distracted from incoming mails. The incoming mails are notifying her about her recent purchase at Tapir. The last incoming email has a hint to look for a fortune teller email. The inbox contains a bunch of attention seeking emails from social media platforms and the spam folder contains common spam emails. The fortune teller email can be found in the spam folder and will send the user to the next level page. All other emails will bring the user to some random page in the internet.
+The user is redirected from the Tpapir shop to this mail client. She can browse the email while being distracted from incoming mails. The incoming mails are notifying her about her recent purchase at Tpapir. The last incoming email has a hint to look for a fortune teller email. The inbox contains a bunch of attention seeking emails from social media platforms and the spam folder contains common spam emails. The fortune teller email can be found in the spam folder and will send the user to the next level page. All other emails will bring the user to some random page in the internet.
 
 # Project setup
 
