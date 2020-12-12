@@ -28,7 +28,11 @@ export default class Section extends Vue {
 
 <style lang="scss">
 .consent__section {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 1.5rem;
+  }
 
   &-title {
     font-size: 1.5rem;

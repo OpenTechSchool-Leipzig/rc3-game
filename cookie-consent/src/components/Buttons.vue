@@ -1,24 +1,33 @@
 <template>
   <div class="consent__buttons">
     <button
-      type="submit"
-      class="consent__button consent__button--submit"
-      @mouseover="moveButtonAway"
-      :style="{
-        position: this.position,
-        top: `${this.posY}px`,
-        left: `${this.posX}px`
-      }"
+      type="button"
+      class="consent__button consent__button--random"
+      @click="selectRandomCookies"
     >
-      Confirm my choices
+      Random cookies
     </button>
-    <button
-      type="reset"
-      class="consent__button consent__button--reset"
-      @click="resetSubmitBtnPos"
-    >
-      Only functional cookies
-    </button>
+    <div>
+      <button
+        type="submit"
+        class="consent__button consent__button--submit"
+        @mouseover="moveButtonAway"
+        :style="{
+          position: this.position,
+          top: `${this.posY}px`,
+          left: `${this.posX}px`
+        }"
+      >
+        Confirm my choices
+      </button>
+      <button
+        type="reset"
+        class="consent__button consent__button--reset"
+        @click="resetSubmitBtnPos"
+      >
+        Only functional cookies
+      </button>
+    </div>
   </div>
 </template>
 
@@ -58,7 +67,21 @@ export default class Buttons extends Vue {
     this.position = "static";
   }
 
+  selectRandomCookies() {
+    // TODO Refactor
+    const checkboxes = Array.from(
+      document.querySelectorAll("form .checkbox__input input")
+    );
+
+    checkboxes.forEach((checkbox: Element) => {
+      if (Math.random() > 0.6) {
+        this.toggleCheckbox(checkbox as HTMLInputElement);
+      }
+    });
+  }
+
   allCheckboxesAreChecked() {
+    // TODO Refactor
     const checkboxes = Array.from(
       document.querySelectorAll(".checkbox__input input")
     );
@@ -67,11 +90,24 @@ export default class Buttons extends Vue {
     );
     return allCheckboxesAreChecked;
   }
+
+  toggleCheckbox(checkbox: HTMLInputElement) {
+    checkbox.checked ? (checkbox.checked = false) : (checkbox.checked = true);
+  }
 }
 </script>
 
 <style lang="scss">
 @import "../styles/_variables.scss";
+
+@keyframes font-color-blink {
+  from {
+    color: $tertiary-color;
+  }
+  to {
+    color: $primary-color;
+  }
+}
 
 .consent {
   &__buttons {
@@ -93,7 +129,7 @@ export default class Buttons extends Vue {
 
     @media (min-width: 450px) {
       flex-wrap: nowrap;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
     }
   }
@@ -122,6 +158,19 @@ export default class Buttons extends Vue {
 
       @media (min-width: 450px) {
         margin-top: 0;
+      }
+    }
+
+    &--random {
+      color: $primary-color;
+      background-color: $primary-color;
+      border: none;
+
+      &:hover {
+        color: $tertiary-color;
+        animation-name: font-color-blink;
+        animation-duration: 20ms;
+        animation-iteration-count: infinite;
       }
     }
   }

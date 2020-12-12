@@ -77,6 +77,8 @@ export default class CookieConsent extends Vue {}
   background-color: $secondary-color;
   padding: 20px;
   height: 80vh;
+  max-width: 1200px;
+  margin: auto;
   overflow-x: hidden;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
