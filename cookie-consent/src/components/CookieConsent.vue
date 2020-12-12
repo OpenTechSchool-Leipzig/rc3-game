@@ -27,18 +27,19 @@ import Buttons from "./Buttons.vue";
 export default class CookieConsent extends Vue {}
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+@import "../styles/_variables.scss";
+
 .consent {
-  background-color: #fff;
+  background-color: $secondary-color;
   padding: 20px;
-  color: #009900;
+  color: $primary-color;
   font-family: Arial, Helvetica, sans-serif;
-  border: 2px solid #009900;
+  border: 2px solid $primary-color;
   overflow-x: hidden;
   overflow-y: scroll;
-  box-shadow: 0 0 20px lightgray;
 
-  height: 90vh;
+  height: 80vh;
   /*
   position: absolute;
   top: 5vh;
@@ -52,7 +53,7 @@ export default class CookieConsent extends Vue {}
     font-size: 28px;
     font-weight: bold;
     letter-spacing: 2px;
-    text-shadow: -5px 5px 5px lightgray;
+    text-shadow: 0 0 5px $tertiary-color;
     margin-top: 0;
   }
 }

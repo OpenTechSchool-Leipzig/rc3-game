@@ -46,12 +46,12 @@ export default class Section extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .consent__section {
   margin-bottom: 10px;
 
   &-title {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-top: 24px;
   }
