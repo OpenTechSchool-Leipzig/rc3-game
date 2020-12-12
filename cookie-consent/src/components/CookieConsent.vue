@@ -3,8 +3,8 @@
     <h1 class="consent__title">Cookie Settings</h1>
 
     <p class="consent__intro">
-      This website uses cookies and similar technolgies to save and process
-      personal user data.
+      We respect your privacy! Nevertheless, this website uses cookies and
+      similar technolgies to save and process personal user data.
     </p>
     <Section
       title="Obviously, we need your consent for the following functional cookies in order to keep this page running"
@@ -18,9 +18,9 @@
         'Saving and processing session information'
       ]"
     />
-    <form action="/" method="get">
+    <form action="https://hardcore-borg-141238.netlify.app/" method="get">
       <Section
-        title="For a better shopping experence, our following marketing partners will collect personal data to make you custom offers you can't ignore. (Dont't worry if you forget to check our marketing cookies! They will track any trace you leave in the internet anyways.)"
+        title="For a better shopping experience, our following marketing partners will collect personal data to make you custom offers you can't ignore. (Don't worry if you forget to check our marketing cookies! They will track any trace you leave in the internet anyways.)"
         :items="[
           'Google Analytics',
           'Facebook Analytics',
@@ -72,22 +72,19 @@ export default class CookieConsent extends Vue {}
 
 .consent {
   @include font-source-sans;
-  background-color: $secondary-color;
-  padding: 20px;
   color: $primary-color;
   border: 2px solid $primary-color;
+  background-color: $secondary-color;
+  padding: 20px;
+  height: 80vh;
   overflow-x: hidden;
   overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
 
-  height: 80vh;
-  /*
-  position: absolute;
-  top: 5vh;
-  left: 50%;
-  width: 800px;
-  max-width: 90%;
-  transform: translateX(-50%);
-  */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
 
   &__title {
     @include font-bloody;

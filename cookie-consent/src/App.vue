@@ -28,9 +28,7 @@ body {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 30px;
+  padding: 2.5rem;
   margin: 0;
-
-  // position: relative;
 }
 </style>
