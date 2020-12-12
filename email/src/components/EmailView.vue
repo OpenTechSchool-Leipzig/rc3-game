@@ -6,6 +6,23 @@
           {{ email.from }}
         </p>
         <p class="text-info font-weight-light">{{ email.title }}</p>
+        <p v-if="attachment" class="attachment-link">
+          <a @click="openAttachment">
+            <svg
+              width="20px"
+              viewBox="0 0 16 16"
+              class="bi bi-paperclip"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"
+              />
+            </svg>
+            Attachment
+          </a>
+        </p>
       </header>
       <p class="content" v-html="email.content"></p>
     </div>
@@ -24,15 +41,47 @@
         />
       </svg>
     </div>
+    <b-modal
+      id="attachment-modal"
+      v-model="modalShow"
+      hide-footer
+      no-close-on-backdrop
+      no-close-on-esc
+    >
+      <template #modal-title>Attachment</template>
+      <p class="modal-image">
+        <img :src="attachmentImage" />
+      </p>
+    </b-modal>
   </div>
 </template>
 
 <script>
 export default {
   name: "EmailView",
+  data() {
+    return {
+      modalShow: false,
+    };
+  },
   computed: {
     email: function() {
       return this.$store.state.selectedEmail;
+    },
+    attachment: function() {
+      return this.email && this.$store.state.selectedEmail.attachment;
+    },
+    attachmentImage: function() {
+      if (this.attachment) {
+        return require(`@/assets/${this.attachment}`);
+      } else {
+        return "";
+      }
+    },
+  },
+  methods: {
+    openAttachment: function() {
+      this.$bvModal.show("attachment-modal");
     },
   },
 };
@@ -51,6 +100,15 @@ export default {
     max-width: 700px;
   }
 
+  .attachment-link {
+    font-size: 14px;
+    margin-top: 10px;
+
+    a {
+      cursor: pointer;
+    }
+  }
+
   p {
     margin: 0;
   }
@@ -60,6 +118,13 @@ export default {
     font-size: 120px;
     margin: 200px auto;
     opacity: 0.05;
+  }
+}
+
+.modal-image {
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 </style>
