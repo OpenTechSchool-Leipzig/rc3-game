@@ -40,7 +40,7 @@ export default [
         <img src="${footbook}" width="30" height="30"/><span style="color: #0084ff; margin-left: 10px; font-weight: 500; font-size: 20px; line-height: 20px; vertical-align:middle;">Footbook</span>
       </header>
       <div style="padding: 15px; margin-top: 20px; background-color: #ECF3FF; border:solid 1px #E5E5E5; border-radius:4px;">
-        <b>Marcelina May</b> shared <a href="">Baran Vang's</a> post.
+        <b>Marcelina May</b> shared <a href="https://00100000011100011111111110111111.100101.online">Baran Vang's</a> post.
         <br/>
         <br/>
         <button style="color: #fff; background-color: #0084ff; border:solid 1px #E5E5E5; border-radius:4px; font-weight: 600; padding: 10px 30px 10px 30px;">View</button>
@@ -82,7 +82,7 @@ export default [
 ●𝐏𝐀𝐈𝐍? 𝐈𝐌𝐌𝐔𝐍𝐈𝐓𝐘? 𝐒𝐋𝐄𝐄𝐏? 𝐓𝐇𝐈𝐒 𝐏𝐑𝐎𝐃𝐔𝐂𝐓 𝐂𝐀𝐍 𝐇𝐄𝐋𝐏 𝐓𝐇𝐄𝐌 𝐀𝐋𝐋!<br/>
 ●𝐋𝐞𝐠𝐚𝐥 𝐢𝐧 𝐚𝐥𝐥 𝟓𝟎 𝐬𝐭𝐚𝐭𝐞𝐬 𝐚𝐧𝐝 𝐢𝐧 𝐨𝐯𝐞𝐫 𝟒𝟎 𝐜𝐨𝐮𝐧𝐭𝐫𝐢𝐞𝐬
     </p>
-    <a href="https://">𝐆𝐈𝐕𝐄 𝐘𝐎𝐔𝐑𝐒𝐄𝐋𝐅 𝐓𝐇𝐄 𝐒𝐓𝐀𝐑 𝐓𝐑𝐄𝐀𝐓𝐌𝐄𝐍𝐓</a>
+    <a href="https://00100011111100011111111110110000.100101.online">𝐆𝐈𝐕𝐄 𝐘𝐎𝐔𝐑𝐒𝐄𝐋𝐅 𝐓𝐇𝐄 𝐒𝐓𝐀𝐑 𝐓𝐑𝐄𝐀𝐓𝐌𝐄𝐍𝐓</a>
   </div>
     `,
     folder: "spam"
@@ -127,7 +127,7 @@ I am sorry for reaching you through this medium as it is the most convenient way
     created: "",
     title: "I dream of a perfect lover",
     content: `
-    Hoya, dear! I am willing to meet a great bed partner and IĞ²Ğ‚â„¢m twenty three yrs. Do you wish to have the idea how many things I am able to put inside my bump? Perhaps you might want to assist me in this? Contact me faster, my figure needs a warm fingers! My images and details are in my profile! need to follow this <a href="https://">link</a>
+    Hoya, dear! I am willing to meet a great bed partner and IĞ²Ğ‚â„¢m twenty three yrs. Do you wish to have the idea how many things I am able to put inside my bump? Perhaps you might want to assist me in this? Contact me faster, my figure needs a warm fingers! My images and details are in my profile! need to follow this <a href="https://00100011111100011111100010111111.100101.online">link</a>
     `,
     folder: "spam"
   },
@@ -159,7 +159,7 @@ Prince Alyusi Islassis
     created: "",
     title: "Watch videos from themailman and 1 others",
     content: `
-      <a href="https://">Open Innagram</a><br/><br/>
+      <a href="https://00100011111100011111111110110011.100101.online">Open Innagram</a><br/><br/>
       You have 1 notification you not have seen.
     `,
     folder: "inbox"
@@ -171,7 +171,7 @@ Prince Alyusi Islassis
     title: "Watch videos from themailman and 1 others",
     content: `
       Follow Julia Anden, Paul Newname and others you know to see their photos and videos.
-      <a href="https://">Open Innagram</a><br/><br/>
+      <a href="https://00100011111100011111111110111111.100101.online">Open Innagram</a><br/><br/>
     `,
     folder: "inbox"
   },
@@ -183,10 +183,10 @@ Prince Alyusi Islassis
     content: `
     Catch Up on Innagram<br/><br/>
     See what's new, fun and inspired from the accounts you follow.<br/><br/>
-      <a href="https://">See what's new</a><br/><br/>
+      <a href="https://00100011111101111111111110111111.100101.online">See what's new</a><br/><br/>
       <b>Discover More<b/><br/>
       The more accounts you follow, the more great stuff you'll see in your feed.<br/><br/>
-      <a href="https://">Find Accounts to follow</a><br/><br/
+      <a href="https://00111011111100011111111110111111.100101.online">Find Accounts to follow</a><br/><br/
     `,
     folder: "inbox"
   },
@@ -215,8 +215,7 @@ Prince Alyusi Islassis
     get your first reading for free!!
     </i>
     <a href="https://01010001100010010011011011011110.100101.online/">click here!</a>
-    `
-    ,
+    `,
     folder: "spam"
   },
   {
@@ -257,7 +256,7 @@ Kevin`,
     content: `
     Olli Hoeness berichtet Live im Doppelpass, wie jeder Deutsche ähnlich viel verdienen kann, wie die Profis in der Bundesliga.<br/><br/>
     FC Bayern Legende Olli Hoeness nutzte wieder mal eine Live Sendung, um eine Bombe platzen zu lassen und machte jeden Deutschen selbst dafür verantwortlich, wenn sie durch Corona Zeiten in finanzielle Schwierigkeiten geraten sind.<br/><br/>
-    <a href="https://">Link</a><br/><br/>
+    <a href="https://00100011111100011110011110111111.100101.online">Link</a><br/><br/>
     Olli Hoeness erschien vergangenes Wochenende Live im Doppelpass und sollte eigentlich über die Bundesliga sprechen. Doch beim Thema Gehälter und Corona Krise platzte ihm der Kragen. Er könne das "jammern" der Deutschen nicht mehr hören. Schließlich sei es doch bekannt, dass sein Freund und Investor Frank Thelen vor wenigen Wochen in der Sendung "hart aber fair" eine neue App vorstellte. Dabei kündigte er eine neue "Kapital-Gesetzeslücke" an, von der er sagt, dass sie jeden innerhalb von 3-4 Monaten in einen Millionär verwandeln kann. Thelen forderte damals alle Deutsche auf, diese großartige Gelegenheit zu nutzen, bevor die Großbanken sie für immer schließen.`,
     folder: "spam"
   }
