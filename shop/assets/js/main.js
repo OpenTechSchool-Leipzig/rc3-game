@@ -64,7 +64,7 @@
          });
 
          // remove item from checkout
-         let subtotalAmount = 15500;
+         let subtotalAmount = 15510;
 
          $(".pr-remove a").click(function() {
              const id = $(this).data("id");
