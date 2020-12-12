@@ -13,5 +13,9 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script type="module">
+      import { reset_tracking_session, track_event } from "https://rc3-game-backend.herokuapp.com/tracker/tracker.js";
+      track_event("pageload");
+    </script>
   </body>
 </html>
