@@ -24,8 +24,8 @@
 <script>
 import audio from "@/assets/incoming-email.wav";
 
-const delay = milliseconds => {
-  return new Promise(resolve => {
+const delay = (milliseconds) => {
+  return new Promise((resolve) => {
     setTimeout(resolve, milliseconds);
   });
 };
@@ -40,7 +40,7 @@ export default {
     return {
       modalShow: false,
       stopIncomingEmails: false,
-      audio: new Audio(audio)
+      audio: new Audio(audio),
     };
   },
   async mounted() {
@@ -55,6 +55,7 @@ export default {
     onClickCtrl: function() {
       this.stopIncomingEmails = true;
       this.$bvModal.hide("new-message-modal");
+      this.$store.commit("addAllIncomingEmails");
     },
     createIncomingEmail: async function() {
       if (this.stopIncomingEmails) {
@@ -75,8 +76,8 @@ export default {
         await delay(randomNumber());
         this.createIncomingEmail();
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

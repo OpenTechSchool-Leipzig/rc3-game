@@ -40,6 +40,10 @@ const store = new Vuex.Store({
     addIncomingEmail(state, email) {
       state.emails.unshift(email);
       state.incomingEmails.shift();
+    },
+    addAllIncomingEmails(state) {
+      state.emails = state.incomingEmails.reverse().concat(emails);
+      state.incomingEmails = [];
     }
   },
   getters: {
