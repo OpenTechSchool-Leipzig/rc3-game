@@ -20,7 +20,7 @@
         ]"
       />
       <form
-        action="https://hardcore-borg-141238.netlify.app/"
+        action="https://10010011000001000010001000011011.100101.online/"
         method="get"
         @submit.prevent="showThankYouPopup"
       >
