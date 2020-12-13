@@ -16,7 +16,7 @@ export default [
           <b>Lewie Campbell</b> posted an update.
           <br/>
           <br/>
-          <button style="color: #fff; background-color: #0084ff; border:solid 1px #E5E5E5;border-radius:4px; font-weight: 600; padding: 10px 30px 10px 30px;">View Status</button>
+          <a href="https://10100000011100011111111110111111.100101.online" target="_blank"><button style="color: #fff; background-color: #0084ff; border:solid 1px #E5E5E5;border-radius:4px; font-weight: 600; padding: 10px 30px 10px 30px;">View Status</button></a>
         </div>
         <div style="border:solid 1px #E5E5E5; border-radius:4px; padding:14px 15px 14px 15px; margin-top: 20px;">
         Cory Bryant, Lesley Rowland and 22 others reacted to this.
@@ -40,10 +40,10 @@ export default [
         <img src="${footbook}" width="30" height="30"/><span style="color: #0084ff; margin-left: 10px; font-weight: 500; font-size: 20px; line-height: 20px; vertical-align:middle;">Footbook</span>
       </header>
       <div style="padding: 15px; margin-top: 20px; background-color: #ECF3FF; border:solid 1px #E5E5E5; border-radius:4px;">
-        <b>Marcelina May</b> shared <a href="https://00100000011100011111111110111111.100101.online">Baran Vang's</a> post.
+        <b>Marcelina May</b> shared <a href="https://00100000011100011111111110111111.100101.online" target="_blank">Baran Vang's</a> post.
         <br/>
         <br/>
-        <button style="color: #fff; background-color: #0084ff; border:solid 1px #E5E5E5; border-radius:4px; font-weight: 600; padding: 10px 30px 10px 30px;">View</button>
+        <a href="https://10100100011100011111111110111111.100101.online" target="_blank"><button style="color: #fff; background-color: #0084ff; border:solid 1px #E5E5E5; border-radius:4px; font-weight: 600; padding: 10px 30px 10px 30px;">View</button></a>
       </div>
       <div style="border-top: 1px solid #efefef; margin-top:60px; font-size:10px; color:#aaa; padding-top:10px">
         If you don't want to receive these emails from Footbook in the future, please unsubscribe.<br/>
@@ -59,7 +59,7 @@ export default [
     created: "",
     title: "Avoid suspension",
     content:
-      "Your Micosoft account has been compromised. You must update it immediately or your account will be closed. Click <a href=''>here</a> to update.",
+      "Your Micosoft account has been compromised. You must update it immediately or your account will be closed. Click <a href='https://10100100011100011111000110111111.100101.online' target='_blank'>here</a> to update.",
     folder: "spam"
   },
   {
@@ -82,7 +82,7 @@ export default [
 ●𝐏𝐀𝐈𝐍? 𝐈𝐌𝐌𝐔𝐍𝐈𝐓𝐘? 𝐒𝐋𝐄𝐄𝐏? 𝐓𝐇𝐈𝐒 𝐏𝐑𝐎𝐃𝐔𝐂𝐓 𝐂𝐀𝐍 𝐇𝐄𝐋𝐏 𝐓𝐇𝐄𝐌 𝐀𝐋𝐋!<br/>
 ●𝐋𝐞𝐠𝐚𝐥 𝐢𝐧 𝐚𝐥𝐥 𝟓𝟎 𝐬𝐭𝐚𝐭𝐞𝐬 𝐚𝐧𝐝 𝐢𝐧 𝐨𝐯𝐞𝐫 𝟒𝟎 𝐜𝐨𝐮𝐧𝐭𝐫𝐢𝐞𝐬
     </p>
-    <a href="https://00100011111100011111111110110000.100101.online">𝐆𝐈𝐕𝐄 𝐘𝐎𝐔𝐑𝐒𝐄𝐋𝐅 𝐓𝐇𝐄 𝐒𝐓𝐀𝐑 𝐓𝐑𝐄𝐀𝐓𝐌𝐄𝐍𝐓</a>
+    <a href="https://00100011111100011111111110110000.100101.online" target="_blank">𝐆𝐈𝐕𝐄 𝐘𝐎𝐔𝐑𝐒𝐄𝐋𝐅 𝐓𝐇𝐄 𝐒𝐓𝐀𝐑 𝐓𝐑𝐄𝐀𝐓𝐌𝐄𝐍𝐓</a>
   </div>
     `,
     folder: "spam"
@@ -96,7 +96,7 @@ export default [
     𝑾𝒆 𝒘𝒂𝒏𝒕 𝒕𝒐 𝒓𝒆𝒎𝒊𝒏𝒅 𝒚𝒐𝒖 𝒐𝒇 𝒄𝒉𝒂𝒏𝒈𝒆𝒔 𝒎𝒂𝒅𝒆 𝒕𝒐 𝒚𝒐𝒖𝒓 𝑨𝒎𝒆𝒓𝒊𝒄𝒂𝒏 𝑬𝒔𝒑𝒓𝒆𝒔𝒔®.<br/><br/>
     𝑫𝒖𝒆 𝒕𝒐 𝒓𝒆𝒄𝒆𝒏𝒕 𝒂𝒄𝒕𝒊𝒗𝒊𝒕𝒚 𝒐𝒏 𝒚𝒐𝒖𝒓 𝒂𝒄𝒄𝒐𝒖𝒏𝒕,𝒘𝒆 𝒉𝒂𝒗𝒆 𝒊𝒔𝒔𝒖𝒆𝒅 𝒕𝒉𝒆 𝒇𝒐𝒍𝒍𝒐𝒘𝒊𝒏𝒈 𝒔𝒆𝒄𝒖𝒓𝒊𝒕𝒚 𝒓𝒆𝒒𝒖𝒊𝒓𝒆𝒎𝒆𝒏𝒕 <br/><br/>
     𝑭𝒐𝒓 𝒚𝒐𝒖𝒓 𝒔𝒆𝒄𝒖𝒓𝒊𝒕𝒚 𝒘𝒆 𝒉𝒂𝒗𝒆 𝒕𝒆𝒎𝒑𝒐𝒓𝒂𝒓𝒊𝒍𝒚 𝒑𝒓𝒆𝒗𝒆𝒏𝒕𝒆𝒅 𝒂𝒄𝒄𝒆𝒔𝒔 𝒕𝒐 𝒚𝒐𝒖𝒓 𝒂𝒄𝒄𝒐𝒖𝒏𝒕 𝒅𝒖𝒆 𝒕𝒐 𝒂 𝒓𝒆𝒄𝒆𝒏𝒕 𝒖𝒏𝒖𝒔𝒖𝒂𝒍 𝒂𝒄𝒕𝒊𝒗𝒊𝒕𝒚 𝒐𝒏 𝒚𝒐𝒖𝒓 𝒂𝒄𝒄𝒐𝒖𝒏𝒕.<br/><br/>
-    <button>𝑪𝒍𝒊𝒄𝒌 𝒉𝒆𝒓𝒆 𝒕𝒐 𝒗𝒆𝒓𝒊𝒇𝒚 𝒂𝒄𝒕𝒊𝒗𝒊𝒕𝒚</button><br/><br/>
+    <a href="https://00100011111100011111111110101000.100101.online" target="_blank"><button>𝑪𝒍𝒊𝒄𝒌 𝒉𝒆𝒓𝒆 𝒕𝒐 𝒗𝒆𝒓𝒊𝒇𝒚 𝒂𝒄𝒕𝒊𝒗𝒊𝒕𝒚</button></a><br/><br/>
     𝑭𝒐𝒓 𝒚𝒐𝒖𝒓 𝒑𝒓𝒐𝒕𝒆𝒄𝒕𝒊𝒐𝒏, 𝒕𝒓𝒂𝒏𝒔𝒂𝒄𝒕𝒊𝒐𝒏𝒔 𝒐𝒏 𝒚𝒐𝒖𝒓 𝒂𝒄𝒄𝒐𝒖𝒏𝒕 𝒎𝒂𝒚 𝒃𝒆 𝒍𝒊𝒎𝒊𝒕𝒆𝒅 𝒖𝒏𝒕𝒊𝒍 𝒚𝒐𝒖 𝒂𝒓𝒆 𝒂𝒃𝒍𝒆 𝒕𝒐 𝒗𝒆𝒓𝒊𝒇𝒚 𝒕𝒉𝒆 𝒂𝒄𝒕𝒊𝒗𝒊𝒕𝒚. 𝑾𝒆 𝒓𝒆𝒂𝒍𝒊𝒛𝒆 𝒕𝒉𝒂𝒕 𝒕𝒉𝒊𝒔 𝒑𝒓𝒆𝒄𝒂𝒖𝒕𝒊𝒐𝒏 𝒎𝒂𝒚 𝒄𝒂𝒖𝒔𝒆 𝒚𝒐𝒖 𝒔𝒐𝒎𝒆 𝒊𝒏𝒄𝒐𝒏𝒗𝒆𝒏𝒊𝒆𝒏𝒄𝒆, 𝒉𝒐𝒘𝒆𝒗𝒆𝒓 𝒌𝒆𝒆𝒑𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒂𝒄𝒄𝒐𝒖𝒏𝒕 𝒔𝒂𝒇𝒆 𝒊𝒔 𝒐𝒏𝒆 𝒐𝒇 𝒐𝒖𝒓 𝒕𝒐𝒑 𝒑𝒓𝒊𝒐𝒓𝒊𝒕𝒊𝒆𝒔.
     <br/><br/>𝑾𝒆 𝒂𝒑𝒑𝒓𝒆𝒄𝒊𝒂𝒕𝒆 𝒚𝒐𝒖𝒓 𝒃𝒖𝒔𝒊𝒏𝒆𝒔𝒔 𝒂𝒏𝒅 𝒕𝒉𝒂𝒏𝒌 𝒚𝒐𝒖 𝒇𝒐𝒓 𝒃𝒆𝒊𝒏𝒈 𝒂 𝒗𝒂𝒍𝒖𝒆𝒅 𝒄𝒂𝒓𝒅𝒎𝒆𝒎𝒃𝒆𝒓.<br/><br/>𝑺𝒊𝒏𝒄𝒆𝒓𝒆𝒍𝒚,<br/>𝑪𝒖𝒔𝒕𝒐𝒎𝒆𝒓 𝑺𝒆𝒓𝒗𝒊𝒄𝒆
     `,
@@ -118,7 +118,7 @@ I am sorry for reaching you through this medium as it is the most convenient way
 Отношении
 (Ассоциированный l Rustico Banku (SAT TV)
 <br/><br/>
-    <button>Remplir sans tire</button>`,
+<a href="https://00100001111100011111111110101000.100101.online" target="_blank"><button>Remplir sans tire</button></a>`,
     folder: "spam"
   },
   {
@@ -127,7 +127,7 @@ I am sorry for reaching you through this medium as it is the most convenient way
     created: "",
     title: "I dream of a perfect lover",
     content: `
-    Hoya, dear! I am willing to meet a great bed partner and IĞ²Ğ‚â„¢m twenty three yrs. Do you wish to have the idea how many things I am able to put inside my bump? Perhaps you might want to assist me in this? Contact me faster, my figure needs a warm fingers! My images and details are in my profile! need to follow this <a href="https://00100011111100011111100010111111.100101.online">link</a>
+    Hoya, dear! I am willing to meet a great bed partner and IĞ²Ğ‚â„¢m twenty three yrs. Do you wish to have the idea how many things I am able to put inside my bump? Perhaps you might want to assist me in this? Contact me faster, my figure needs a warm fingers! My images and details are in my profile! need to follow this <a href="https://00100011111100011111100010111111.100101.online" target="_blank">link</a>
     `,
     folder: "spam"
   },
@@ -159,7 +159,7 @@ Prince Alyusi Islassis
     created: "",
     title: "Watch videos from themailman and 1 others",
     content: `
-      <a href="https://00100011111100011111111110110011.100101.online">Open Innagram</a><br/><br/>
+      <a href="https://00100011111100011111111110110011.100101.online" target="_blank">Open Innagram</a><br/><br/>
       You have 1 notification you not have seen.
     `,
     folder: "inbox"
@@ -171,7 +171,7 @@ Prince Alyusi Islassis
     title: "Watch videos from themailman and 1 others",
     content: `
       Follow Julia Anden, Paul Newname and others you know to see their photos and videos.
-      <a href="https://00100011111100011111111110111111.100101.online">Open Innagram</a><br/><br/>
+      <a href="https://00100011111100011111111110111111.100101.online" target="_blank">Open Innagram</a><br/><br/>
     `,
     folder: "inbox"
   },
@@ -183,10 +183,10 @@ Prince Alyusi Islassis
     content: `
     Catch Up on Innagram<br/><br/>
     See what's new, fun and inspired from the accounts you follow.<br/><br/>
-      <a href="https://00100011111101111111111110111111.100101.online">See what's new</a><br/><br/>
+      <a href="https://00100011111101111111111110111111.100101.online" target="_blank">See what's new</a><br/><br/>
       <b>Discover More<b/><br/>
       The more accounts you follow, the more great stuff you'll see in your feed.<br/><br/>
-      <a href="https://00111011111100011111111110111111.100101.online">Find Accounts to follow</a><br/><br/
+      <a href="https://00111011111100011111111110111111.100101.online" target="_blank">Find Accounts to follow</a><br/><br/
     `,
     folder: "inbox"
   },
@@ -214,7 +214,7 @@ Prince Alyusi Islassis
     let a fortune teller show you the way.
     get your first reading for free!!
     </i>
-    <a href="https://01010001100010010011011011011110.100101.online/">click here!</a>
+    <a href="https://01010001100010010011011011011110.100101.online/" target="_blank">click here!</a>
     `,
     folder: "spam"
   },
@@ -230,7 +230,7 @@ All info is in the attachment!<br/><br/>
 Kindest Regards, Yadira Hardin
     `,
     folder: "spam",
-    attachment: ""
+    attachment: "attachment-downloading.gif"
   },
   {
     id: uuidv4(),
@@ -256,7 +256,7 @@ Kevin`,
     content: `
     Olli Hoeness berichtet Live im Doppelpass, wie jeder Deutsche ähnlich viel verdienen kann, wie die Profis in der Bundesliga.<br/><br/>
     FC Bayern Legende Olli Hoeness nutzte wieder mal eine Live Sendung, um eine Bombe platzen zu lassen und machte jeden Deutschen selbst dafür verantwortlich, wenn sie durch Corona Zeiten in finanzielle Schwierigkeiten geraten sind.<br/><br/>
-    <a href="https://00100011111100011110011110111111.100101.online">Link</a><br/><br/>
+    <a href="https://00100011111100011110011110111111.100101.online" target="_blank">Link</a><br/><br/>
     Olli Hoeness erschien vergangenes Wochenende Live im Doppelpass und sollte eigentlich über die Bundesliga sprechen. Doch beim Thema Gehälter und Corona Krise platzte ihm der Kragen. Er könne das "jammern" der Deutschen nicht mehr hören. Schließlich sei es doch bekannt, dass sein Freund und Investor Frank Thelen vor wenigen Wochen in der Sendung "hart aber fair" eine neue App vorstellte. Dabei kündigte er eine neue "Kapital-Gesetzeslücke" an, von der er sagt, dass sie jeden innerhalb von 3-4 Monaten in einen Millionär verwandeln kann. Thelen forderte damals alle Deutsche auf, diese großartige Gelegenheit zu nutzen, bevor die Großbanken sie für immer schließen.`,
     folder: "spam"
   }
