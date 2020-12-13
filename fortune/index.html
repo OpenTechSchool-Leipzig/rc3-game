@@ -2,8 +2,12 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="style.css"/>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" type="text/css" href="https://www.jsdelivr.com/package/npm/bulma"/>
+  <script type="module">
+    import { load_tracking_session, track_event } from "https://00100011111100011111111110111101.100101.online/tracker/tracker.js";
+    load_tracking_session().then(() => track_event("pageload"));
+  </script>
 </head>
 <body>
   <div class="introduction">
