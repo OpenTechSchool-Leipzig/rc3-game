@@ -11,18 +11,25 @@
 <body>
   <a href="index.html">back to start</a>
   <div class="introduction">
-<p>Choose a pixel</p>
+<p>The internet is made from pixels. <br>To find out, what it has to offer for you, you have to choose a pixel. <br>Please make your choice as intuitive as possible. <br>There is no right or wrong.</p>
+<br><br><p>Please choose a pixel:</p><br>
 <!-- Generate random pixels, change color on hover, change color if clicked.  -->
 <div class="flex-container">
-<div class="pixel" id="p-1"></div>
-<div class="pixel" id="p-2"></div>
-<div class="pixel" id="p-3"></div>
+<div class="pixel"></div>
+<div class="pixel"></div>
+<div class="pixel"></div>
+<div class="pixel"></div>
+<div class="pixel"></div>
+<div class="pixel"></div>
+<div class="pixel"></div>
+<div class="pixel"></div>
+<div class="pixel"></div>
 </div>
 <div id="p-action-tab">
 </div>
 
 
-<input type="button" value="Continue" id="submit-hands">
+<input type="button" value="submit this pixel" id="submit-pixel">
 
 
 
@@ -39,19 +46,34 @@
   $(document).ready(function() {
 
     $(".pixel").click(function() {
-    $(this).css({"background-color":"yellow"});
-    $("#continue-btn").fadeIn()
+    $(".pixel").removeClass("active-pixel");
+    $(this).addClass("active-pixel");
+    $("#submit-pixel").fadeIn();
   });
 
+  // function openGate() {
+  //   $("#continue-btn").fadeIn();
+  // }
+
+  $("#submit-pixel").click(function() {
+   $("#action-tab").html("<p class='light'>Oh shoot. This is already MY favourite pixel. Please choose another one.</p>").hide().fadeIn();
+   $("#submit-pixel").attr('onClick', '$("#continue-btn").fadeIn();');
+ });
 
 
-    $("#submit-hands").click(function() {
-    $("#action-tab").html("<p class='light'>Interesting choice.</p>").hide().fadeIn();
-    $("#submit-hands").hide()
-    $("#continue-btn").fadeIn()
-  });
 
-  } );
+});
+
+
+  //
+  //   $("#submit-hands").click(function() {
+  //   $("#action-tab").html("<p class='light'>Interesting choice.</p>").hide().fadeIn();
+  //   $("#submit-hands").hide()
+  //   $("#continue-btn").fadeIn()
+  // });
+  //
+     // $("#submit-pixel").attr('onClick', 'window.location.href = "06viLn2.html"');
+  // } );
 
   </script>
 </html>

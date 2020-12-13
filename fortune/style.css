@@ -43,6 +43,15 @@ p.light {
   display:none;
 }
 
+#submit-pixel {
+  display:none;
+}
+
+
+.continue-link {
+  display:none;
+}
+
 .hand-wrapper {
 
 }
@@ -66,7 +75,11 @@ p.light {
 }
 
 .pixel:hover {
-  background-color: blue;
+  background-color: #0dbd95;
+}
+
+.active-pixel {
+  background-color: #fd83ff;
 }
 
 .flex-container {
