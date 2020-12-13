@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Popup text="Thank you very much! We value your choices!" />
     <CookieConsent />
   </div>
 </template>
@@ -7,10 +8,12 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import CookieConsent from "./components/CookieConsent.vue";
+import Popup from "./components/Popup.vue";
 
 @Component({
   components: {
-    CookieConsent
+    CookieConsent,
+    Popup
   }
 })
 export default class App extends Vue {}
@@ -30,5 +33,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding: 2.5rem;
   margin: 0;
+  @include font-source-sans;
 }
 </style>
