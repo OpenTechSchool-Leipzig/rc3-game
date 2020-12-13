@@ -1,5 +1,5 @@
 # Highscore
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/98598f84-59c5-4dce-baa4-7aef57317e02/deploy-status)](https://app.netlify.com/sites/clever-blackwell-7f4f71/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/196b027a-57fd-4b1c-8ec2-0df42d65d9b0/deploy-status)](https://app.netlify.com/sites/quirky-lalande-3f5aaf/deploys)
 
-Page can be found at: https://clever-blackwell-7f4f71.netlify.app/
+Page can be found at: https://quirky-lalande-3f5aaf.netlify.app/
