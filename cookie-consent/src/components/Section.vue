@@ -4,16 +4,21 @@
     <div v-for="(itemTitle, i) in items" :key="i">
       <Item :label="itemTitle" :isDisabled="disableChoices" />
     </div>
+    <template v-if="appendCookieRainItem">
+      <CookieRainItem />
+    </template>
   </section>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import Item from "./Item.vue";
+import Item from "./checkItem/Item.vue";
+import CookieRainItem from "./checkItem/CookieRainItem.vue";
 
 @Component({
   components: {
-    Item
+    Item,
+    CookieRainItem
   }
 })
 export default class Section extends Vue {
@@ -23,6 +28,8 @@ export default class Section extends Vue {
   items!: Array<string>;
   @Prop({ default: false })
   disableChoices!: boolean;
+  @Prop({ default: false })
+  appendCookieRainItem!: boolean;
 }
 </script>
 

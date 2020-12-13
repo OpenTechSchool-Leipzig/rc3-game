@@ -33,10 +33,7 @@
             'Twitter Analytics',
             'Cambridge Analytics'
           ]"
-        />
-        <Section
-          title="For an extraordinary surfing experience, you may want to check the following advertising cookies"
-          :items="['foo', 'bar']"
+          :appendCookieRainItem="true"
         />
         <Section
           title="Since our website is solely funded by ads, please consider to give your consent to our partners"

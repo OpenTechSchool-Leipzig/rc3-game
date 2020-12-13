@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { EventBus, CustomEvents } from "../EventBus";
+import { EventBus, CustomEvents } from "../../EventBus";
 
 @Component
 export default class Item extends Vue {
@@ -58,7 +58,7 @@ export default class Item extends Vue {
 </script>
 
 <style lang="scss">
-@import "../styles/_variables.scss";
+@import "../../styles/_variables.scss";
 
 .consent__item {
   margin-bottom: 10px;

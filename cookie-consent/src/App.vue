@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <CookieRain />
     <Popup text="Thank you very much! We value your choices!" />
     <CookieConsent />
   </div>
@@ -8,11 +9,13 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import CookieConsent from "./components/CookieConsent.vue";
+import CookieRain from "./components/CookieRain.vue";
 import Popup from "./components/Popup.vue";
 
 @Component({
   components: {
     CookieConsent,
+    CookieRain,
     Popup
   }
 })
