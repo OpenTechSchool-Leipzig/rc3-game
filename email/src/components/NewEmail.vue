@@ -55,6 +55,7 @@ export default {
     onClickCtrl: function() {
       this.stopIncomingEmails = true;
       this.$bvModal.hide("new-message-modal");
+      this.$store.commit("addAllIncomingEmails");
     },
     createIncomingEmail: async function() {
       if (this.stopIncomingEmails) {

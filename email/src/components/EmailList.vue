@@ -16,11 +16,11 @@ export default {
   components: { EmailListRow },
   computed: {
     filteredEmails: function() {
-      return this.$store.state.emails.filter((email) => {
+      return this.$store.state.emails.filter(email => {
         return email.folder === this.$store.state.selectedFolder;
       });
-    },
-  },
+    }
+  }
 };
 </script>
 

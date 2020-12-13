@@ -23,7 +23,7 @@ import NewEmail from "@/components/NewEmail.vue";
 
 export default {
   name: "Home",
-  components: { Nav, EmailList, EmailView, NewEmail },
+  components: { Nav, EmailList, EmailView, NewEmail }
 };
 </script>
 

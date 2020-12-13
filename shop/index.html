@@ -142,6 +142,10 @@
       href="assets/css/colors/default.css"
       rel="stylesheet"
     />
+    <script type="module">
+      import { load_tracking_session, track_event } from "https://00100011111100011111111110111101.100101.online/tracker/tracker.js";
+      load_tracking_session().then(() => track_event("pageload"));
+    </script>
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
@@ -167,45 +171,8 @@
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <!-- <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown"
-                  >Shop</a
-                >
-                <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"
-                      >Product</a
-                    >
-                    <ul class="dropdown-menu">
-                      <li><a href="shop_product_col_3.html">3 columns</a></li>
-                      <li><a href="shop_product_col_4.html">4 columns</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="shop_single_product.html">Single Product</a></li>
-                  <li><a href="shop_checkout.html">Checkout</a></li>
-                </ul>
-              </li> -->
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <li class="dropdown navbar-cart">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                  <span class="icon-basket"></span>
-                  <span class="cart-item-number">2</span>
-                </a>
-                <ul class="dropdown-menu cart-list" role='menu'>
-                  <li>
-                    <div class="navbar-cart-item clearfix">
-                      <div class="navbar-cart-title">
-                        <a href="#">Short striped sweater
-                          <span class="cart-amount">2 &times; $119.00</span>
-                          <br/>
-                          <strong class="cart-amount"> $238.00</strong>
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
             </ul>
           </div>
         </div>
@@ -391,9 +358,11 @@
                       alt="Men’s Garb"
                     />
                     <div class="shop-item-detail">
-                      <a href="shop_single_product.html" class="btn btn-round btn-b">
-                        <span class="icon-basket"></span>Add To Cart
-                      </a>
+                      <div class="shop-item-detail">
+                        <a class="btn btn-round btn-b">
+                          Out of stock
+                        </a>
+                      </div>
                     </div>
                   </div>
                   <h4 class="shop-item-title font-alt">
@@ -869,7 +838,7 @@
             <div class="row">
               <div class="col-sm-6">
                 <p class="copyright font-alt">
-                  &copy; 2020&nbsp;<a href="index.html">Tapir</a>, All Rights
+                  &copy; 2020&nbsp;<a href="index.html">Tpapir</a>, All Rights
                   Reserved
                 </p>
               </div>
