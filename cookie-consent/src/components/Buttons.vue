@@ -68,6 +68,8 @@ export default class Buttons extends Vue {
   }
 
   selectRandomCookies() {
+    // eslint-disable-next-line
+    (window as any).track_event("random-cookies");
     // TODO Refactor
     const checkboxes = Array.from(
       document.querySelectorAll("form .checkbox__input input")

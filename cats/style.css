@@ -1,5 +1,8 @@
 body {
-
+    scroll-snap-points-y: repeat(300px);
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow: scroll;
 }
 
 h1 {
@@ -21,12 +24,10 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    scroll-snap-points-y: repeat(300px);
-    scroll-snap-type: y mandatory;
 }
 
 .col {
-    flex: 0 0 30%;
-    padding: 2rem 0;
+    flex: 0 0 50%;
+    padding: 30vh 0;
     scroll-snap-align: start;
 }
