@@ -165,6 +165,7 @@ export default class Buttons extends Vue {
       color: $primary-color;
       background-color: $primary-color;
       border: none;
+      outline: 0;
 
       &:hover {
         color: $tertiary-color;
