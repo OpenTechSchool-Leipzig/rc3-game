@@ -16,10 +16,15 @@ Play here: https://0.100101.online
 | 6     | cats page           | cats           | https://hardcore-borg-141238.netlify.app      | https://10101000000110110001110001011111.100101.online |
 | 7     | highscore           | highscore      | https://quirky-lalande-3f5aaf.netlify.app     | https://10010011000001000010001000011011.100101.online |
 
-## Idee
+## Idea
 
 https://yopad.eu/p/rc3-opentechschool
 
 ## ToDos
 
 https://cryptpad.fr/kanban/#/2/kanban/edit/CtcYEc25lFyRWgLfXwBqucoo/
+
+## Game related repos
+
+https://github.com/OpenTechSchool-Leipzig/rc3-game-backend
+https://github.com/OpenTechSchool-Leipzig/rc3-game-proxy
