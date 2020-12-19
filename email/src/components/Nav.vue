@@ -72,10 +72,6 @@
           <b-link to="about" class="text-white">Settings</b-link>
         </p>
       </section> -->
-      <img
-        class="check-email"
-        src="https://media.giphy.com/media/12Up26fqbaU45W/giphy.gif"
-      />
     </div>
   </b-sidebar>
 </template>
