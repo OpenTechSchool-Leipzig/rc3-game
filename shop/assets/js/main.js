@@ -24,7 +24,7 @@
 
          // proceed to checkout submission
          $('#checkout-submit').click(() => {
-             console.log(checkoutSteps)
+            $('#checkout-error').hide();
             var steps = Object.keys(checkoutSteps);
             var done = true
             steps.forEach(function(step) {
@@ -38,6 +38,7 @@
             if (done) {
                 $('#checkout-success').show();
                 $('#checkout-cart').hide();
+                $('#navbar-cart').hide();
             } else {
                 $('#checkout-error').show();
             }
