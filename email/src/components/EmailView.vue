@@ -61,7 +61,7 @@ export default {
   name: "EmailView",
   data() {
     return {
-      modalShow: false
+      modalShow: false,
     };
   },
   computed: {
@@ -69,7 +69,7 @@ export default {
       return this.$store.state.selectedEmail;
     },
     attachment: function() {
-      return this.email && this.$store.state.selectedEmail.attachment;
+      return this.email && this.email.attachment;
     },
     attachmentImage: function() {
       if (this.attachment) {
@@ -77,13 +77,16 @@ export default {
       } else {
         return "";
       }
-    }
+    },
   },
   methods: {
     openAttachment: function() {
+      if (this.email.attachment === "attachment-downloading.gif") {
+        window.track_event("email-attachment");
+      }
       this.$bvModal.show("attachment-modal");
-    }
-  }
+    },
+  },
 };
 </script>
 
