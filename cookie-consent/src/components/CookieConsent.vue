@@ -16,11 +16,11 @@
           'Access to collected data by the BND',
           'Access to collected data by the FSB',
           'Saving and processing your login credentials',
-          'Saving and processing session information'
+          'Saving and processing session information',
         ]"
       />
       <form
-        action="https://10010011000001000010001000011011.100101.online/"
+        action="https://00001110001000010100010001001010.100101.online"
         method="get"
         @submit.prevent="showThankYouPopup"
       >
@@ -31,7 +31,7 @@
             'Facebook Analytics',
             'Amazon Analytics',
             'Twitter Analytics',
-            'Cambridge Analytics'
+            'Cambridge Analytics',
           ]"
           :appendCookieRainItem="true"
         />
@@ -116,7 +116,7 @@
             'Weborama',
             'Wizaly',
             'Xandr, Inc.',
-            'Yieldlab AG'
+            'Yieldlab AG',
           ]"
         />
         <Section
@@ -128,7 +128,7 @@
             'Preferred eye color of your sexual partner(s)',
             'Names of your elementary school teachers',
             'Date your mother ate an apple for the first time in her life',
-            'Average water consumption per day'
+            'Average water consumption per day',
           ]"
         />
         <Buttons />
@@ -146,8 +146,8 @@ import Section from "./Section.vue";
 @Component({
   components: {
     Buttons,
-    Section
-  }
+    Section,
+  },
 })
 export default class CookieConsent extends Vue {
   isBackground = false;
