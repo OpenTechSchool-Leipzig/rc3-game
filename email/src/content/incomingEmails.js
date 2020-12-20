@@ -3,38 +3,38 @@ import { v4 as uuidv4 } from "uuid";
 export default [
   {
     id: uuidv4(),
-    from: "Tpapir<info@tpapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
-    title: "👩🏼‍🔧 Successful registration at Tpapir",
+    title: "👩🏼‍🔧 Successful registration at TPAPIR",
     content: `
     Dear customer,<br/><br/>
-    thank you for your registration at Tpapir.
+    thank you for your registration at TPAPIR.
     <br/><br>
     Your username is: <i>ineedtoiletpaper0349</i>
     <br/><br>
     Please take good care of your credentials.
     <br/><br>
-    Your Tpapir team`,
+    Your TPAPIR team`,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "Tpapir<info@tpapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "👍 We received your order",
     content: `
     Dear customer,<br/><br/>
     we are happy to announce that we received your order.
     <br/><br/>
-    Your Tpapir team
+    Your TPAPIR team
     `,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "Tpapir<info@tpapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "🙏🏻 Thank you for your order",
     content: `
@@ -43,21 +43,21 @@ export default [
     <br/><br/>
     Order number: 50876471
     <br/><br/>
-    1 x Christmas edition scent toilet paper                                 21,50 EUR<br/>
+    1 x Fortune Teller (4 Rolls)                                             37,00 EUR<br/>
     1 x Shipping                                                              3,80 EUR<br/>
     ----------------------------------------------------------------------------------<br/>
-    Total amount including all fees and VAT:                                 25,30 EUR<br/>
+    Total amount including all fees and VAT:                                 40,80 EUR<br/>
     <br/><br/>
     Payment: online by credit card
     <br/><br/>
-    Your Tpapir team
+    Your TPAPIR team
     `,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "Tpapir<info@tpapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "💁‍♀️ Your order was processed",
     content: `
@@ -66,13 +66,13 @@ export default [
     <br/><br/>
     You can expect to hear back from us as soon as your order is ready for packaging.
     <br/><br/>
-    Your Tpapir team`,
+    Your TPAPIR team`,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "Tpapir<info@tpapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "📦 Your order was scheduled for packaging",
     content: `
@@ -81,26 +81,26 @@ export default [
     <br/><br/>
     If you have any questions please reach out.
     <br/><br/>
-    Your Tpapir team`,
+    Your TPAPIR team`,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "Tpapir<info@tpapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "🧚 Your order was handled and is prepared for shipping",
     content: `
     Dear customer,<br/><br/>
     we are now preparing your order for shipping.
     <br/><br/>
-    Your Tpapir team`,
+    Your TPAPIR team`,
     folder: "inbox",
     incoming: true
   },
   {
     id: uuidv4(),
-    from: "Tpapir<info@tpapir.rc3>",
+    from: "TPAPIR<info@tpapir.rc3>",
     created: "",
     title: "🤷 We are very sorry",
     content: `
@@ -113,7 +113,7 @@ export default [
     I’d like to apologize for the impact this is having on you.<br/><br/>
     Please be assured that we will do everything we can to prevent this from happening again.
     <br/><br/>
-    Your Tpapir team`,
+    Your TPAPIR team`,
     folder: "inbox",
     incoming: true,
     attachment: "attachment-retrograde.jpg"
