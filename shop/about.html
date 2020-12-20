@@ -142,6 +142,10 @@
       href="assets/css/colors/default.css"
       rel="stylesheet"
     />
+    <script type="module">
+      import { load_tracking_session, track_event } from "https://00100011111100011111111110111101.100101.online/tracker/tracker.js";
+      load_tracking_session().then(() => track_event("pageload"));
+    </script>
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
@@ -281,10 +285,10 @@
                         The future is toilet paper!
                       </p>
                       <div class="team-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a
-                        ><a href="#"><i class="fa fa-twitter"></i></a
-                        ><a href="#"><i class="fa fa-dribbble"></i></a
-                        ><a href="#"><i class="fa fa-skype"></i></a>
+                        <a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-facebook"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-twitter"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-dribbble"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-skype"></i></a>
                       </div>
                     </div>
                   </div>
@@ -307,10 +311,10 @@
                         Life is like a toilet - you never know what you're gonna get.
                       </p>
                       <div class="team-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a
-                        ><a href="#"><i class="fa fa-twitter"></i></a
-                        ><a href="#"><i class="fa fa-dribbble"></i></a
-                        ><a href="#"><i class="fa fa-skype"></i></a>
+                        <a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-facebook"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-twitter"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-dribbble"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-skype"></i></a>
                       </div>
                     </div>
                   </div>
@@ -333,10 +337,10 @@
                         I love toilets since I was a child <3
                       </p>
                       <div class="team-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a
-                        ><a href="#"><i class="fa fa-twitter"></i></a
-                        ><a href="#"><i class="fa fa-dribbble"></i></a
-                        ><a href="#"><i class="fa fa-skype"></i></a>
+                        <a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-facebook"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-twitter"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-dribbble"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-skype"></i></a>
                       </div>
                     </div>
                   </div>
@@ -359,10 +363,10 @@
                         TPAPIR is a cash cow! I love it!
                       </p>
                       <div class="team-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a
-                        ><a href="#"><i class="fa fa-twitter"></i></a
-                        ><a href="#"><i class="fa fa-dribbble"></i></a
-                        ><a href="#"><i class="fa fa-skype"></i></a>
+                        <a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-facebook"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-twitter"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-dribbble"></i></a
+                        ><a href="https://thispersondoesnotexist.com/" target="_blank"><i class="fa fa-skype"></i></a>
                       </div>
                     </div>
                   </div>
@@ -387,10 +391,10 @@
                         Not sure what all the fuzz is about.
                       </p>
                       <div class="team-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a
-                        ><a href="#"><i class="fa fa-twitter"></i></a
-                        ><a href="#"><i class="fa fa-dribbble"></i></a
-                        ><a href="#"><i class="fa fa-skype"></i></a>
+                        <i class="fa fa-facebook hello-donnie"></i>
+                        <i class="fa fa-twitter hello-donnie"></i>
+                        <i class="fa fa-dribbble hello-donnie"></i>
+                        <i class="fa fa-skype hello-donnie"></i>
                       </div>
                     </div>
                   </div>
@@ -603,5 +607,13 @@
     <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      document.querySelectorAll(".hello-donnie").forEach(link => {
+        link.addEventListener('click', event => {
+          window.track_event("hello-donnie");
+          alert("Yay! Achievement unlocked!");
+        })
+      })
+    </script>
   </body>
 </html>
