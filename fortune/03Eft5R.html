@@ -9,7 +9,6 @@
 
 </head>
 <body>
-  <a href="index.html">back to start</a>
   <div class="introduction">
 <p>Choose a card</p>
 
@@ -39,6 +38,23 @@
 
 </div>
 
+
+
+<div style="height:10000px"></div>
+<div class="introduction"><p>What are you doing down here?</p>
+  <p>There is nothing <span id="hidden">to see!</span></p>
+<div id="hidden-card">
+<p>Oh! I've found another card - must have dropped it.</p>
+<div class="card-container">
+  <div class="card" style="left: 150px;" id="card-08"></div>
+
+</div>
+
+</div>
+<div id="text-output-2"></div>
+</div>
+
+
 </body>
   <script>
 
@@ -55,14 +71,14 @@
           });
         $("#card-02").click(function() {
                 $("#card-output").html("<img src='img/strength.jpg'>");
-                $("#text-output").html("<p>This card resembles inner strength. It represents mastering raw emotions, distractions and possible procrastinations in order to bring calm to yourself or a situation. You seem to be familiar with the sometimes confusing surroundings of the internet and navigate through it like a fish in water.</p>");
+                $("#text-output").html("<p>This card resembles inner STRENGTH. It represents mastering raw emotions, distractions and possible procrastinations in order to bring calm to yourself or a situation. You seem to be familiar with the sometimes confusing surroundings of the internet and navigate through it like a fish in water. Anyways, strength is not always helpful, sometimes you need ... well how do I say this without hurting you ... more intelligence?</p>");
                 $("#continue-btn").fadeIn();
                 $("#action-tab").hide();
                 $("#true-continue-btn").hide();
           });
         $("#card-03").click(function() {
                 $("#card-output").html("<img src='img/the-empress.jpg'>");
-                $("#text-output").html("<p>THE EMPRESS shows us how deeply we are embedded to our femininity. Femininity could be associated with fertility, expression, creativity and nurturing among many other aspects. It therefore calls you to connect with beauty and bring happiness to your life.</p>");
+                $("#text-output").html("<p>THE EMPRESS shows us how deeply we are embedded to our femininity. Femininity could be associated with fertility, expression, creativity and nurturing among many other aspects. It therefore calls you to connect with beauty and bring happiness to your life. It is my favourite card.</p>");
                 $("#continue-btn").fadeIn();
                 $("#action-tab").hide();
                 $("#true-continue-btn").hide();
@@ -96,6 +112,10 @@
                     $("#action-tab").hide();
                     $("#true-continue-btn").hide();
               });
+          $("#card-08").click(function() {
+                        $("#card-08").html("<img src='img/the-good-boi.jpg'>");
+                        $("#text-output-2").html("<p>The good boi is a card af great luck. <br/>It won't bring you any further, though. You'll need some magic for that.</p>");
+                  });
 
 
 
@@ -103,6 +123,11 @@
     $("#action-tab").html("<p>Sorry honey, but I can't let you walk away with this card. You should draw another one.</p>").hide().fadeIn();
 
   });
+
+  $("#hidden").click(function() {
+  $("#hidden-card").fadeIn();
+
+});
   } );
 
   </script>

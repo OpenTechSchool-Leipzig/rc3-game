@@ -143,8 +143,8 @@
       rel="stylesheet"
     />
     <script type="module">
-        import { load_tracking_session, track_event } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
-        load_tracking_session().then(() => track_event("pageload"));
+        import { track_event } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
+        window.track_event = track_event
     </script>
   </head>
 
@@ -612,7 +612,7 @@
       document.querySelectorAll(".hello-donnie").forEach(link => {
         link.addEventListener('click', event => {
           window.track_event("hello-donnie");
-          alert("Yay! Achievement unlocked!");
+          alert("Yay! Achievement 'Hello Donnie' unlocked!");
         })
       })
     </script>

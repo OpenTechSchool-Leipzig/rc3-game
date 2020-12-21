@@ -9,7 +9,6 @@
 
 </head>
 <body>
-  <a href="index.html">back to start</a>
   <div class="introduction">
 <p>Please place both your hands on the screen and select "Continue".</p>
 
@@ -24,7 +23,7 @@
 </div>
 
 </div>
-
+<br/>
 
 <input type="button" value="Continue" id="submit-hands">
 
@@ -42,7 +41,7 @@
 
   $(document).ready(function() {
     $("#submit-hands").click(function() {
-    $("#action-tab").html("<p class='light'>Hmm... strange... <br>It feels like you have not had both your hands on the screen. <br>Anyway, you wouldn't fool me, right? <br>Through the energy of your hands I can sense that ...</p>").hide().fadeIn();
+    $("#action-tab").html("<p class='light'>Hmm... strange... <br>It feels like you have not had both your hands on the screen. <br>Anyway, you wouldn't fool me, right? <br> Thanks for submitting your energy, let's move on. </p>").hide().fadeIn();
     $("#continue-btn").fadeIn()
   });
   } );

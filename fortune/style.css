@@ -10,6 +10,9 @@ body {
 }
 
 a{
+  font-family: 'Grenze Gotisch', serif;
+  font-weight: 400;
+  font-size: 18px;
   color:white;
 }
 
@@ -21,14 +24,15 @@ margin-bottom: 10vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
-font-family: 'Grenze Gotisch', cursive;
+font-family: 'Grenze Gotisch', serif;
 font-weight: 700;
 }
 
 p {
-font-family: 'Grenze Gotisch', cursive;
+font-family: 'Grenze Gotisch', serif;
 font-weight: 400;
 font-size: 18px;
+color: white;
 }
 
 p.light {
@@ -46,6 +50,19 @@ p.light {
 #submit-pixel {
   display:none;
 }
+
+#action-01 {
+
+}
+
+#action-02 {
+    display:none;
+}
+
+#second-response {
+    display:none;
+}
+
 
 
 .continue-link {
@@ -115,7 +132,7 @@ text-align: center;
   cursor:pointer;
 }
 
-#card-output {
+#card-output, #card-08 {
   display:block;
   width:300px;
   height:300px;
@@ -123,12 +140,16 @@ text-align: center;
   margin-bottom: 50px;
 }
 
-#card-output > img {
+#card-output > img, #card-08 > img {
   width:100%;
   height:100%;
 }
 
-#text-output {
+#text-output, #text-output-2 {
   width: 300px;
   margin: auto;
+}
+
+#hidden-card {
+  display:none;
 }
