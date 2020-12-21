@@ -9,7 +9,6 @@
 
 </head>
 <body>
-  <a href="index.html">back to start</a>
   <div class="introduction">
 <p>The internet is made from pixels. <br>To find out, what it has to offer for you, you have to choose a pixel. <br>Please make your choice as intuitive as possible. <br>There is no right or wrong.</p>
 <br><br><p>Please choose your pixel:</p><br>
@@ -25,18 +24,40 @@
 <div class="pixel"></div>
 <div class="pixel"></div>
 </div>
-<div id="p-action-tab">
+
+
+<div id="submit-pixel">
+
+<div id="action-01">
+    <input type="button" id="button-01" value="submit this pixel">
+
+</div>
+
+<div id="action-02">
+  <input type="button" id="button-02" value="submit this pixel">
+  <p id="first-response">Oh shoot. This is already MY favourite pixel. Please choose another one.</p>
+  <p id="second-response">This one is fine.</p>
+
+<a href="06viLn2.html"><input type="button" id="continue-btn" value="Continue"></a>
+
+
+</div>
+
 </div>
 
 
-<input type="button" value="submit this pixel" id="submit-pixel">
+<!-- <div id="p-action-tab">
+</div> -->
+
+
+<!-- <input type="button" value="submit this pixel" id="submit-pixel"> -->
 
 
 
 <div id="action-tab">
 </div>
 
-<a href="06viLn2.html"><input type="button" id="continue-btn" value="Continue"></a>
+
 
 </div>
 </div>
@@ -49,16 +70,33 @@
     $(".pixel").removeClass("active-pixel");
     $(this).addClass("active-pixel");
     $("#submit-pixel").fadeIn();
+    $("#first-response").hide();
   });
 
   // function openGate() {
   //   $("#continue-btn").fadeIn();
   // }
 
-  $("#submit-pixel").click(function() {
-   $("#action-tab").html("<p class='light'>Oh shoot. This is already MY favourite pixel. Please choose another one.</p>").hide().fadeIn();
-   $("#submit-pixel").attr('onClick', '$("#continue-btn").fadeIn();');
+   $("#button-01").click(function() {
+    $("#action-01").hide();
+    $("#action-02").fadeIn();
+    $("#first-response").fadeIn();
+
+  });
+
+  $("#button-02").click(function() {
+    $("#button-02").hide();
+    $("#first-response").hide();
+    $("#second-response").fadeIn();
+    $("#continue-btn").fadeIn();
+
  });
+
+
+ //  $("#submit-pixel").click(function() {
+ //   $("#action-tab").html("<p class='light'>Oh shoot. This is already MY favourite pixel. Please choose another one.</p>").hide().fadeIn();
+ //   $("#submit-pixel").attr('onClick', '$("#continue-btn").fadeIn();');
+ // });
 
 
 

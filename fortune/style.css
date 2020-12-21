@@ -10,6 +10,9 @@ body {
 }
 
 a{
+  font-family: 'Grenze Gotisch', serif;
+  font-weight: 400;
+  font-size: 18px;
   color:white;
 }
 
@@ -21,12 +24,12 @@ margin-bottom: 10vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
-font-family: 'Grenze Gotisch', cursive;
+font-family: 'Grenze Gotisch', serif;
 font-weight: 700;
 }
 
 p {
-font-family: 'Grenze Gotisch', cursive;
+font-family: 'Grenze Gotisch', serif;
 font-weight: 400;
 font-size: 18px;
 color: white;
@@ -47,6 +50,19 @@ p.light {
 #submit-pixel {
   display:none;
 }
+
+#action-01 {
+
+}
+
+#action-02 {
+    display:none;
+}
+
+#second-response {
+    display:none;
+}
+
 
 
 .continue-link {
