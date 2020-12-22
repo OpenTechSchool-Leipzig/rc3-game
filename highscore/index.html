@@ -8,7 +8,7 @@
         <script type="module">
           import { load_tracking_session, track_event, get_report, get_highscore } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
           load_tracking_session()
-            .then(() => track_event("pageload"))
+            .then(() => track_event("finish"))
             .then(() => get_report())
             .then((report) => {
               document.getElementById("report").textContent = JSON.stringify(report, null, 2);
