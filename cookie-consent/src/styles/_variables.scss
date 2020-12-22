@@ -3,16 +3,16 @@ $secondary-color: #16163b;
 $tertiary-color: #bfbfbf; // #e6e6e6;
 
 @font-face { 
-	font-family: "Bloddy";
+  font-family: "Bloddy";
   src: url("~@/assets/fonts/BLOODY-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face { 
-	font-family: "Source Sans";
+  font-family: "Source Sans";
   src: url("~@/assets/fonts/sourcesanspro-regular-webfont.woff") format("woff"),
-        url("~@/assets/fonts/sourcesanspro-regular-webfont.woff2") format("woff2");
+  url("~@/assets/fonts/sourcesanspro-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -23,4 +23,14 @@ $tertiary-color: #bfbfbf; // #e6e6e6;
 
 @mixin font-source-sans {
   font-family: "Source Sans", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url("~@/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.consent__title {
+  font-family: "Source Sans";
 }

@@ -1,7 +1,7 @@
 <template>
   <div :class="{ consent: true, 'consent--light': this.isBackground }">
     <div class="consent__content">
-      <h1 class="consent__title">Cookie Settings</h1>
+      <h1 class="consent__title">TPAPIR - Cookie Settings</h1>
 
       <p class="consent__intro">
         We respect your privacy! Nevertheless, this website uses cookies and
