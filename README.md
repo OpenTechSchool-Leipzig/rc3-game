@@ -1,6 +1,6 @@
-# rc3-game
+# Escape the broken app
 
-A fun game about how to waste your time on the internet.
+It's the year 2020 and the web is in a horrible state. You need to escape! Can you?
 
 Play here: https://0.100101.online
 
