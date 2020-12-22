@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px red dashed;
+}
+
+a:hover {
+  border-bottom: 2px red solid;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.code {
+  display: inline-block;
+  text-decoration: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  border: 1px solid red;
+  padding: 10px;
+  background-color: rgba(255, 0, 0, 0.05);
+  text-align: center;
+}
+
+section {
+  margin: 60px 0 60px 0;
+}
+
+section.main {
+  margin-top: 0;
+}

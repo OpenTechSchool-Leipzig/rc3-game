@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>You did it!</title>
-        <script type="module">
-          import { load_tracking_session, track_event, get_report, get_highscore } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
-          load_tracking_session()
-            .then(() => track_event("finish"))
-            .then(() => get_report())
-            .then((report) => {
-              document.getElementById("report").textContent = JSON.stringify(report, null, 2);
-              return get_highscore();
-            })
-            .then((highscore) => {
-              document.getElementById("highscore").textContent = JSON.stringify(highscore, null, 2);
-            });
-         </script>
-    </head>
-    <body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>You made it through the internet!</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+    <script type="module">
+      import {
+        load_tracking_session,
+        track_event,
+        get_report,
+        get_highscore,
+      } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
+      load_tracking_session()
+        .then(() => track_event("finish"))
+        .then(() => get_report())
+        .then((report) => {
+          document.getElementById("report").textContent = JSON.stringify(
+            report,
+            null,
+            2
+          );
+          return get_highscore();
+        })
+        .then((highscore) => {
+          document.getElementById("highscore").textContent = JSON.stringify(
+            highscore,
+            null,
+            2
+          );
+        });
+    </script>
+  </head>
+  <body>
+    <div class="container">
       <pre>
     __ _  __ _ _ __ ___   ___    _____   _____ _ __
    / _` |/ _` | '_ ` _ \ / _ \  / _ \ \ / / _ \ '__|
@@ -27,13 +42,46 @@
    \__, |\__,_|_| |_| |_|\___|  \___/ \_/ \___|_|
    |___/
 
-  You won.
       </pre>
-      <pre id="report">
-  Report not (yet) available.
-      </pre>
-      <pre id="highscore">
-  High score table not (yet) available.
-      </pre>
-    </body>
+      <section class="main">
+        <h1>Concrats! You made it through the internet!</h1>
+        <p>
+          If your are a ticket holder of the
+          <a href="https://rc3.world" target="_blank"
+            >Remote Chaos Experience</a
+          >
+          you can redeem your badge using the following code:
+          <div class="code">XXXX</div>
+        </p>
+      </section>
+      <div id="report">Report not (yet) available.</div>
+      <div id="highscore">High score table not (yet) available.</div>
+
+      <section>
+        <h1>Game stats</h1>
+      </section>
+
+      <section>
+        <h1>Achievements</h1>
+      </section>
+
+      <section>
+        <h1>Credits</h1>
+        <p>
+          Thanks to these amazing people who helped build this game:
+        </p>
+        <p>
+          Ben,<br />
+          Christina,<br />
+          Dominik,<br />
+          Elli,<br />
+          Julian,<br />
+          Krissi,<br />
+          Marcus,<br />
+          Norma
+        </p>
+        <p>Big thanks also to our beta-testers.</p>
+      </section>
+    </div>
+  </body>
 </html>
