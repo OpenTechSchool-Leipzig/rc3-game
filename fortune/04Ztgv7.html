@@ -18,9 +18,9 @@
 <body>
   <div class="introduction">
 <p>We came to an important point. <br>Now it's time for you to ask your most pressing question. <br/>You are granted only one question, so choose wisely.</p>
-<form>
+<form id="form">
   <input type="text" id="question"><br/><br/>
-  <input type="button" value="Continue" id="submit-question">
+  <input type="submit" value="Continue">
 </form>
 
 
@@ -40,12 +40,13 @@
   <script>
 
   $(document).ready(function() {
-    $("#submit-question").click(function() {
-    $("#action-tab").html("<p class='light'>Actually, no one ever asked anything like this before.<br> Well, we'll see how this aligns with your data.<br> The answer to your question will be in your final fortune.</p>").hide().fadeIn();
-    $("#submit-question").hide()
-    $("#continue-btn").fadeIn()
+    $("#form").submit(function( event ) {
+      event.preventDefault();
+      $("#action-tab").html("<p class='light'>Actually, no one ever asked anything like this before.<br> Well, we'll see how this aligns with your data.<br> The answer to your question will be in your final fortune.</p>").hide().fadeIn();
+      $("#submit-question").hide()
+      $("#continue-btn").fadeIn().focus();
+    });
   });
-  } );
 
   </script>
 </html>
