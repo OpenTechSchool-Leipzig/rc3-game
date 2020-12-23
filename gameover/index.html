@@ -22,7 +22,7 @@
             // handle various properties from report
             keys.forEach(key => {
               const value = report[key];
-              if (typeof value === "string") {
+              if (typeof value === "string" || typeof value === "number") {
                 const domElement = document.getElementById(key)
                 if (domElement) {
                   domElement.textContent = value;
@@ -33,7 +33,7 @@
 
           // handle achievements from report
           const achievements = report.achievements;
-          const domElement = document.getElementById("achievement");
+          const domElement = document.getElementById("achievements");
           let html = '';
           achievements.forEach(achievement => {
             html += `<p>${achievement.id} - ${achievement.title}</p>`
