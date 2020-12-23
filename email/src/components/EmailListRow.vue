@@ -57,9 +57,9 @@ li {
     background-color: rgba(0, 0, 0, 0.01);
   }
 
-  &.new {
-    background-color: rgba(23, 162, 184, 0.4);
-  }
+  //&.new {
+  //  background-color: rgba(23, 162, 184, 0.4);
+  //}
 
   &.selected,
   &:nth-child(2n).selected {
