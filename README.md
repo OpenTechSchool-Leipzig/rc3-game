@@ -24,6 +24,16 @@ https://yopad.eu/p/rc3-opentechschool
 
 https://cryptpad.fr/kanban/#/2/kanban/edit/CtcYEc25lFyRWgLfXwBqucoo/
 
+## Achievements
+
+"Discovered ten different HTTP cats" ("http-cat")
+"Walked in the delicious cookie rain" ("cookie-rain")
+"Trusted your privacy to a PRNG" ("random-cookies")
+"Picked the CORRECT tarot card" ("tarot-card")
+"Found the secret email attachment" ("email-attachment")
+"Said hi to Donnie (wuff wuff)" ("hello-donnie")
+"Took a ride on a flying roll of toilet paper" ("flying-toiletpaper")
+
 ## Game related repos
 
 ### Bot backend
