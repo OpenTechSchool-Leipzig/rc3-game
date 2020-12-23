@@ -26,8 +26,8 @@
         })
         .then((report) => {
           // add class to indicate game was played
-          const domElement = document.getElementById("game-over");
-          domElement.classList.add("game-success");
+          const bodyElement = document.getElementById("game-over");
+          bodyElement.classList.add("game-success");
 
 
           const keys = Object.keys(report);
@@ -46,7 +46,7 @@
 
           // handle achievements from report
           const currentAchievements = report.achievements;
-          const domElement = document.getElementById("achievements");
+          const achievementsEle = document.getElementById("achievements");
           const wasAchieved = (achievementId) => {
             return currentAchievements.find((achievement) => {
               return achievement.id === achievementId;
@@ -61,7 +61,7 @@
               html += `<p><span class="symbol">&#9744;</span> ${achievement.id} - ${achievement.title}</p>`
             }
           })
-          domElement.innerHTML = html;
+          achievementsEle.innerHTML = html;
 
           return get_highscore();
         })
