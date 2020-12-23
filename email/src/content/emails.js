@@ -214,7 +214,7 @@ Prince Alyusi Islassis
     let a fortune teller show you the way.
     get your first reading for free!!
     </i>
-    <a href="https://01010001100010010011011011011110.100101.online/" target="_blank">click here!</a>
+    <a href="https://01010001100010010011011011011110.100101.online/">click here!</a>
     `,
     folder: "spam"
   },
