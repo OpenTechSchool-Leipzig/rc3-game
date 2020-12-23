@@ -18,6 +18,7 @@
 
       load_tracking_session()
         .then(() => track_event("finish"))
+        .then(() => get_achievements())
         .then((achievements) => {
           totalAchievements = achievements.items;
           return get_report();
