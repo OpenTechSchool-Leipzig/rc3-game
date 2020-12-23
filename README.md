@@ -26,6 +26,10 @@ https://cryptpad.fr/kanban/#/2/kanban/edit/CtcYEc25lFyRWgLfXwBqucoo/
 
 ## Game related repos
 
+### Bot backend
+
+-
+
 ### Stats, achievements backend
 
 https://github.com/OpenTechSchool-Leipzig/rc3-game-backend
