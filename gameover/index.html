@@ -13,9 +13,15 @@
         get_report,
         get_highscore,
       } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
+
+      let totalAchievements = [];
+
       load_tracking_session()
         .then(() => track_event("finish"))
-        .then(() => get_report())
+        .then((achievements) => {
+          totalAchievements = achievements.items;
+          return get_report();
+        })
         .then((report) => {
           const keys = Object.keys(report);
           if (keys.length > 0) {
@@ -32,11 +38,21 @@
           }
 
           // handle achievements from report
-          const achievements = report.achievements;
+          const currentAchievements = report.achievements;
           const domElement = document.getElementById("achievements");
+          const wasAchieved = (achievementId) => {
+            return currentAchievements.find((achievement) => {
+              return achievement.id === achievementId;
+            })
+          }
+
           let html = '';
-          achievements.forEach(achievement => {
-            html += `<p>${achievement.id} - ${achievement.title}</p>`
+          totalAchievements.forEach(achievement => {
+            if (wasAchieved(achievement.id)) {
+              html += `<p class="highlight">${achievement.id} - ${achievement.title}</p>`
+            } else {
+              html += `<p>${achievement.id} - ${achievement.title}</p>`
+            }
           })
           domElement.innerHTML = html;
 
@@ -55,6 +71,7 @@
     </script>
   </head>
   <body>
+    <div class="bg"></div>
     <div class="container">
       <pre>
     __ _  __ _ _ __ ___   ___    _____   _____ _ __
@@ -106,7 +123,7 @@
             >Remote Chaos Experience</a
           >
           you can redeem your badge using the following code:
-          <div class="code">XXXX</div>
+          <div class="code">- - - -</div>
         </p>
       </section>
 
