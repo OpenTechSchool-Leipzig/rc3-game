@@ -1,3 +1,12 @@
+/**
+ * Scoll down (search) to "Checkout code" to see the checkout scripts
+ * Minify code using: https://skalman.github.io/UglifyJS-online/ and replace main.js
+ *
+ *
+ *
+ *
+ */
+
 /* ---------------------------------------------- /*
  * Preloader
  /* ---------------------------------------------- */
@@ -8,105 +17,6 @@
     });
 
     $(document).ready(function() {
-
-        /* ---------------------------------------------- /*
-         * Home Code
-         /* ---------------------------------------------- */
-
-        $('#close-buy-now-alert').click(() => {
-            $('#buy-now-alert').hide();
-        })
-
-        /* ---------------------------------------------- /*
-         * Checkout Code
-         /* ---------------------------------------------- */
-
-         var couponCode = "t0iletpaper";
-         var checkoutSteps = {
-            couponCode: false,
-            removeSubscription: false,
-            removeTravel: false,
-            removeGift: false,
-            removeProtection: false
-         };
-
-         // proceed to checkout submission
-         $('#checkout-submit').click(() => {
-            $('#checkout-error').hide();
-            var steps = Object.keys(checkoutSteps);
-            var done = true
-            steps.forEach(function(step) {
-                if (checkoutSteps[step] === false) {
-                    done = false;
-                    return;
-                }
-            });
-
-            $('html, body').animate({ scrollTop: 0 }, 'fast');
-            if (done) {
-                $('#checkout-success').show();
-                $('#checkout-cart').hide();
-                $('#navbar-cart').hide();
-            } else {
-                $('#checkout-error').show();
-            }
-         });
-
-         // applying coupon code
-         $("#checkout-apply-coupon").click(function() {
-            var coupon = $("#checkout-coupon-input").val().trim().toLowerCase();
-            if (coupon === couponCode) {
-                $('#checkout-cart-coupon').show();
-                $("#checkout-coupon-input").val(couponCode);
-                $('#checkout-coupon-wrong').hide();
-                $('#checkout-coupon-success').show();
-                checkoutSteps.couponCode = true;
-            } else {
-                $('#checkout-coupon-success').hide();
-                $('#checkout-coupon-wrong').show();
-            }
-         });
-
-         $("#checkout-coupon-input").focus(function() {
-            $('#checkout-coupon-wrong').hide();
-            $("#checkout-coupon-input").val("");
-         });
-
-         // remove item from checkout
-         let subtotalAmount = 17060;
-
-         $(".pr-remove a").click(function() {
-             const id = $(this).data("id");
-             $(`#${id}`).hide({duration: 400});
-
-             if (id === "travel") {
-                subtotalAmount = subtotalAmount - 680;
-                checkoutSteps.removeTravel = true;
-             }
-             if (id === "subscription") {
-                subtotalAmount = subtotalAmount - 11000;
-                checkoutSteps.removeSubscription = true;
-             }
-             if (id === "gift") {
-                subtotalAmount = subtotalAmount - 480;
-                checkoutSteps.removeGift = true;
-             }
-             if (id === "protection") {
-                subtotalAmount = subtotalAmount - 1200;
-                checkoutSteps.removeProtection = true;
-             }
-
-            $(".sub-total-replace").each(function() {
-                $(this).text(`€${$.number( subtotalAmount/100, 2, ',', '.')}`);
-            })
-            $(".total-replace").each(function() {
-                const total = subtotalAmount + 380
-                $(this).text(`€${$.number( total/100, 2, ',', '.')}`);
-            })
-         })
-
-
-
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
          /* ---------------------------------------------- */
@@ -512,6 +422,98 @@
             });
 
         });
+
+        /* ---------------------------------------------- /*
+         * Checkout Code
+         /* ---------------------------------------------- */
+
+         var couponCode = "t0iletpaper";
+         var base64EncodedUrl = "aHR0cHM6Ly8xMTEwMDAxMTAwMTAxMTAwMDAwMTExMDAxMDExMDAxMS4xMDAxMDEub25saW5l"; //base64 encoded
+         var checkoutSteps = {
+            couponCode: false,
+            removeSubscription: false,
+            removeTravel: false,
+            removeGift: false,
+            removeProtection: false
+         };
+
+         // proceed to checkout submission
+         $('#checkout-submit').click(() => {
+            $('#checkout-error').hide();
+            var steps = Object.keys(checkoutSteps);
+            var done = true
+            steps.forEach(function(step) {
+                if (checkoutSteps[step] === false) {
+                    done = false;
+                    return;
+                }
+            });
+
+            $('html, body').animate({ scrollTop: 0 }, 'fast');
+            if (done) {
+                var url = atob(base64EncodedUrl);
+                $('#checkout-success').html(`<strong>Thank you for your order.</strong> Please check your <a href="${url}">inbox</a> for details.`);
+                $('#checkout-success').show();
+                $('#checkout-cart').hide();
+                $('#navbar-cart').hide();
+            } else {
+                $('#checkout-error').show();
+            }
+         });
+
+         // applying coupon code
+         $("#checkout-apply-coupon").click(function() {
+            var coupon = $("#checkout-coupon-input").val().trim().toLowerCase();
+            if (coupon === couponCode) {
+                $('#checkout-cart-coupon').show();
+                $("#checkout-coupon-input").val(couponCode);
+                $('#checkout-coupon-wrong').hide();
+                $('#checkout-coupon-success').show();
+                checkoutSteps.couponCode = true;
+            } else {
+                $('#checkout-coupon-success').hide();
+                $('#checkout-coupon-wrong').show();
+            }
+         });
+
+         $("#checkout-coupon-input").focus(function() {
+            $('#checkout-coupon-wrong').hide();
+            $("#checkout-coupon-input").val("");
+         });
+
+         // remove item from checkout
+         let subtotalAmount = 17060;
+
+         $(".pr-remove a").click(function() {
+             const id = $(this).data("id");
+             $(`#${id}`).hide({duration: 400});
+
+             if (id === "travel") {
+                subtotalAmount = subtotalAmount - 680;
+                checkoutSteps.removeTravel = true;
+             }
+             if (id === "subscription") {
+                subtotalAmount = subtotalAmount - 11000;
+                checkoutSteps.removeSubscription = true;
+             }
+             if (id === "gift") {
+                subtotalAmount = subtotalAmount - 480;
+                checkoutSteps.removeGift = true;
+             }
+             if (id === "protection") {
+                subtotalAmount = subtotalAmount - 1200;
+                checkoutSteps.removeProtection = true;
+             }
+
+            $(".sub-total-replace").each(function() {
+                $(this).text(`€${$.number( subtotalAmount/100, 2, ',', '.')}`);
+            })
+            $(".total-replace").each(function() {
+                const total = subtotalAmount + 380
+                $(this).text(`€${$.number( total/100, 2, ',', '.')}`);
+            })
+         })
+
 
 
         /* ---------------------------------------------- /*
