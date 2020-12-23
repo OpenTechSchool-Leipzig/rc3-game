@@ -25,6 +25,12 @@ body {
   color: red;
 }
 
+.symbol {
+  font-size: 2em;
+  font-family: Arial;
+  vertical-align: text-bottom;
+}
+
 p.description {
   margin-bottom: 50px;
 }

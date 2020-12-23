@@ -49,9 +49,9 @@
           let html = '';
           totalAchievements.forEach(achievement => {
             if (wasAchieved(achievement.id)) {
-              html += `<p class="highlight">${achievement.id} - ${achievement.title}</p>`
+              html += `<p><span class="symbol">&#9745;</span> ${achievement.id} - ${achievement.title}</p>`
             } else {
-              html += `<p>${achievement.id} - ${achievement.title}</p>`
+              html += `<p><span class="symbol">&#9744;</span> ${achievement.id} - ${achievement.title}</p>`
             }
           })
           domElement.innerHTML = html;
@@ -87,7 +87,7 @@
           Your are now officially at the end of the game and we hope you had an amazing and somehow nerf recking journey through our snapshots of the broken web.
         </p>
         <p>
-          Remember, the internet is a place that can be created<sup>*</sup> and changed by <b>YOU</b>. It doesn't have to be broken that way.
+          <span class="symbol">&#9758;</span> Remember, the internet is a place that can be created<sup>*</sup> and changed by <b>YOU</b>. It doesn't have to be broken that way.
         </p>
         <p class="small"><sup>*</sup>If you don't know how, the <a href="https://opentechschool.org" target="_blank">OpenTechSchool</a> community can help you get started with coding.</p>
       </section>
