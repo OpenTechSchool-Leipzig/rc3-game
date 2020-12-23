@@ -25,6 +25,11 @@
           return get_report();
         })
         .then((report) => {
+          // add class to indicate game was played
+          const domElement = document.getElementById("game-over");
+          domElement.classList.add("game-success");
+
+
           const keys = Object.keys(report);
           if (keys.length > 0) {
             // handle various properties from report
@@ -72,7 +77,7 @@
         });
     </script>
   </head>
-  <body>
+  <body id="game-over">
     <div class="bg"></div>
     <div class="container">
       <pre>
@@ -107,8 +112,7 @@
       <section>
         <h1>Achievements</h1>
         <p id="achievements">Report not available.</p>
-        <br/>
-        <p>Haven't found all achievements yet? <a href="https://0.100101.online">Start from the beginning</a>.</p>
+        <p class="hidden"><br/>Haven't found all achievements yet? <a href="https://0.100101.online">Start from the beginning</a>.</p>
       </section>
 
       <section>
@@ -116,7 +120,7 @@
         <div id="highscore">High score table not available.</div>
       </section>
 
-      <section>
+      <section class="hidden">
         <h1>Get the badge</h1>
         <p>
           If your are a ticket holder of the

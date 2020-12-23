@@ -73,3 +73,12 @@ section.main {
 section.main h1 {
   line-height: 1.6em;
 }
+
+section.hidden,
+section .hidden {
+  display: none;
+}
+
+body.game-success .hidden {
+  display: inherit;
+}
