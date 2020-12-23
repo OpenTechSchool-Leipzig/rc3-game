@@ -1,4 +1,4 @@
-# Escape the broken app
+# Escape the broken internet
 
 It's the year 2020 and the web is in a horrible state. You need to escape! Can you?
 
