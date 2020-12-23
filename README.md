@@ -26,5 +26,12 @@ https://cryptpad.fr/kanban/#/2/kanban/edit/CtcYEc25lFyRWgLfXwBqucoo/
 
 ## Game related repos
 
+### Stats, achievements backend
+
 https://github.com/OpenTechSchool-Leipzig/rc3-game-backend
+
+Test app: https://00100011111100011111111110111101.100101.online/example/
+
+### HTTP Cats Proxy
+
 https://github.com/OpenTechSchool-Leipzig/rc3-game-proxy
