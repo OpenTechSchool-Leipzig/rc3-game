@@ -17,19 +17,40 @@
         .then(() => track_event("finish"))
         .then(() => get_report())
         .then((report) => {
-          document.getElementById("report").textContent = JSON.stringify(
-            report,
-            null,
-            2
-          );
+          const keys = Object.keys(report);
+          if (keys.length > 0) {
+            // handle various properties from report
+            keys.forEach(key => {
+              const value = report[key];
+              if (typeof value === "string") {
+                const domElement = document.getElementById(key)
+                if (domElement) {
+                  domElement.textContent = value;
+                }
+              }
+            })
+          }
+
+          // handle achievements from report
+          const achievements = report.achievements;
+          const domElement = document.getElementById("achievement");
+          let html = '';
+          achievements.forEach(achievement => {
+            html += `<p>${achievement.id} - ${achievement.title}</p>`
+          })
+          domElement.innerHTML = html;
+
           return get_highscore();
         })
         .then((highscore) => {
-          document.getElementById("highscore").textContent = JSON.stringify(
-            highscore,
-            null,
-            2
-          );
+          // handle scores from highscore
+          const scores = highscore.scores;
+          const domElement = document.getElementById("highscore");
+          let html = '';
+          scores.forEach(score => {
+            html += `<p>${score.player_name} - ${score.score}</p>`
+          })
+          domElement.innerHTML = html;
         });
     </script>
   </head>
@@ -44,31 +65,37 @@
 
       </pre>
       <section class="main">
-        <h1>Concrats! You made it through the internet!</h1>
+        <h1>Concrats <span id="player_name">anonymous</span>! You made it through the broken internet!</h1>
         <p>
-          Your are now officially at the end of the game and we hope you had an amazing and somehow nerf recking journey through our snapshot of the internet.
+          Your are now officially at the end of the game and we hope you had an amazing and somehow nerf recking journey through our snapshots of the broken web.
         </p>
         <p>
-          Remember, the internet is a place that can be created and changed by YOU. It doesn't have to be broken that way.
+          Remember, the internet is a place that can be created<sup>*</sup> and changed<sup>*</sup> by <b>YOU</b>. It doesn't have to be broken that way.
         </p>
+        <p class="small"><sup>*</sup>If you don't know how, the <a href="https://opentechschool.org" target="_blank">OpenTechSchool</a> community can help you get started with coding.</p>
       </section>
 
 
       <section>
         <h1>Game stats</h1>
+        <p>
+          How did you perform during the game?
+        </p>
+        <p><span id="total_clicks"></span> Clicks</p>
+        <p><span id="session_duration_in_seconds"></span> Seconds</p>
       </section>
 
       <section>
         <h1>Achievements</h1>
         <p>
-          Have you find all of the hidden achievements in the game? Here are your stats:
+          Did you find all of the hidden achievements in the game?
         </p>
-        <div id="report">Report not (yet) available.</div>
+        <p id="achievements">Report not available.</p>
       </section>
 
       <section>
         <h1>Highscore</h1>
-        <div id="highscore">High score table not (yet) available.</div>
+        <div id="highscore">High score table not available.</div>
       </section>
 
       <section>
