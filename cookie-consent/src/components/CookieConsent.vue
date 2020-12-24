@@ -153,10 +153,24 @@ export default class CookieConsent extends Vue {
   isBackground = false;
 
   showThankYouPopup($event: Event) {
+    if(!this.allCheckboxesAreChecked()) {
+      return;
+    }
+
     this.isBackground = true;
     EventBus.$emit(CustomEvents.ShowThankYouPopup);
     const form: HTMLFormElement = $event.target as HTMLFormElement;
     setTimeout(() => form.submit(), 2000);
+  }
+
+  allCheckboxesAreChecked() {
+    // TODO Refactor
+    const checkboxes = Array.from(
+      document.querySelectorAll(".checkbox__input input")
+    );
+    return checkboxes.every(
+      (checkbox: Element) => (checkbox as HTMLInputElement).checked
+    );
   }
 }
 </script>

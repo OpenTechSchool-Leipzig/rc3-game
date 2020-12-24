@@ -86,10 +86,9 @@ export default class Buttons extends Vue {
     const checkboxes = Array.from(
       document.querySelectorAll(".checkbox__input input")
     );
-    const allCheckboxesAreChecked: boolean = checkboxes.every(
+    return checkboxes.every(
       (checkbox: Element) => (checkbox as HTMLInputElement).checked
     );
-    return allCheckboxesAreChecked;
   }
 
   toggleCheckbox(checkbox: HTMLInputElement) {
