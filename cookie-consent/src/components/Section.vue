@@ -5,7 +5,7 @@
       <Item :label="itemTitle" :isDisabled="disableChoices" />
     </div>
     <template v-if="appendCookieRainItem">
-      <CookieRainItem />
+      <Item />
     </template>
   </section>
 </template>
@@ -13,12 +13,10 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import Item from "./checkItem/Item.vue";
-import CookieRainItem from "./checkItem/CookieRainItem.vue";
 
 @Component({
   components: {
-    Item,
-    CookieRainItem
+    Item
   }
 })
 export default class Section extends Vue {

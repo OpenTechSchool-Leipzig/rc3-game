@@ -24,7 +24,12 @@
           </svg>
         </span>
       </span>
-      <span class="checkbox__label">{{ label }}</span>
+      <template v-if="label">
+        <span class="checkbox__label">{{ label }}</span>
+      </template>
+      <template v-else>
+        <CookieRainLabel />
+      </template>
     </label>
   </div>
 </template>
@@ -32,10 +37,15 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { EventBus, CustomEvents } from "../../EventBus";
+import CookieRainLabel from "./CookieRainLabel.vue";
 
-@Component
+@Component({
+  components: {
+    CookieRainLabel
+  }
+})
 export default class Item extends Vue {
-  @Prop({ required: true })
+  @Prop()
   label!: string;
   @Prop({ default: false })
   isDisabled!: boolean;
