@@ -1,10 +1,10 @@
 <template>
-    <span class="checkbox__label">
-        <span class="checkbox__cookie" @click="startCookieRain">
-            Cookie Rain
-        </span>
-        Analytics
+  <span class="checkbox__label">
+    <span class="checkbox__cookie" @click="startCookieRain">
+      Cookie Rain
     </span>
+    Analytics
+  </span>
 </template>
 
 <script lang="ts">
@@ -21,10 +21,9 @@ export default class CookieRainLabel extends Vue {
 </script>
 
 <style lang="scss">
-
 .checkbox__cookie {
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>
