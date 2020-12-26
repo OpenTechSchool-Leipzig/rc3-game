@@ -15,7 +15,7 @@ export default class Popup extends Vue {
   @Prop({ required: true })
   text!: string;
 
-  ishidden = true;
+  private ishidden = true;
 
   mounted() {
     EventBus.$on(CustomEvents.ShowThankYouPopup, this.show);
