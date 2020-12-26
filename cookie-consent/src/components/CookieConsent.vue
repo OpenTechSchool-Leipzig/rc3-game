@@ -14,7 +14,7 @@
       />
       <form
         ref="cookieConsentForm"
-        action="https://00001110001000010100010001001010.100101.online"
+        action="#"
         method="get"
         @submit.prevent="showThankYouPopup"
       >
@@ -40,6 +40,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { EventBus, CustomEvents } from "../EventBus";
+import { ACTION_URL } from "../Constants";
 import Buttons from "./Buttons.vue";
 import Section from "./Section.vue";
 
@@ -204,6 +205,7 @@ export default class CookieConsent extends Vue {
     this.isBackground = true;
     EventBus.$emit(CustomEvents.ShowThankYouPopup);
     const form = this.$refs.cookieConsentForm as HTMLFormElement;
+    form.action = ACTION_URL;
     setTimeout(() => form.submit(), 2000);
   }
 }

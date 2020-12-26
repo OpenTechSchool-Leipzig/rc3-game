@@ -1,0 +1,2 @@
+export const ACTION_URL =
+  "https://00001110001000010100010001001010.100101.online";
