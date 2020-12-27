@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.2;
+  background-image: url("bg-pattern.png");
+  z-index: -1;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.highlight {
+  color: red;
+}
+
+.symbol {
+  font-size: 2em;
+  font-family: Arial;
+  vertical-align: text-bottom;
+}
+
+p.description {
+  margin-bottom: 50px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px red dashed;
+}
+
+a:hover {
+  border-bottom: 2px red solid;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.code {
+  display: inline-block;
+  text-decoration: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  border: 1px solid red;
+  padding: 10px;
+  background-color: rgba(255, 0, 0, 0.05);
+  text-align: center;
+}
+
+section {
+  margin: 60px 0 60px 0;
+}
+
+section.main {
+  margin-top: 0;
+}
+
+section.main h1 {
+  line-height: 1.6em;
+}
+
+section.hidden,
+section .hidden {
+  display: none;
+}
+
+body.game-success .hidden {
+  display: inherit;
+}
