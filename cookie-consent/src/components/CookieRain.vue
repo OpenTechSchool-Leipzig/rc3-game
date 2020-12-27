@@ -21,12 +21,12 @@ import { EventBus, CustomEvents } from "../EventBus";
 
 @Component
 export default class CookieRain extends Vue {
-  ishidden = true;
-  lastTick = 0;
-  position = { x: 0, y: 0 };
-  img!: CanvasImageSource;
-  canvas!: HTMLCanvasElement;
-  ctx!: CanvasRenderingContext2D;
+  private ishidden = true;
+  private lastTick = 0;
+  private position = { x: 0, y: 0 };
+  private img!: CanvasImageSource;
+  private canvas!: HTMLCanvasElement;
+  private ctx!: CanvasRenderingContext2D;
 
   mounted() {
     EventBus.$on(CustomEvents.ShowCookieRain, this.init);
