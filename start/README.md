@@ -2,6 +2,6 @@
 
 Page used in the rc3 world.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/196b027a-57fd-4b1c-8ec2-0df42d65d9b0/deploy-status)](https://app.netlify.com/sites/quirky-lalande-3f5aaf/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3733855a-46dc-425b-a686-9f3869903025/deploy-status)](https://app.netlify.com/sites/angry-saha-fe6325/deploys)
 
-Page can be found at: https://quirky-lalande-3f5aaf.netlify.app/
+Page can be found at: https://angry-saha-fe6325.netlify.app
