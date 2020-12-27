@@ -392,6 +392,17 @@
                   ingredients you will need.
                 </p>
 
+                <p class="desc">
+                  As with any recipe, the key to success is the quality of the
+                  ingredients used. Therefore, use fresh mint and limes,
+                  preferably organic. When it comes to sugar, steer clear of the
+                  common misconception and use granulated sugar instead, which
+                  is easier to dissolve than brown sugar, or choose a
+                  high-quality sugar syrup. Similarly, go for classic sparkling
+                  water and avoid using lemonade, since its overly sweet taste
+                  could unbalance the flavours.
+                </p>
+
                 <br /><br />
                 <h4>Club Mate (or your favorite mate-based soda)</h4>
 
@@ -428,6 +439,14 @@
                     >hack your own</a
                   >.
                 </p>
+
+                <div class="image-wrapper">
+                  <a
+                    href="https://01100001101101111000011011000101.100101.online"
+                    target="_blank"
+                    ><img src="./images/weird-ad4.png" alt="Blog Image"
+                  /></a>
+                </div>
 
                 <br /><br />
                 <h4>Cane sugar</h4>
@@ -559,16 +578,32 @@
                   /></a>
                 </div>
 
-                <h4>Recipe</h4>
-
                 <button
+                  id="view-recipe"
                   class="btn btn-2"
                   style="margin: 20px auto; display: block"
                 >
                   View receipe
                 </button>
 
-                <div class="recipe" style="border: 3px solid #ffad4d">
+                <script>
+                  var button = document.getElementById("view-recipe");
+                  button.addEventListener("click", function () {
+                    var recipe = document.getElementById("recipe");
+                    recipe.style.display = "block";
+                    button.style.display = "none";
+                  });
+                </script>
+
+                <div
+                  id="recipe"
+                  class="recipe"
+                  style="
+                    border: 3px solid #ffad4d;
+                    display: none;
+                    margin-top: 40px;
+                  "
+                >
                   <div
                     style="
                       background-color: #ffad4d;
@@ -616,6 +651,21 @@
                     <p>&#10103; Pound lime in a long drink glass.</p>
                     <p>&#10104; Add cane sugar to the glass, stir.</p>
                     <p>&#10105; Add crushed ice, rum and mate.</p>
+
+                    <br /><br />
+                    <p>
+                      If you enjoyed this recipe please
+                      <a
+                        href="https://10010011000001000010001000011011.100101.online/"
+                        >click here</a
+                      >.
+                    </p>
+
+                    <br /><br />
+                    <p>
+                      * Excessive alcohol consumption is harmful to health.
+                      Drink in moderation.
+                    </p>
                   </div>
                 </div>
 
@@ -627,70 +677,72 @@
                   /></a>
                 </div>
 
+                <br /><br />
+                <h4>Tschunk Success Tipps</h4>
+
+                <p class="desc">
+                  1. Using a sharp knife and cutting board, cut a thin slice out
+                  of the center of the lime. Cut into the lime slice and place
+                  on the edge of the glass for garnish.
+                </p>
+                <p class="desc">
+                  2. Top up with Club Mate: Do not fill up completely, the mate
+                  sometimes foams when you stir it.
+                </p>
+                <p class="desc">3. Add drinking straw.</p>
+
+                <br /><br />
+                <h4>You may also like: Mojito</h4>
+
+                <p class="desc">
+                  Mojito, an icon of the Cuban lifestyle, made its appearance in
+                  France in the early 2000s and has since become the country’s
+                  favourite cocktail. The reason for its tremendous popularity
+                  is simple: fresh, exotic flavours that take the senses on a
+                  journey to faraway lands. Check out our ultra-simple recipe
+                  that you can use over and over again for chic, laid-back
+                  cocktails.
+                </p>
+
+                <p class="desc">
+                  Mojitos are a showstopper in any self-respecting cocktail bar
+                  and have proved to be a constant source of inspiration for
+                  bartenders, who have since concocted a wide range of
+                  fruit-based versions packed full of flavour. Examples include
+                  the cucumber mojito with its characteristic fresh and subtle
+                  notes, and the royal mojito which uses champagne instead of
+                  sparkling water.
+                </p>
+
                 <ul>
                   <li><a class="btn" href="">longdrink</a></li>
                   <li><a class="btn" href="">rc3</a></li>
                 </ul>
               </div>
 
-              <div class="post-author">
-                <div class="author-image">
-                  <!-- <img
-                    src="./files/author-1-200x200.jpg"
-                    alt="Autohr Image"
-                  /> -->
-                </div>
-                <div class="author-info">
-                  <!-- <h4 class="name">
-                    <b class="light-color"></b>
-                  </h4> -->
-
-                  <ul class="social-icons">
-                    <li>
-                      <a
-                        href="https://01100001101101001000011011000101.100101.online"
-                        target="_blank"
-                        ><i class="ion-social-facebook-outline"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://01110101101101001001111011000101.100101.online"
-                        target="_blank"
-                        ><i class="ion-social-twitter-outline"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://01110101101101001001111011100101.100101.online"
-                        target="_blank"
-                        ><i class="ion-social-instagram-outline"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://01100001101101001011011011000101.100101.online"
-                        target="_blank"
-                        ><i class="ion-social-vimeo-outline"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://11000001101101111000011011000101.100101.online"
-                        target="_blank"
-                        ><i class="ion-social-pinterest-outline"></i
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="image-wrapper">
+                <a
+                  href="https://01100001101101111000011011000101.100101.online"
+                  target="_blank"
+                  ><img src="./images/weird-ad2.png" alt="Blog Image"
+                /></a>
               </div>
+
+              <div class="image-wrapper">
+                <a
+                  href="https://01100001101101111000011011000101.100101.online"
+                  target="_blank"
+                  ><img src="./images/weird-ad3.png" alt="Blog Image"
+                /></a>
+              </div>
+
               <div class="comments-area">
                 <h4 class="title"><b class="light-color">4 Comments</b></h4>
                 <div class="comment">
                   <div class="author-image">
                     <img
                       src="./images/author-2-150x150.jpg"
-                      alt="Autohr Image"
+                      alt="Author Image"
                     />
                   </div>
                   <div class="comment-info">
@@ -706,7 +758,7 @@
                   <div class="author-image">
                     <img
                       src="./images/author-3-150x150.jpg"
-                      alt="Autohr Image"
+                      alt="Author Image"
                     />
                   </div>
                   <div class="comment-info">
@@ -722,7 +774,7 @@
                   <div class="author-image">
                     <img
                       src="./images/author-1-150x150.jpg"
-                      alt="Autohr Image"
+                      alt="Author Image"
                     />
                   </div>
                   <div class="comment-info">
@@ -746,7 +798,7 @@
                   <div class="author-image">
                     <img
                       src="./images/author-4-150x150.jpg"
-                      alt="Autohr Image"
+                      alt="Author Image"
                     />
                   </div>
                   <div class="comment-info">
@@ -805,9 +857,6 @@
           </div>
           <div class="col-lg-4 col-md-12">
             <div class="sidebar-area">
-              <div class="sidebar-section about-author center-text">
-                <!-- add commericals -->
-              </div>
               <div class="sidebar-section src-area">
                 <form>
                   <input class="src-input" type="text" placeholder="Search" />
@@ -971,7 +1020,7 @@
                 <a
                   href="https://10101001110101011000111011000111.100101.online"
                   target="_blank"
-                  ><img src="./images/clothes-ad.png" alt="Ads Image"
+                  ><img src="./images/mate-kiste.jpeg" alt="Ads Image"
                 /></a>
                 <a
                   href="https://10101001110101011011111011000111.100101.online"
