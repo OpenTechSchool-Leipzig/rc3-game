@@ -12,6 +12,13 @@
     <link href="./files/ionicons.css" rel="stylesheet" />
     <link href="./files/styles.css" rel="stylesheet" />
     <link href="./files/responsive.css" rel="stylesheet" />
+    <script type="module">
+      import {
+        load_tracking_session,
+        track_event,
+      } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
+      load_tracking_session().then(() => track_event("pageload"));
+    </script>
     <style type="text/css">
       section p.desc {
         font-size: 20px;
