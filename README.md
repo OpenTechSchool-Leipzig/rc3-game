@@ -16,6 +16,12 @@ Play here: https://0.100101.online
 | 6     | food blog page      | blog           | https://sharp-joliot-036e2b.netlify.app       | https://10110101111001001010101111111111.100101.online |
 | 7     | gameover            | gameover       | https://quirky-lalande-3f5aaf.netlify.app     | https://10010011000001000010001000011011.100101.online |
 
+RC3 World Game entry
+
+| level | description | folder | netlify url                           | game url                |
+| ----- | ----------- | ------ | ------------------------------------- | ----------------------- |
+|       | pre start   | start  | https://angry-saha-fe6325.netlify.app | https://1.100101.online |
+
 WIP
 
 | level | description | folder | netlify url                              | game url                                               |
