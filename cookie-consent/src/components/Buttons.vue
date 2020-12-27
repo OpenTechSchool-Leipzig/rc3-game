@@ -32,18 +32,20 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Prop } from "vue-property-decorator";
 import { EventBus, CustomEvents } from "../EventBus";
 
 @Component
 export default class Buttons extends Vue {
-  private position!: string;
-  private posX!: number;
-  private posY!: number;
+  @Prop({ default: false })
+  allItemsAreChecked!: boolean;
+
+  private position: string;
+  private posX: number;
+  private posY: number;
 
   constructor() {
     super();
-    // this.resetSubmitBtnPos();
     this.position = "static";
     this.posX = -1;
     this.posY = -1;
@@ -54,7 +56,7 @@ export default class Buttons extends Vue {
   }
 
   moveButtonAway(e: MouseEvent) {
-    if (this.allCheckboxesAreChecked()) {
+    if (this.allItemsAreChecked) {
       return;
     }
 
@@ -69,31 +71,7 @@ export default class Buttons extends Vue {
 
   selectRandomCookies() {
     (window as any).track_event("random-cookies");
-    // TODO Refactor
-    const checkboxes = Array.from(
-      document.querySelectorAll("form .checkbox__input input")
-    );
-
-    checkboxes.forEach((checkbox: Element) => {
-      if (Math.random() > 0.6) {
-        this.toggleCheckbox(checkbox as HTMLInputElement);
-      }
-    });
-  }
-
-  allCheckboxesAreChecked() {
-    // TODO Refactor
-    const checkboxes = Array.from(
-      document.querySelectorAll(".checkbox__input input")
-    );
-    const allCheckboxesAreChecked: boolean = checkboxes.every(
-      (checkbox: Element) => (checkbox as HTMLInputElement).checked
-    );
-    return allCheckboxesAreChecked;
-  }
-
-  toggleCheckbox(checkbox: HTMLInputElement) {
-    checkbox.checked ? (checkbox.checked = false) : (checkbox.checked = true);
+    EventBus.$emit(CustomEvents.CheckRandomItems);
   }
 }
 </script>

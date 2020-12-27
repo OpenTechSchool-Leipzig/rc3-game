@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <title>You made it through the broken internet!</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+    <script type="module">
+      import {
+        load_tracking_session,
+        track_event,
+        get_report,
+        get_highscore,
+        get_achievements
+      } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
+
+      let totalAchievements = [];
+
+      load_tracking_session()
+        .then(() => track_event("finish"))
+        .then(() => get_achievements())
+        .then((achievements) => {
+          totalAchievements = achievements.items;
+          return get_report();
+        })
+        .then((report) => {
+          // add class to indicate game was played
+          const bodyElement = document.getElementById("game-over");
+          bodyElement.classList.add("game-success");
+
+
+          const keys = Object.keys(report);
+          if (keys.length > 0) {
+            // handle various properties from report
+            keys.forEach(key => {
+              const value = report[key];
+              if (typeof value === "string" || typeof value === "number") {
+                const domElement = document.getElementById(key)
+                if (domElement) {
+                  domElement.textContent = value;
+                }
+              }
+            })
+          }
+
+          // handle achievements from report
+          const currentAchievements = report.achievements;
+          const achievementsEle = document.getElementById("achievements");
+          const wasAchieved = (achievementId) => {
+            return currentAchievements.find((achievement) => {
+              return achievement.id === achievementId;
+            })
+          }
+
+          let html = '';
+          totalAchievements.forEach(achievement => {
+            if (wasAchieved(achievement.id)) {
+              html += `<p><span class="symbol">&#9745;</span> ${achievement.id} - ${achievement.title}</p>`
+            } else {
+              html += `<p><span class="symbol">&#9744;</span> ${achievement.id} - ${achievement.title}</p>`
+            }
+          })
+          achievementsEle.innerHTML = html;
+
+          return get_highscore();
+        })
+        .then((highscore) => {
+          // handle scores from highscore
+          const scores = highscore.scores;
+          const domElement = document.getElementById("highscore");
+          let html = '';
+          scores.forEach(score => {
+            html += `<p>${score.player_name} - ${score.score} Points</p>`
+          })
+          domElement.innerHTML = html;
+        });
+    </script>
+  </head>
+  <body id="game-over">
+    <div class="bg"></div>
+    <div class="container">
+      <pre>
+    __ _  __ _ _ __ ___   ___    _____   _____ _ __
+   / _` |/ _` | '_ ` _ \ / _ \  / _ \ \ / / _ \ '__|
+  | (_| | (_| | | | | | |  __/ | (_) \ V /  __/ |
+   \__, |\__,_|_| |_| |_|\___|  \___/ \_/ \___|_|
+   |___/
+
+      </pre>
+      <section class="main">
+        <h1>Concrats <span id="player_name">anonymous</span>! You made it through the broken internet!</h1>
+        <p>
+          Your are now officially at the end of the game and we hope you had an amazing and somehow nerf recking journey through our snapshots of the broken web.
+        </p>
+        <p>
+          <span class="symbol">&#9758;</span> Remember, the internet is a place that can be created<sup>*</sup> and changed by <b>YOU</b>. It doesn't have to be broken that way.
+        </p>
+        <p class="small"><sup>*</sup>If you don't know how, the <a href="https://opentechschool.org" target="_blank">OpenTechSchool</a> community can help you get started with coding.</p>
+      </section>
+
+
+      <section>
+        <h1>Game stats</h1>
+        <p class="description">
+          How did you perform during the game?
+        </p>
+        <p>You clicked <span id="total_clicks" class="highlight">unknown number of</span> times.</p>
+        <p>You played <span id="session_duration_in_seconds" class="highlight">unknown number of</span> seconds.</p>
+        <p>You have visited <span id="visited_pages" class="highlight">unknown number of</span> pages.</p>
+        <p>You scored <span id="score" class="highlight">unknown number of</span> points.</p>
+      </section>
+
+      <section>
+        <h1>Achievements</h1>
+        <p id="achievements">Report not available.</p>
+        <p class="hidden"><br/>Haven't found all achievements yet? <a href="https://0.100101.online">Start from the beginning</a>.</p>
+      </section>
+
+      <section>
+        <h1>Highscore</h1>
+        <div id="highscore">High score table not available.</div>
+      </section>
+
+      <section class="hidden">
+        <h1>Get the badge</h1>
+        <p>
+          If your are a ticket holder of the
+          <a href="https://rc3.world" target="_blank"
+            >Remote Chaos Experience</a
+          >
+          you can redeem your badge using the following code:
+          <div class="code">- - - -</div>
+        </p>
+        <p>
+          Everyone else can download the badge <a href="/assets/broken-badge.png">here</a>.
+        </p>
+      </section>
+
+      <section>
+        <h1>Credits</h1>
+        <p>
+          Thanks to these amazing people who helped build this game:
+        </p>
+        <p>
+          Ben,<br />
+          Christina,<br />
+          Dominik,<br />
+          Elli,<br />
+          Julian,<br />
+          Krissi,<br />
+          Markus,<br />
+          Norma
+        </p>
+        <p>Big thanks also to our beta-testers.</p>
+      </section>
+    </div>
+  </body>
+</html>

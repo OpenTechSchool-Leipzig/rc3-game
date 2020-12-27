@@ -142,6 +142,13 @@
       href="assets/css/colors/default.css"
       rel="stylesheet"
     />
+    <script type="module">
+      import {
+        load_tracking_session,
+        track_event,
+      } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
+      load_tracking_session().then(() => track_event("pageload"));
+    </script>
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
@@ -179,10 +186,14 @@
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
                 <h2 class="module-title font-alt">Contact</h2>
-                <div class="module-subtitle font-serif" style="font-size: 2.3rem">
+                <div
+                  class="module-subtitle font-serif"
+                  style="font-size: 2.3rem"
+                >
                   "A wonderful softness has taken possession of my entire soul,
                   like these sweet mornings of spring which I enjoy with my
-                  whole heart. And I wish the same for you!" - Jim Stone, Founder of TPAPIR
+                  whole heart. And I wish the same for you!" - Jim Stone,
+                  Founder of TPAPIR
                 </div>
               </div>
             </div>
@@ -194,12 +205,11 @@
               <div class="col-sm-6">
                 <h4 class="font-alt">Get in touch</h4>
                 <br />
-                <form
-                  id="contactForm"
-                  role="form"
-                  method="post"
-                  action="php/contact.php"
-                >
+                <p id="contact-success" style="display: none">
+                  Thanks for your inquery, we will get back to you ...eventually
+                  in 576890 days.
+                </p>
+                <form id="contact-form">
                   <div class="form-group">
                     <label class="sr-only" for="name">Name</label>
                     <input
@@ -274,7 +284,8 @@
                 <div class="widget">
                   <h5 class="widget-title font-alt">About TPAPIR</h5>
                   <p>
-                     It is not just paper, it is the expression of your innermost need.
+                    It is not just paper, it is the expression of your innermost
+                    need.
                   </p>
                   <p>Phone: +1 234 567 89 10</p>
                   Fax: +1 234 567 89 10
@@ -310,9 +321,7 @@
                   <h5 class="widget-title font-alt">Popular Posts</h5>
                   <ul class="widget-posts">
                     <li class="clearfix">
-                      <div class="widget-posts-image">
-
-                      </div>
+                      <div class="widget-posts-image"></div>
                       <div class="widget-posts-body">
                         <div class="widget-posts-title">
                           <a href="#">Design Award for Sound of Pee</a>
@@ -321,9 +330,7 @@
                       </div>
                     </li>
                     <li class="clearfix">
-                      <div class="widget-posts-image">
-
-                      </div>
+                      <div class="widget-posts-image"></div>
                       <div class="widget-posts-body">
                         <div class="widget-posts-title">
                           <a href="#">Experiences with Beach Dream</a>
@@ -378,12 +385,14 @@
     <script src="assets/lib/smoothscroll.js"></script>
     <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
-    <script
-      async=""
-      defer=""
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Axt8xiFYMBMDwwG1XzBQvEbYpzCvFU"
-    ></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      $("#contact-form").submit((event) => {
+        event.preventDefault();
+        $("#contact-form").hide();
+        $("#contact-success").show();
+      });
+    </script>
   </body>
 </html>

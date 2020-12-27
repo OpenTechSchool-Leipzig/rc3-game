@@ -4,9 +4,9 @@
       <span class="checkbox__input">
         <input
           type="checkbox"
-          v-model="isCheked"
+          v-model="isChecked"
           :disabled="isDisabled"
-          @change="repositionSubmitBtn"
+          @change="onChange"
         />
         <span class="checkbox__control">
           <svg
@@ -24,7 +24,12 @@
           </svg>
         </span>
       </span>
-      <span class="checkbox__label">{{ label }}</span>
+      <template v-if="label">
+        <span class="checkbox__label">{{ label }}</span>
+      </template>
+      <template v-else>
+        <CookieRainLabel />
+      </template>
     </label>
   </div>
 </template>
@@ -32,27 +37,60 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { EventBus, CustomEvents } from "../../EventBus";
+import CookieRainLabel from "./CookieRainLabel.vue";
 
-@Component
+@Component({
+  components: {
+    CookieRainLabel
+  }
+})
 export default class Item extends Vue {
-  @Prop({ required: true })
+  @Prop()
   label!: string;
   @Prop({ default: false })
   isDisabled!: boolean;
 
-  isCheked = false;
+  private isChecked = false;
 
   mounted() {
     if (this.isDisabled) {
-      this.isCheked = true;
+      this.isChecked = true;
+    }
+    EventBus.$on(CustomEvents.CheckRandomItems, this.randomlyToggleItem);
+  }
+
+  onChange() {
+    this.repositionSubmitBtn();
+    this.updateCheckedItemsCount();
+  }
+
+  updateCheckedItemsCount() {
+    EventBus.$emit(
+      this.isChecked
+        ? CustomEvents.IncreaseCheckedItemsCount
+        : CustomEvents.DecreaseCheckedItemsCount
+    );
+  }
+
+  repositionSubmitBtn() {
+    if (this.isChecked) {
+      EventBus.$emit(CustomEvents.ResetSubmitBtnPos);
     }
   }
 
-  repositionSubmitBtn(e: MouseEvent) {
-    const checkbox: HTMLInputElement = e.target as HTMLInputElement;
-    if (checkbox.checked) {
-      EventBus.$emit(CustomEvents.ResetSubmitBtnPos);
+  randomlyToggleItem() {
+    if (this.isDisabled) {
+      return;
     }
+
+    if (Math.random() > 0.6) {
+      this.toggleCheckbox();
+      this.updateCheckedItemsCount();
+    }
+  }
+
+  toggleCheckbox() {
+    this.isChecked = !this.isChecked;
   }
 }
 </script>
