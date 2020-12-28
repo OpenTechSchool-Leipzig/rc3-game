@@ -15,7 +15,7 @@
         :style="{
           position: this.position,
           top: `${this.posY}px`,
-          left: `${this.posX}px`
+          left: `${this.posX}px`,
         }"
       >
         Confirm my choices
@@ -72,6 +72,7 @@ export default class Buttons extends Vue {
   selectRandomCookies() {
     (window as any).track_event("random-cookies");
     EventBus.$emit(CustomEvents.CheckRandomItems);
+    alert("Yay! Achievement 'Random cookies' unlocked!");
   }
 }
 </script>

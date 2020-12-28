@@ -16,6 +16,7 @@ export default class CookieRainLabel extends Vue {
   startCookieRain() {
     EventBus.$emit(CustomEvents.ShowCookieRain);
     (window as any).track_event("cookie-rain");
+    alert("Yay! Achievement 'Cookie rain' unlocked!");
   }
 }
 </script>
