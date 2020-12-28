@@ -45,6 +45,11 @@ a:hover {
   border-bottom: 2px red solid;
 }
 
+a.no-underline,
+a.no-underline:hover {
+  border-bottom: none;
+}
+
 .container {
   max-width: 800px;
   padding: 20px;

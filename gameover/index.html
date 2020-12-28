@@ -75,10 +75,30 @@
 
           let html = "";
           let badgeHtml = "";
+          let redeemTokens = {
+            "10-http-cats":
+              "hnAHOUdrpRTslvelSpl2492DxBcehZbU3CBia0i0uxai0PZQ16",
+            "cautious-clicker":
+              "UAhIjQwZaNskr2TY3DwMEmKwtHIIWSnfUBhBED5w8noDKlK7jK",
+            "cookie-rain": "r8s4nvVJBQi9d7a8R340mEwzoPgiXCGKFgdasThygPejIgGLO7",
+            "email-attachment":
+              "cHmY2aSNspciHATQ2piLpxfY48vKxxrkzxrlrIiICo94GdZoi4",
+            "furious-clicker":
+              "BQpyX04PSEbOkIXddvfPM84WC3r0jAqiywa91iB3a9lXfDIZro",
+            "hello-donnie":
+              "MFbFo0Ed8CX3J3ScsOdWxzjlCwDd04WOSUKBLCOa7w9TorlNZc",
+            "random-cookie":
+              "ucBtkIC2f0YKM1DlqWS9GneectHeX48ZVsFRWOba3dDd5EBLsD",
+            "tarot-card": "CcYKcRkra51Ije79c0TFKbjpCG17HPEtN8FROHAACEFE6jfAvc",
+          };
           totalAchievements.forEach((achievement) => {
             if (wasAchieved(achievement.id)) {
               html += `<p><span class="symbol">&#9745;</span> ${achievement.id} - ${achievement.title}</p>`;
-              badgeHtml += `<img src="assets/${achievement.id}.png" width="100" height="100"/>`;
+              badgeHtml += `<a href="https://rc3.world/rc3/me/redeem_badge/${
+                redeemTokens[achievement.id]
+              }" target="_blank" class="no-underline"><img src="assets/${
+                achievement.id
+              }.png" width="100" height="100"/></a>`;
             } else {
               html += `<p><span class="symbol">&#9744;</span> ${achievement.id} - ${achievement.title}</p>`;
             }
@@ -172,30 +192,20 @@
 
       <section class="hidden">
         <h1>Get the badge(s)</h1>
-        <!-- <p>
-          If your are a ticket holder of the
-          <a href="https://rc3.world" target="_blank"
-            >Remote Chaos Experience</a
-          >
-          you can redeem your badge using the following code:
-          <div class="code">- - - -</div>
-        </p> -->
         <p>
           If your are a ticket holder of the
           <a href="https://rc3.world" target="_blank"
             >Remote Chaos Experience</a
           >
-          you can
-          <a
-            href="mailto:leipzig@opentechschool.org?subject=I%20made%20it%20through%20the%20internet"
-            >send us an email</a
-          >
-          with your session id
-          <span id="session_id" class="highlight">unknown</span> and your rc3
-          World username and we will grant you the badges.
+          you can redeem the badges by clicking on the images.
         </p>
         <div>
-          <img src="assets/broken-badge.png" width="100" height="100" />
+          <a
+            href="https://rc3.world/rc3/me/redeem_badge/5ZAfD5QmzLwJUuGO3FgPl9C6VgXmOcbQUWFr1RgFuXBqw0mtGH"
+            target="_blank"
+            class="no-underline"
+            ><img src="assets/broken-badge.png" width="100" height="100"
+          /></a>
           <span id="badges"></span>
         </div>
       </section>
