@@ -83,6 +83,7 @@ export default {
     openAttachment: function() {
       if (this.email.attachment === "attachment-downloading.gif") {
         window.track_event("email-attachment");
+        alert("Yay! Achievement 'Email attachement' unlocked!");
       }
       this.$bvModal.show("attachment-modal");
     },
