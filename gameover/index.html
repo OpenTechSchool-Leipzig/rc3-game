@@ -5,10 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
     <title>You made it through the broken internet!</title>
     <link rel="stylesheet" type="text/css" href="assets/styles.css" />
     <script type="module">
@@ -17,7 +31,7 @@
         track_event,
         get_report,
         get_highscore,
-        get_achievements
+        get_achievements,
       } from "https://00100011111100011111111110111101.100101.online/rc3gt/rc3gt-wrapper.js";
 
       let totalAchievements = [];
@@ -34,39 +48,43 @@
           const bodyElement = document.getElementById("game-over");
           bodyElement.classList.add("game-success");
 
-
           const keys = Object.keys(report);
           if (keys.length > 0) {
             // handle various properties from report
-            keys.forEach(key => {
+            keys.forEach((key) => {
               const value = report[key];
               if (typeof value === "string" || typeof value === "number") {
-                const domElement = document.getElementById(key)
+                const domElement = document.getElementById(key);
                 if (domElement) {
                   domElement.textContent = value;
                 }
               }
-            })
+            });
           }
 
           // handle achievements from report
           const currentAchievements = report.achievements;
           const achievementsEle = document.getElementById("achievements");
+          const badgesEle = document.getElementById("badges");
+
           const wasAchieved = (achievementId) => {
             return currentAchievements.find((achievement) => {
               return achievement.id === achievementId;
-            })
-          }
+            });
+          };
 
-          let html = '';
-          totalAchievements.forEach(achievement => {
+          let html = "";
+          let badgeHtml = "";
+          totalAchievements.forEach((achievement) => {
             if (wasAchieved(achievement.id)) {
-              html += `<p><span class="symbol">&#9745;</span> ${achievement.id} - ${achievement.title}</p>`
+              html += `<p><span class="symbol">&#9745;</span> ${achievement.id} - ${achievement.title}</p>`;
+              badgeHtml += `<img src="assets/${achievement.id}.png" width="100" height="100"/>`;
             } else {
-              html += `<p><span class="symbol">&#9744;</span> ${achievement.id} - ${achievement.title}</p>`
+              html += `<p><span class="symbol">&#9744;</span> ${achievement.id} - ${achievement.title}</p>`;
             }
-          })
+          });
           achievementsEle.innerHTML = html;
+          badgesEle.innerHTML = badgeHtml;
 
           return get_highscore();
         })
@@ -74,10 +92,10 @@
           // handle scores from highscore
           const scores = highscore.scores;
           const domElement = document.getElementById("highscore");
-          let html = '';
-          scores.forEach(score => {
-            html += `<p>${score.player_name} - ${score.score} Points</p>`
-          })
+          let html = "";
+          scores.forEach((score) => {
+            html += `<p>${score.player_name} - ${score.score} Points</p>`;
+          });
           domElement.innerHTML = html;
         });
     </script>
@@ -94,32 +112,92 @@
 
       </pre>
       <section class="main">
-        <h1>Concrats <span id="player_name">anonymous</span>! You made it through the broken internet!</h1>
+        <h1>
+          Concrats <span id="player_name">anonymous</span>! You made it through
+          the broken internet!
+        </h1>
         <p>
-          Your are now officially at the end of the game and we hope you had an amazing and somehow nerf recking journey through our snapshots of the broken web.
+          Your are now officially at the end of the game and we hope you had an
+          amazing and somehow nerf recking journey through our snapshots of the
+          broken web.
         </p>
         <p>
-          <span class="symbol">&#9758;</span> Remember, the internet is a place that can be created<sup>*</sup> and changed by <b>YOU</b>. It doesn't have to be broken that way.
+          <span class="symbol">&#9758;</span> Remember, the internet is a place
+          that can be created<sup>*</sup> and changed by <b>YOU</b>. It doesn't
+          have to be broken that way.
         </p>
-        <p class="small"><sup>*</sup>If you don't know how, the <a href="https://opentechschool.org" target="_blank">OpenTechSchool</a> community can help you get started with coding.</p>
+        <p class="small">
+          <sup>*</sup>If you don't know how, the
+          <a href="https://opentechschool.org" target="_blank"
+            >OpenTechSchool</a
+          >
+          community can help you get started with coding.
+        </p>
       </section>
-
 
       <section>
         <h1>Game stats</h1>
-        <p class="description">
-          How did you perform during the game?
+        <p class="description">How did you perform during the game?</p>
+        <p>
+          You clicked
+          <span id="total_clicks" class="highlight">unknown number of</span>
+          times.
         </p>
-        <p>You clicked <span id="total_clicks" class="highlight">unknown number of</span> times.</p>
-        <p>You played <span id="session_duration_in_seconds" class="highlight">unknown number of</span> seconds.</p>
-        <p>You have visited <span id="visited_pages" class="highlight">unknown number of</span> pages.</p>
-        <p>You scored <span id="score" class="highlight">unknown number of</span> points.</p>
+        <p>
+          You played
+          <span id="session_duration_in_seconds" class="highlight"
+            >unknown number of</span
+          >
+          seconds.
+        </p>
+        <p>
+          You have visited
+          <span id="visited_pages" class="highlight">unknown number of</span>
+          pages.
+        </p>
+        <p>
+          You scored
+          <span id="score" class="highlight">unknown number of</span> points.
+        </p>
       </section>
 
       <section>
         <h1>Achievements</h1>
         <p id="achievements">Report not available.</p>
-        <p class="hidden"><br/>Haven't found all achievements yet? <a href="https://0.100101.online">Start from the beginning</a>.</p>
+        <p class="hidden">
+          <br />Haven't found all achievements yet?
+          <a href="https://0.100101.online">Start from the beginning</a>.
+        </p>
+      </section>
+
+      <section class="hidden">
+        <h1>Get the badge(s)</h1>
+        <!-- <p>
+          If your are a ticket holder of the
+          <a href="https://rc3.world" target="_blank"
+            >Remote Chaos Experience</a
+          >
+          you can redeem your badge using the following code:
+          <div class="code">- - - -</div>
+        </p> -->
+        <p>
+          If your are a ticket holder of the
+          <a href="https://rc3.world" target="_blank"
+            >Remote Chaos Experience</a
+          >
+          you can
+          <a
+            href="mailto:leipzig@opentechschool.org?subject=I%20made%20it%20through%20the%20internet"
+            >send us an email</a
+          >
+          with your session id
+          <span id="session_id" class="highlight">unknown</span> and your rc3
+          World username and we will grant you the badges.
+        </p>
+        <div>
+          <img src="assets/broken-badge.png" width="100" height="100" />
+          <span id="badges"></span>
+        </div>
       </section>
 
       <section>
@@ -127,26 +205,19 @@
         <div id="highscore">High score table not available.</div>
       </section>
 
-      <section class="hidden">
-        <h1>Get the badge</h1>
+      <section>
+        <h1>You liked the game?</h1>
+        <p>Share the game url: https://0.100101.online</p>
         <p>
-          If your are a ticket holder of the
-          <a href="https://rc3.world" target="_blank"
-            >Remote Chaos Experience</a
-          >
-          you can redeem your badge using the following code:
-          <div class="code">- - - -</div>
-        </p>
-        <p>
-          Everyone else can download the badge <a href="/assets/broken-badge.png">here</a>.
+          Send us an <a href="mailto:leipzig@opentechschool.org">email</a> or
+          tweet at
+          <a href="https://twitter.com/OTS_LE" target="_blank">OTS_LE</a>.
         </p>
       </section>
 
       <section>
         <h1>Credits</h1>
-        <p>
-          Thanks to these amazing people who helped build this game:
-        </p>
+        <p>Thanks to these amazing people who helped build this game:</p>
         <p>
           Ben,<br />
           Christina,<br />
