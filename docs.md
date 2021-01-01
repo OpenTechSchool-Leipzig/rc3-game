@@ -1,4 +1,4 @@
-# Game documentation
+# Developer documentation
 
 This documentation includes background information around building the game.
 

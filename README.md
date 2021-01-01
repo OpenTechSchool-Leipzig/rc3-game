@@ -15,6 +15,6 @@ Make sure you explore the sites to find hidden secrets. Your are not at the end 
 
 [Read the doc](./hints.md)
 
-## Development documentation
+## Developer documentation
 
 [Read the doc](./docs.md)
